@@ -4,15 +4,19 @@
   "description": "lightweight ui framework",
   "main": "index.js",
   "scripts": {
-    "build": "yarn clean && mkdir dist/ && cp index.html dist/ && cp css dist/ && cp js dist/",
+    "build": "yarn clean && mkdir dist/ && cp src/*.html dist/ && cp -r src/css dist/ && cp -r src/js dist/",
     "clean": "rimraf dist/",
     "format": "yarn prettier --write .",
     "format-check": "yarn prettier --check .",
     "validate": "yarn format-check"
   },
-  "author": "",
+  "author": "dylanized",
   "license": "ISC",
   "devDependencies": {
-    "prettier": "^3.0.3"
+    "prettier": "^3.0.3",
+    "rimraf": "^5.0.5"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
   }
 }
