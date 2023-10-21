@@ -8,6 +8,7 @@
     "clean": "rimraf dist/",
     "format": "yarn prettier --write .",
     "format-check": "yarn prettier --check .",
+    "start": "http-server --port 3000 dist/",
     "validate": "yarn format-check"
   },
   "author": "dylanized",
