@@ -1,0 +1,11 @@
+/* COLOR CLASSES */
+
+.text-cloud {
+  color: var(--color-cloud) !important;
+}
+.bg-cloud {
+  background-color: var(--color-cloud) !important;
+}
+.border-cloud {
+  border-color: var(--color-cloud) !important;
+}

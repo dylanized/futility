@@ -1,0 +1,8 @@
+{
+  "customCssFilename": "app",
+  "customJsFilename": "app",
+  "showHeader": true,
+  "showFooter": true,
+  "siteName": "Minimos",
+  "siteTagline": "lightweight ui framework"
+}

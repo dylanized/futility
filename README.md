@@ -31,3 +31,9 @@ To build a new compiled version in the `/dist` folder, run `yarn build`.
 To serve the compiled version, run `yarn start` and visit http://localhost:3000.
 
 To format & lint the source code, run `yarn validate`.
+
+# Todo
+
+- add favicon
+- eslint
+- onchange rebuild

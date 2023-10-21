@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Fail on errors
+set -e
+
+# Delete dist folder and recreate it
+yarn clean && mkdir dist/
+
+# For each ejs template, render html file
+for filename in /src/*.ejs; do
+  npx ejs src/404.ejs -f app.json -o dist/404.html
+  npx ejs src/index.ejs -f app.json -o dist/index.html
+done
+
+# Copy asset folders
+cp -r src/css/ dist/css/
+cp -r src/js/ dist/js/
+
+# Format files
+yarn format-dist
