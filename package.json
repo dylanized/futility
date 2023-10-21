@@ -8,7 +8,7 @@
     "clean": "rimraf dist/",
     "format": "prettier --write .",
     "format-check": "prettier --check .",
-    "format-dist": "prettier --write dist/",
+    "format-dist": "prettier --log-level silent --write dist/",
     "start": "http-server --port 3000 dist/",
     "validate": "yarn format-check"
   },
