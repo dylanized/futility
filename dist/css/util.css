@@ -85,19 +85,19 @@
 }
 
 /* position */
-.position-relative {
+.p-relative {
   position: relative !important;
 }
-.position-absolute {
+.p-absolute {
   position: absolute !important;
 }
-.position-top-1 {
+.p-top-1 {
   top: 0.5rem !important;
 }
-.position-top-3 {
+.p-top-3 {
   top: 1.5rem !important;
 }
-.position-right-1 {
+.p-right-1 {
   right: 1rem !important;
 }
 
