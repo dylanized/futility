@@ -1,8 +1,7 @@
 {
-  "customCssFilename": "app",
-  "customJsFilename": "app",
-  "showHeader": true,
-  "showFooter": true,
+  "colors": {
+    "cloud": "#e8e8e8"
+  },
   "siteName": "Minimos",
   "siteTagline": "lightweight ui framework"
 }

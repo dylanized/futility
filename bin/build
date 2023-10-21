@@ -6,14 +6,16 @@ set -e
 # Delete dist folder and recreate it
 yarn clean && mkdir dist/
 
-# For each ejs template, render html file
-for filename in /src/*.ejs; do
-  npx ejs src/404.ejs -f app.json -o dist/404.html
-  npx ejs src/index.ejs -f app.json -o dist/index.html
-done
+# For each page template, render html file
+npx ejs src/404.ejs -f app.json -o dist/404.html
+npx ejs src/index.ejs -f app.json -o dist/index.html
+
+# Create css folder, then for each css file template, render css file
+mkdir dist/css/
+npx ejs src/css/base.css.ejs -f app.json -o dist/css/base.css
+npx ejs src/css/util.css.ejs -f app.json -o dist/css/util.css
 
 # Copy asset folders
-cp -r src/css/ dist/css/
 cp -r src/js/ dist/js/
 
 # Format files
