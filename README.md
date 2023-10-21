@@ -1,6 +1,6 @@
 # Minimos
 
-lightweight ui framework
+## lightweight ui framework
 
 # Getting Started
 
@@ -22,13 +22,15 @@ This repo also contains the source code to build a custom version of Minimos.
 
 The source contains these parts:
 
-- index.html (source markup)
-- css/minimos.css (source framework CSS)
-- lib/
+- project config file (app.json)
+- html templates (index.ejs and 404.ejs)
+- css templates (css/base.css.ejs and css/util.css.ejs)
+- js placeholder file (js/app.js)
+- build script (bin/build)
 
 To build a new compiled version in the `/dist` folder, run `yarn build`.
 
-To serve the compiled version, run `yarn start` and visit http://localhost:3000.
+To serve the built version, run `yarn start` and visit http://localhost:3000.
 
 To format & lint the source code, run `yarn validate`.
 
@@ -36,4 +38,11 @@ To format & lint the source code, run `yarn validate`.
 
 - add favicon
 - eslint
-- onchange rebuild
+- watch for changes
+- styleguide pages
+- dynamically generate colors
+- validate markup
+- lint more file types
+- lib folder
+- img folder
+- reset?
