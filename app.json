@@ -1,7 +1,57 @@
 {
+  "borderWidths": {
+    "1": "1px",
+    "2": "2px",
+    "3": "3px"
+  },
   "colors": {
+    "feature": "#ff5349",
+    "charcoal": "#999",
+    "slate": "#545454",
+    "silver": "#cdcdcd",
     "cloud": "#e8e8e8"
   },
   "siteName": "Minimos",
-  "siteTagline": "lightweight ui framework"
+  "siteTagline": "lightweight ui framework",
+  "sizes": {
+    "xl2": "1.75rem",
+    "xl1": "1.5rem",
+    "lg": "1.3rem",
+    "md": "1.05rem",
+    "base": "0.9rem",
+    "sm": "0.75rem",
+    "xs": "0.65rem"
+  },
+  "spacers": {
+    "0": "0",
+    "1": "0.3rem",
+    "2": "0.7rem",
+    "3": "1.2rem",
+    "4": "1.8rem"
+  },
+  "widths": [
+    20,
+    25,
+    30,
+    40,
+    50,
+    60,
+    70,
+    80,
+    90
+  ],
+  "widthsPx": [
+    1,
+    40,
+    50,
+    65,
+    100,
+    120,
+    140,
+    175,
+    250,
+    325,
+    375,
+    600
+  ]
 }

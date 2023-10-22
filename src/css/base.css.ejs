@@ -1,18 +1,22 @@
 :root {
-  --color-cloud: #e8e8e8;
+  /* colors */
+  <% for (const color in colors) { -%>
+    --color-<%= color %>: <%= colors[color] %>;
+  <% } %>
+
+  /* spacers */
+  <% for (const spacer in spacers) { -%>
+    --<%= spacer %>: <%= spacers[spacer] %>;
+  <% } %>
+
+  /* text fonts */
   --font-sans: "Open Sans", Helvetica, Arial, sans-serif;
   --font-serif: Georgia, "Times New Roman", serif;
-  --text-xl2: 1.75rem;
-  --text-xl1: 1.5rem;
-  --text-lg: 1.3rem;
-  --text-md: 1.05rem;
-  --text-base: 0.9rem;
-  --text-sm: 0.75rem;
-  --text-xs: 0.65rem;
-  --w1: 0.3rem;
-  --w2: 0.7rem;
-  --w3: 1.2rem;
-  --w4: 1.8rem;
+
+  /* text sizes */
+  <% for (const size in sizes) { -%>
+    --text-<%= size %>: <%= sizes[size] %>;
+  <% } %>
 }
 
 /* BASE ELEMENTS */

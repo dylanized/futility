@@ -1,26 +1,36 @@
 /* UTILITY CLASSES */
 
 /* border */
-.border-1px {
-  border-top-width: 1px !important;
-}
-.border-2px {
-  border-top-width: 2px !important;
-}
-.border-3px {
-  border-top-width: 3px !important;
-}
+<% for (const width in borderWidths) { -%>
+  .border-<%= width %> {
+    width: <%= borderWidths[width] %> !important;
+  }
+  .border-top-<%= width %> {
+    width: <%= borderWidths[width] %> !important;
+  }
+  .border-right-<%= width %> {
+    width: <%= borderWidths[width] %> !important;
+  }
+  .border-bottom-<%= width %> {
+    width: <%= borderWidths[width] %> !important;
+  }
+  .border-left-<%= width %> {
+    width: <%= borderWidths[width] %> !important;
+  }
+<% } %>
 
-/* color classes */
-.text-cloud {
-  color: var(--color-cloud) !important;
-}
-.bg-cloud {
-  background-color: var(--color-cloud) !important;
-}
-.border-cloud {
-  border-color: var(--color-cloud) !important;
-}
+/* colors */
+<% for (const color in colors) { -%>
+  .text-<%= color %> {
+    color: var(--color-<%= color %>) !important;
+  }
+  .bg-<%= color %> {
+    background-color: var(--color-<%= color %>) !important;
+  }
+  .border-<%= color %> {
+    border-color: var(--color-<%= color %>) !important;
+  }
+<% } %>
 
 /* display */
 .d-block {
@@ -45,44 +55,58 @@
 }
 
 /* margin */
-.m-0 {
-  margin: 0 !important;
-}
-.mb-0 {
-  margin-bottom: 0 !important;
-}
-.mt-1 {
-  margin-top: var(--w1) !important;
-}
-.mb-1 {
-  margin-bottom: var(--w1) !important;
-}
-.ml-1 {
-  margin-left: var(--w1) !important;
-}
-.mr-1 {
-  margin-right: var(--w1) !important;
-}
+<% for (const spacer in spacers) { -%>
+  .m-<%= spacer %> {
+    margin: <%= spacers[spacer] %> !important;
+  }
+  .mt-<%= spacer %> {
+    margin-top: <%= spacers[spacer] %> !important;
+  }
+  .mr-<%= spacer %> {
+    margin-right: <%= spacers[spacer] %> !important;
+  }
+  .mb-<%= spacer %> {
+    margin-bottom: <%= spacers[spacer] %> !important;
+  }
+  .ml-<%= spacer %> {
+    margin-left: <%= spacers[spacer] %> !important;
+  }
+  .mx-<%= spacer %> {
+    margin-left: <%= spacers[spacer] %> !important;
+    margin-right: <%= spacers[spacer] %> !important;
+  }
+  .my-<%= spacer %> {
+    margin-top: <%= spacers[spacer] %> !important;
+    margin-bottom: <%= spacers[spacer] %> !important;
+  }
+<% } %>
 
 /* padding */
-.pl-1 {
-  padding-left: var(--w1) !important;
-}
-.pr-1 {
-  padding-right: var(--w1) !important;
-}
-.py-1 {
-  padding-top: var(--w1) !important;
-  padding-bottom: var(--w1) !important;
-}
-.py-3 {
-  padding-top: var(--w2) !important;
-  padding-bottom: var(--w2) !important;
-}
-.px-1 {
-  padding-left: var(--w1) !important;
-  padding-right: var(--w1) !important;
-}
+<% for (const spacer in spacers) { -%>
+  .p-<%= spacer %> {
+    padding: <%= spacers[spacer] %> !important;
+  }
+  .pt-<%= spacer %> {
+    padding-top: <%= spacers[spacer] %> !important;
+  }
+  .pr-<%= spacer %> {
+    padding-right: <%= spacers[spacer] %> !important;
+  }
+  .pb-<%= spacer %> {
+    padding-bottom: <%= spacers[spacer] %> !important;
+  }
+  .pl-<%= spacer %> {
+    padding-left: <%= spacers[spacer] %> !important;
+  }
+  .px-<%= spacer %> {
+    padding-left: <%= spacers[spacer] %> !important;
+    padding-right: <%= spacers[spacer] %> !important;
+  }
+  .py-<%= spacer %> {
+    padding-top: <%= spacers[spacer] %> !important;
+    padding-bottom: <%= spacers[spacer] %> !important;
+  }
+<% } %>
 
 /* position */
 .p-relative {
@@ -91,15 +115,20 @@
 .p-absolute {
   position: absolute !important;
 }
-.p-top-1 {
-  top: 0.5rem !important;
-}
-.p-top-3 {
-  top: 1.5rem !important;
-}
-.p-right-1 {
-  right: 1rem !important;
-}
+<% for (const spacer in spacers) { -%>
+  .top-<%= spacer %> {
+    top: <%= spacers[spacer] %> !important;
+  }
+  .right-<%= spacer %> {
+    right: <%= spacers[spacer] %> !important;
+  }
+  .bottom-<%= spacer %> {
+    bottom: <%= spacers[spacer] %> !important;
+  }
+  .left-<%= spacer %> {
+    left: <%= spacers[spacer] %> !important;
+  }
+<% } %>
 
 /* text alignment */
 .text-center {
@@ -115,21 +144,11 @@
 }
 
 /* text size */
-.text-xl {
-  font-size: 3rem !important;
-}
-.text-lg {
-  font-size: 2rem !important;
-}
-.text-md {
-  font-size: var(--w2) !important;
-}
-.text-sm {
-  font-size: var(--w1) !important;
-}
-.text-xs {
-  font-size: var(--w1) !important;
-}
+<% for (const size in sizes) { -%>
+  .text-<%= size %> {
+    font-size: var(--text-<%= size %>) !important;
+  }
+<% } %>
 
 /* text weight */
 .text-bold {
@@ -139,66 +158,16 @@
   font-weight: normal !important;
 }
 
-/* width percentages */
-.w-20 {
-  width: 20% !important;
-}
-.w-25 {
-  width: 25% !important;
-}
-.w-30 {
-  width: 30% !important;
-}
-.w-33 {
-  width: 33% !important;
-}
-.w-35 {
-  width: 35% !important;
-}
-.w-50 {
-  width: 50% !important;
-}
-.w-100 {
-  width: 100% !important;
-}
+/* width % */
+<% for (const i in widths) { -%>
+  .w-<%= widths[i] %> {
+    width: <%= widths[i] %>% !important;
+  }
+<% } %>
 
 /* width px */
-.w-1px {
-  width: 1px !important;
-}
-.w-40px {
-  width: 40px !important;
-}
-.w-50px {
-  width: 50px !important;
-}
-.w-65px {
-  width: 65px !important;
-}
-.w-100px {
-  width: 100px !important;
-}
-.w-120px {
-  width: 120px !important;
-}
-.w-140px {
-  width: 140px !important;
-}
-.w-175px {
-  width: 175px !important;
-}
-.w-250px {
-  width: 250px !important;
-}
-.w-325px {
-  width: 325px !important;
-}
-.w-350px {
-  width: 350px !important;
-}
-.w-375px {
-  width: 375px !important;
-}
-.w-600px {
-  width: 600px !important;
-}
+<% for (const i in widthsPx) { -%>
+  .w-<%= widthsPx[i] %> {
+    width: <%= widthsPx[i] %>px !important;
+  }
+<% } %>

@@ -9,6 +9,7 @@
     "format": "prettier --write .",
     "format-check": "prettier --check .",
     "format-dist": "prettier --log-level silent --write dist/",
+    "render": ". bin/render",
     "start": "http-server --port 3000 dist/",
     "validate": "yarn format-check"
   },
