@@ -4,47 +4,73 @@
 
 # Getting Started
 
-Minimos is a very simple frontend web framework, based on utility css principles.
+Minimos is a very simple frontend web framework, based on utility css principles and a simple Bash build script.
 
-This repo contains the default version of minimos in the `/dist` folder.
+This repo contains the source files for generating static web template files.
+
+To preview your templates, launch the development server with `yarn start` and visit http://localhost:3000. You will see the Minimos default index page, and can click through your other templates.
+
+To build the static version of your templates, run `yarn build` and explore the generated files in `/dist`. To view these static files, run `yarn start-dist` and visit http://localhost:3000.
+
+# Source Files
+
+HTML Templates:
+
+  - index.ejs (Table of Contents)
+  - article.ejs (Blog Article)
+  - form.ejs (Form Styles)
+  - index.ejs (Table of Contents)
+  - landing.ejs (Landing Page)
+  - layout-2col.ejs (2 Column Example)
+  - layout-3col.ejs (3 Column Example)
+  - table.ejs (Table Styles)
+
+CSS Templates:
+
+  - base.css.ejs (CSS Variables & Base Elements)
+  - util.css.ejs (Utility Classes)
+
+Configuration & Tooling:
+
+  - app.json (App Config)
+  - bin/build (Build Script)
+
+# Compiled Files
 
 The compiled version consists of these parts:
 
-  - index.html (basic page markup with styleguide components)
-  - css/minimos.css (framework CSS)
-  - css/app.css (custom CSS)
+  - app.json (application config)
+  - src/base.css
+  - src/util.css
   - js/app.js (custom JS)
-  - lib/ (common JS libraries)
 
-# Building Minimos
-
-This repo also contains the source code to build a custom version of Minimos.
-
-The source contains these parts:
-
-  - project config file (app.json)
-  - html templates (index.ejs and 404.ejs)
-  - css templates (css/base.css.ejs and css/util.css.ejs)
-  - js placeholder file (js/app.js)
-  - build script (bin/build)
-
-To build a new compiled version in the `/dist` folder, run `yarn build`.
-
-To serve the built version, run `yarn start` and visit http://localhost:3000.
+# Tooling
 
 To format & lint the source code, run `yarn validate`.
 
 # Todo
 
+  - font awesome (or other icon library)
+  - basic lipsum in index.html
+  - table data styles
+  - form.html
+  - for each page in this folder, render it
+
+  - yarn start-dist express-static
+  - yarn dev index.js
+  - 2col, 3col
+
   - add favicon
   - eslint
   - watch for changes
-  - styleguide pages
-  - dynamically generate spacers
-  - dynamically generate widths
-  - dynamically generate border widths
-  - validate markup
   - lint more file types
   - lib folder
   - img folder
   - reset?
+  - validate 404
+  - landing page template
+  - resume template
+  - article template
+  - contact form template
+  - build-minify
+  - start-minify
