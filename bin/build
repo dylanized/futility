@@ -9,6 +9,9 @@ yarn clean && mkdir dist/
 # For each page template, render html file
 yarn render src/404.ejs dist/404.html
 yarn render src/index.ejs dist/index.html
+yarn render src/table.ejs dist/table.html
+yarn render src/form.ejs dist/form.html
+yarn render src/landing.ejs dist/landing.html
 
 # Create css folder, then for each css file template, render css file
 mkdir dist/css/

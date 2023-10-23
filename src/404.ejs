@@ -1,12 +1,14 @@
 <%- include('inc/header') %>
-    <main>
-      <section>
-        <%- include('inc/error', {
-          className: 'error-warning',
-          linkHref: '/',
-          linkText: 'Go Home',
-          title: 'Page Not Found!',
-        }) %>
-      </section>
-    </main>
+<main class="row">
+  <div class="container">
+    <section>
+      <%- include('inc/error', {
+        className: 'error-warning',
+        linkHref: '/',
+        linkText: 'Go Home',
+        title: 'Page Not Found!',
+      }) %>
+    </section>
+  </div>
+</main>
 <%- include('inc/footer') %>

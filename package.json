@@ -10,7 +10,8 @@
     "format-check": "prettier --check .",
     "format-dist": "prettier --log-level silent --write dist/",
     "render": ". bin/render",
-    "start": "http-server --port 3000 dist/",
+    "start": "node index.js",
+    "start-dist": "http-server --port 3000 dist/",
     "validate": "yarn format-check"
   },
   "author": "dylanized",

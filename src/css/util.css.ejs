@@ -1,40 +1,48 @@
 /* UTILITY CLASSES */
 
 /* border */
-<% for (const width in borderWidths) { -%>
-  .border-<%= width %> {
-    width: <%= borderWidths[width] %> !important;
+<% for (const width_suffix in borderWidths) { -%>
+  .border-<%= width_suffix %> {
+    width: <%= borderWidths[width_suffix] %> !important;
   }
-  .border-top-<%= width %> {
-    width: <%= borderWidths[width] %> !important;
+  .border-top-<%= width_suffix %> {
+    width: <%= borderWidths[width_suffix] %> !important;
   }
-  .border-right-<%= width %> {
-    width: <%= borderWidths[width] %> !important;
+  .border-right-<%= width_suffix %> {
+    width: <%= borderWidths[width_suffix] %> !important;
   }
-  .border-bottom-<%= width %> {
-    width: <%= borderWidths[width] %> !important;
+  .border-bottom-<%= width_suffix %> {
+    width: <%= borderWidths[width_suffix] %> !important;
   }
-  .border-left-<%= width %> {
-    width: <%= borderWidths[width] %> !important;
+  .border-left-<%= width_suffix %> {
+    width: <%= borderWidths[width_suffix] %> !important;
   }
 <% } %>
 
 /* colors */
-<% for (const color in colors) { -%>
-  .text-<%= color %> {
-    color: var(--color-<%= color %>) !important;
+<% for (const color_slug in colors) { -%>
+  .text-<%= color_slug %> {
+    color: var(--color-<%= color_slug %>) !important;
   }
-  .bg-<%= color %> {
-    background-color: var(--color-<%= color %>) !important;
+  .bg-<%= color_slug %> {
+    background-color: var(--color-<%= color_slug %>) !important;
   }
-  .border-<%= color %> {
-    border-color: var(--color-<%= color %>) !important;
+  .border-<%= color_slug %> {
+    border-color: var(--color-<%= color_slug %>) !important;
   }
 <% } %>
+
+/* cursor */
+.cursor-pointer {
+  cursor: pointer !important;
+}
 
 /* display */
 .d-block {
   display: inline !important;
+}
+.d-flex {
+  display: flex !important;
 }
 .d-inline {
   display: inline !important;
@@ -55,56 +63,56 @@
 }
 
 /* margin */
-<% for (const spacer in spacers) { -%>
-  .m-<%= spacer %> {
-    margin: <%= spacers[spacer] %> !important;
+<% for (const spacer_id in spacers) { -%>
+  .m-<%= spacer_id %> {
+    margin: var(--sp-<%= spacer_id %>) !important;
   }
-  .mt-<%= spacer %> {
-    margin-top: <%= spacers[spacer] %> !important;
+  .mt-<%= spacer_id %> {
+    margin-top: var(--sp-<%= spacer_id %>) !important;
   }
-  .mr-<%= spacer %> {
-    margin-right: <%= spacers[spacer] %> !important;
+  .mr-<%= spacer_id %> {
+    margin-right: var(--sp-<%= spacer_id %>) !important;
   }
-  .mb-<%= spacer %> {
-    margin-bottom: <%= spacers[spacer] %> !important;
+  .mb-<%= spacer_id %> {
+    margin-bottom: var(--sp-<%= spacer_id %>) !important;
   }
-  .ml-<%= spacer %> {
-    margin-left: <%= spacers[spacer] %> !important;
+  .ml-<%= spacer_id %> {
+    margin-left:var(--sp-<%= spacer_id %>) !important;
   }
-  .mx-<%= spacer %> {
-    margin-left: <%= spacers[spacer] %> !important;
-    margin-right: <%= spacers[spacer] %> !important;
+  .mx-<%= spacer_id %> {
+    margin-left: var(--sp-<%= spacer_id %>) !important;
+    margin-right: var(--sp-<%= spacer_id %>) !important;
   }
-  .my-<%= spacer %> {
-    margin-top: <%= spacers[spacer] %> !important;
-    margin-bottom: <%= spacers[spacer] %> !important;
+  .my-<%= spacer_id %> {
+    margin-top: var(--sp-<%= spacer_id %>) !important;
+    margin-bottom: var(--sp-<%= spacer_id %>) !important;
   }
 <% } %>
 
 /* padding */
-<% for (const spacer in spacers) { -%>
-  .p-<%= spacer %> {
-    padding: <%= spacers[spacer] %> !important;
+<% for (const spacer_id in spacers) { -%>
+  .p-<%= spacer_id %> {
+    padding: var(--sp-<%= spacer_id %>) !important;
   }
-  .pt-<%= spacer %> {
-    padding-top: <%= spacers[spacer] %> !important;
+  .pt-<%= spacer_id %> {
+    padding-top: var(--sp-<%= spacer_id %>) !important;
   }
-  .pr-<%= spacer %> {
-    padding-right: <%= spacers[spacer] %> !important;
+  .pr-<%= spacer_id %> {
+    padding-right: var(--sp-<%= spacer_id %>) !important;
   }
-  .pb-<%= spacer %> {
-    padding-bottom: <%= spacers[spacer] %> !important;
+  .pb-<%= spacer_id %> {
+    padding-bottom: var(--sp-<%= spacer_id %>) !important;
   }
-  .pl-<%= spacer %> {
-    padding-left: <%= spacers[spacer] %> !important;
+  .pl-<%= spacer_id %> {
+    padding-left: var(--sp-<%= spacer_id %>) !important;
   }
-  .px-<%= spacer %> {
-    padding-left: <%= spacers[spacer] %> !important;
-    padding-right: <%= spacers[spacer] %> !important;
+  .px-<%= spacer_id %> {
+    padding-left: var(--sp-<%= spacer_id %>) !important;
+    padding-right: var(--sp-<%= spacer_id %>) !important;
   }
-  .py-<%= spacer %> {
-    padding-top: <%= spacers[spacer] %> !important;
-    padding-bottom: <%= spacers[spacer] %> !important;
+  .py-<%= spacer_id %> {
+    padding-top: var(--sp-<%= spacer_id %>) !important;
+    padding-bottom: var(--sp-<%= spacer_id %>) !important;
   }
 <% } %>
 
@@ -115,22 +123,25 @@
 .p-absolute {
   position: absolute !important;
 }
-<% for (const spacer in spacers) { -%>
-  .top-<%= spacer %> {
-    top: <%= spacers[spacer] %> !important;
+<% for (const spacer_id in spacers) { -%>
+  .top-<%= spacer_id %> {
+    top: var(--sp-<%= spacer_id %>) !important;
   }
-  .right-<%= spacer %> {
-    right: <%= spacers[spacer] %> !important;
+  .right-<%= spacer_id %> {
+    right: var(--sp-<%= spacer_id %>) !important;
   }
-  .bottom-<%= spacer %> {
-    bottom: <%= spacers[spacer] %> !important;
+  .bottom-<%= spacer_id %> {
+    bottom: var(--sp-<%= spacer_id %>) !important;
   }
-  .left-<%= spacer %> {
-    left: <%= spacers[spacer] %> !important;
+  .left-<%= spacer_id %> {
+    left: var(--sp-<%= spacer_id %>) !important;
   }
 <% } %>
 
 /* text alignment */
+.text-left {
+  text-align: left !important;
+}
 .text-center {
   text-align: center !important;
 }
@@ -144,9 +155,9 @@
 }
 
 /* text size */
-<% for (const size in sizes) { -%>
-  .text-<%= size %> {
-    font-size: var(--text-<%= size %>) !important;
+<% for (const size_suffix in textSizes) { -%>
+  .text-<%= size_suffix %> {
+    font-size: var(--text-<%= size_suffix %>) !important;
   }
 <% } %>
 
@@ -159,15 +170,22 @@
 }
 
 /* width % */
-<% for (const i in widths) { -%>
-  .w-<%= widths[i] %> {
-    width: <%= widths[i] %>% !important;
+<% for (const width_suffix in widths) { -%>
+  .w-<%= width_suffix %> {
+    width: <%= widths[width_suffix] %> !important;
   }
 <% } %>
 
 /* width px */
-<% for (const i in widthsPx) { -%>
-  .w-<%= widthsPx[i] %> {
-    width: <%= widthsPx[i] %>px !important;
+<% for (const width_suffix in widthsPx) { -%>
+  .w-<%= widthsPx[width_suffix] %> {
+    width: <%= widthsPx[width_suffix] %> !important;
   }
-<% } %>
+<% } -%>
+
+/* specialty */
+ul.list-inline {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
