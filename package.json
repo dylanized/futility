@@ -1,11 +1,12 @@
 {
   "name": "minimos",
   "version": "1.0.0",
-  "description": "lightweight ui framework",
+  "description": "simple ui framework",
   "main": "index.js",
   "scripts": {
     "build": ". bin/build",
     "clean": "rimraf dist/",
+    "dev": "yarn start",
     "format": "prettier --write .",
     "format-check": "prettier --check .",
     "format-dist": "prettier --log-level silent --write dist/",
