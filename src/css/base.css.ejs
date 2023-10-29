@@ -10,8 +10,7 @@
   <% } %>
 
   /* text fonts */
-  --font-sans: "Open Sans", Helvetica, Arial, sans-serif;
-  --font-serif: Georgia, "Times New Roman", serif;
+  --font-main: Georgia, "Times New Roman", serif;
 
   /* text sizes */
   <% for (const size_suffix in textSizes) { -%>
@@ -26,7 +25,7 @@ body {
   font-size: 1rem;
   color: var(--color-charcoal);
   line-height: 1.2;
-  font-family: var(--font-serif);
+  font-family: var(--font-main);
   padding: 0;
   margin: 0;
 }
@@ -63,7 +62,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-sans);
+  font-family: var(--font-main);
   color: var(--color-feature);
 }
 
@@ -234,7 +233,7 @@ button {
 }
 
 textarea {
-  font-family: var(--font-sans);
+  font-family: var(--font-main);
   margin-bottom: var(--sp-2);
   width: 100%;
 }
