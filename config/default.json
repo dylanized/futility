@@ -2,33 +2,35 @@
   "app": {
     "port": 3000,
     "srcFolder": "src",
-    "staticFolder": "dist"      
+    "staticFolder": "dist"
   },
-  "footerText": "&copy; 2023 Minimos Studio",
-  "primaryNav": [
-    {
-      "href": "/",
-      "text": "Home",
-      "title": "Home"
-    },
-    {
-      "href": "/foo",
-      "text": "Foo",
-      "title": "footer"
-    },
-    {
-      "href": "/bar",
-      "text": "Bar",
-      "title": "Bar"
-    },
-    {
-      "href": "/baz",
-      "text": "Baz",
-      "title": "Baz"
-    }
-  ],
-  "siteName": "Minimos",
-  "siteTagline": "Simple UI Framework",
+  "data": {
+    "footerText": "&copy; 2023 Minimos Studio",
+    "primaryNav": [
+      {
+        "href": "/",
+        "text": "Home",
+        "title": "Home"
+      },
+      {
+        "href": "/foo",
+        "text": "Foo",
+        "title": "footer"
+      },
+      {
+        "href": "/bar",
+        "text": "Bar",
+        "title": "Bar"
+      },
+      {
+        "href": "/baz",
+        "text": "Baz",
+        "title": "Baz"
+      }
+    ],
+    "siteName": "Minimos",
+    "siteTagline": "Simple UI Framework"
+  },
   "theme": {
     "borderWidths": {
       "0": "0",
