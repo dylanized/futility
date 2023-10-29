@@ -1,22 +1,17 @@
 const express = require("express");
 const ejs = require("ejs");
 const path = require("path");
-
-// Set port var to env var or default
-const port = process.env.PORT || 3000;
-
-// Load config
-const config = require("./app.json");
+const config = require("config");
 
 // Instantiate Express app
 const app = express();
 
 // Setup template engine
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, config.srcFolder || "src"));
+app.set("views", path.join(__dirname, config.get("srcFolder")));
 
 // Mount static middleware
-app.use(express.static(config.srcFolder || "src"));
+app.use(express.static(config.get("srcFolder")));
 
 // Mount route for 'When user requests base route, serve th index page'
 app.get("/", (req, res) => {
@@ -34,4 +29,6 @@ app.get("*", (req, res) => {
 });
 
 // Launch app and display msg
-app.listen(port, () => console.log(`Server running on port ${port}`));
+app.listen(config.get("port"), () =>
+  console.log(`Server running on port ${config.get("port")}`),
+);
