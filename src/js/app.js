@@ -1,4 +1,4 @@
 // When document is loaded, print message
-$(document).ready(function() {
+$(document).ready(function () {
   console.log("hello world");
 });
