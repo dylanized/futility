@@ -52,6 +52,7 @@
     "5": "2.1rem"
   },
   "srcFolder": "src",
+  "staticFolder": "dist",
   "widths": {
     "25": "25%",
     "33": "33%",
