@@ -8,10 +8,10 @@ const app = express();
 
 // Setup template engine
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, config.get("srcFolder")));
+app.set("views", path.join(__dirname, config.get("app.srcFolder")));
 
 // Mount static middleware
-app.use(express.static(config.get("srcFolder")));
+app.use(express.static(config.get("app.srcFolder")));
 
 // Mount route for 'When user requests base route, serve th index page'
 app.get("/", (req, res) => {
@@ -29,6 +29,6 @@ app.get("*", (req, res) => {
 });
 
 // Launch app and display msg
-app.listen(config.get("port"), () =>
-  console.log(`Server running on port ${config.get("port")}`),
+app.listen(config.get("app.port"), () =>
+  console.log(`Server running on port ${config.get("app.port")}`),
 );

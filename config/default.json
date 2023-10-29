@@ -1,6 +1,10 @@
 {
+  "app": {
+    "port": 3000,
+    "srcFolder": "src",
+    "staticFolder": "dist"      
+  },
   "footerText": "&copy; 2023 Minimos Studio",
-  "port": 3000,
   "primaryNav": [
     {
       "href": "/",
@@ -25,8 +29,6 @@
   ],
   "siteName": "Minimos",
   "siteTagline": "Simple UI Framework",
-  "srcFolder": "src",
-  "staticFolder": "dist",
   "theme": {
     "borderWidths": {
       "0": "0",
