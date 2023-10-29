@@ -1,21 +1,4 @@
 {
-  "borderWidths": {
-    "0": "0",
-    "1": "1px",
-    "2": "2px",
-    "3": "3px"
-  },
-  "breakpointTablet": "600px",
-  "breakpointDesktop": "975px",
-  "colors": {
-    "feature": "#ff5349",
-    "cloud": "#e8e8e8",
-    "chalk": "#ddd",
-    "silver": "silver",
-    "slate": "#777",
-    "charcoal": "#111",
-    "black": "#000"
-  },
   "footerText": "&copy; 2023 Minimos Studio",
   "port": 3000,
   "primaryNav": [
@@ -42,47 +25,67 @@
   ],
   "siteName": "Minimos",
   "siteTagline": "Simple UI Framework",
-  "spacers": {
-    "0": "0",
-    "sm": "0.15rem",
-    "1": "0.3rem",
-    "2": "0.7rem",
-    "3": "1.2rem",
-    "4": "1.8rem",
-    "5": "2.1rem"
-  },
   "srcFolder": "src",
   "staticFolder": "dist",
-  "widths": {
-    "25": "25%",
-    "33": "33%",
-    "50": "50%",
-    "66": "66%",
-    "75": "75%"
-  },
-  "widthsPx": {
-    "1px": "1px",
-    "25px": "25px",
-    "50px": "50px",
-    "75px": "75px",
-    "100px": "100px",
-    "125px": "125px",
-    "150px": "150px",
-    "175px": "175px",
-    "200px": "200px",
-    "250px": "250px",
-    "300px": "300px",
-    "400px": "400px",
-    "500px": "500px",
-    "600px": "600px"
-  },
-  "textSizes": {
-    "xl2": "1.75rem",
-    "xl1": "1.5rem",
-    "lg": "1.3rem",
-    "md": "1.05rem",
-    "base": "0.9rem",
-    "sm": "0.75rem",
-    "xs": "0.65rem"
+  "theme": {
+    "borderWidths": {
+      "0": "0",
+      "1": "1px",
+      "2": "2px",
+      "3": "3px"
+    },
+    "breakpointTablet": "600px",
+    "breakpointDesktop": "975px",
+    "colors": {
+      "feature": "#ff5349",
+      "cloud": "#e8e8e8",
+      "chalk": "#ddd",
+      "silver": "silver",
+      "slate": "#777",
+      "charcoal": "#111",
+      "black": "#000"
+    },
+    "slug": "default",
+    "spacers": {
+      "0": "0",
+      "sm": "0.15rem",
+      "1": "0.3rem",
+      "2": "0.7rem",
+      "3": "1.2rem",
+      "4": "1.8rem",
+      "5": "2.1rem"
+    },
+    "textSizes": {
+      "xl2": "1.75rem",
+      "xl1": "1.5rem",
+      "lg": "1.3rem",
+      "md": "1.05rem",
+      "base": "0.9rem",
+      "sm": "0.75rem",
+      "xs": "0.65rem"
+    },
+    "widths": {
+      "25": "25%",
+      "33": "33%",
+      "50": "50%",
+      "66": "66%",
+      "75": "75%"
+    },
+    "widthsPx": {
+      "1px": "1px",
+      "25px": "25px",
+      "50px": "50px",
+      "75px": "75px",
+      "100px": "100px",
+      "125px": "125px",
+      "150px": "150px",
+      "175px": "175px",
+      "200px": "200px",
+      "250px": "250px",
+      "300px": "300px",
+      "400px": "400px",
+      "500px": "500px",
+      "600px": "600px"
+    }
   }
 }

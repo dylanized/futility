@@ -1,26 +1,26 @@
 /* UTILITY CLASSES */
 
 /* border */
-<% for (const width_suffix in borderWidths) { -%>
+<% for (const width_suffix in theme.borderWidths) { -%>
   .border-<%= width_suffix %> {
-    width: <%= borderWidths[width_suffix] %> !important;
+    width: <%= theme.borderWidths[width_suffix] %> !important;
   }
   .border-top-<%= width_suffix %> {
-    width: <%= borderWidths[width_suffix] %> !important;
+    width: <%= theme.borderWidths[width_suffix] %> !important;
   }
   .border-right-<%= width_suffix %> {
-    width: <%= borderWidths[width_suffix] %> !important;
+    width: <%= theme.borderWidths[width_suffix] %> !important;
   }
   .border-bottom-<%= width_suffix %> {
-    width: <%= borderWidths[width_suffix] %> !important;
+    width: <%= theme.borderWidths[width_suffix] %> !important;
   }
   .border-left-<%= width_suffix %> {
-    width: <%= borderWidths[width_suffix] %> !important;
+    width: <%= theme.borderWidths[width_suffix] %> !important;
   }
 <% } %>
 
 /* colors */
-<% for (const color_slug in colors) { -%>
+<% for (const color_slug in theme.colors) { -%>
   .text-<%= color_slug %> {
     color: var(--color-<%= color_slug %>) !important;
   }
@@ -63,7 +63,7 @@
 }
 
 /* margin */
-<% for (const spacer_id in spacers) { -%>
+<% for (const spacer_id in theme.spacers) { -%>
   .m-<%= spacer_id %> {
     margin: var(--sp-<%= spacer_id %>) !important;
   }
@@ -90,7 +90,7 @@
 <% } %>
 
 /* padding */
-<% for (const spacer_id in spacers) { -%>
+<% for (const spacer_id in theme.spacers) { -%>
   .p-<%= spacer_id %> {
     padding: var(--sp-<%= spacer_id %>) !important;
   }
@@ -123,7 +123,7 @@
 .p-absolute {
   position: absolute !important;
 }
-<% for (const spacer_id in spacers) { -%>
+<% for (const spacer_id in theme.spacers) { -%>
   .top-<%= spacer_id %> {
     top: var(--sp-<%= spacer_id %>) !important;
   }
@@ -155,7 +155,7 @@
 }
 
 /* text size */
-<% for (const size_suffix in textSizes) { -%>
+<% for (const size_suffix in theme.textSizes) { -%>
   .text-<%= size_suffix %> {
     font-size: var(--text-<%= size_suffix %>) !important;
   }
@@ -170,16 +170,16 @@
 }
 
 /* width % */
-<% for (const width_suffix in widths) { -%>
+<% for (const width_suffix in theme.widths) { -%>
   .w-<%= width_suffix %> {
-    width: <%= widths[width_suffix] %> !important;
+    width: <%= theme.widths[width_suffix] %> !important;
   }
 <% } %>
 
 /* width px */
-<% for (const width_suffix in widthsPx) { -%>
-  .w-<%= widthsPx[width_suffix] %> {
-    width: <%= widthsPx[width_suffix] %> !important;
+<% for (const width_suffix in theme.widthsPx) { -%>
+  .w-<%= theme.widthsPx[width_suffix] %> {
+    width: <%= theme.widthsPx[width_suffix] %> !important;
   }
 <% } -%>
 

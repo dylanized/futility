@@ -1,20 +1,20 @@
 :root {
   /* colors */
-  <% for (const color_slug in colors) { -%>
-    --color-<%= color_slug %>: <%= colors[color_slug] %>;
+  <% for (const color_slug in theme.colors) { -%>
+    --color-<%= color_slug %>: <%= theme.colors[color_slug] %>;
   <% } %>
 
   /* spacers */
-  <% for (const spacer_id in spacers) { -%>
-    --sp-<%= spacer_id %>: <%= spacers[spacer_id] %>;
+  <% for (const spacer_id in theme.spacers) { -%>
+    --sp-<%= spacer_id %>: <%= theme.spacers[spacer_id] %>;
   <% } %>
 
   /* text fonts */
   --font-main: Georgia, "Times New Roman", serif;
 
   /* text sizes */
-  <% for (const size_suffix in textSizes) { -%>
-    --text-<%= size_suffix %>: <%= textSizes[size_suffix] %>;
+  <% for (const size_suffix in theme.textSizes) { -%>
+    --text-<%= size_suffix %>: <%= theme.textSizes[size_suffix] %>;
   <% } %>
 }
 
@@ -249,12 +249,12 @@ blockquote {
 
 /* tablet */
 
-@media (min-width: <%= breakpointTablet %>) {
+@media (min-width: <%= theme.breakpointTablet %>) {
 
 }
 
 /* desktop */
 
-@media (min-width: <%= breakpointDesktop %>) {
+@media (min-width: <%= theme.breakpointDesktop %>) {
 
 }
