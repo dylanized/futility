@@ -5,6 +5,8 @@
     "2": "2px",
     "3": "3px"
   },
+  "breakpointTablet": "600px",
+  "breakpointDesktop": "975px",
   "colors": {
     "feature": "#ff5349",
     "cloud": "#e8e8e8",
