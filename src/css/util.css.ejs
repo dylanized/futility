@@ -84,8 +84,8 @@
     margin-right: var(--sp-<%= spacer_id %>) !important;
   }
   .my-<%= spacer_id %> {
-    margin-top: var(--sp-<%= spacer_id %>) !important;
     margin-bottom: var(--sp-<%= spacer_id %>) !important;
+    margin-top: var(--sp-<%= spacer_id %>) !important;
   }
 <% } %>
 
@@ -110,17 +110,17 @@
     padding-left: var(--sp-<%= spacer_id %>) !important;
     padding-right: var(--sp-<%= spacer_id %>) !important;
   }
-  .py-<%= spacer_id %> {
-    padding-top: var(--sp-<%= spacer_id %>) !important;
+  .py-<%= spacer_id %> {    
     padding-bottom: var(--sp-<%= spacer_id %>) !important;
+    padding-top: var(--sp-<%= spacer_id %>) !important;
   }
 <% } %>
 
 /* position */
-.p-relative {
+.position-relative {
   position: relative !important;
 }
-.p-absolute {
+.position-absolute {
   position: absolute !important;
 }
 <% for (const spacer_id in theme.spacers) { -%>
