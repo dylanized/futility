@@ -10,7 +10,7 @@ const config = require("./app.json");
 const app = express();
 
 // Mount static middleware
-app.use(express.static("dist"));
+app.use(express.static(config.staticFolder || "dist"));
 
 // Launch app and display msg
 app.listen(port, () => console.log(`Server running on port ${port}`));

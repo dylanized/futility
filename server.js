@@ -13,10 +13,10 @@ const app = express();
 
 // Setup template engine
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "src"));
+app.set("views", path.join(__dirname, config.srcFolder || "src"));
 
 // Mount static middleware
-app.use(express.static("src"));
+app.use(express.static(config.srcFolder || "src"));
 
 // Mount route for 'When user requests base route, serve th index page'
 app.get("/", (req, res) => {
