@@ -1,7 +1,7 @@
-const express = require("express");
-const ejs = require("ejs");
-const path = require("path");
 const config = require("config");
+const ejs = require("ejs");
+const express = require("express");
+const path = require("path");
 
 // Instantiate Express app
 const app = express();
@@ -13,13 +13,14 @@ app.set("views", path.join(__dirname, config.get("app.srcFolder")));
 // Mount static middleware
 app.use(express.static(config.get("app.srcFolder")));
 
-// Mount route for 'When user requests base route, serve th index page'
+// Mount route for 'When user requests base route, serve the index page'
 app.get("/", (req, res) => {
   res.render("index", config);
 });
 
 // Mount route for 'When user requests a top-level page, try to render it'
 app.get(/\/^((?!.).)*$:slug/, (req, res, next) => {
+  // TODO - check if file exists
   res.render(req.params.slug, config);
 });
 
