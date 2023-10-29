@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= siteName %> :: <%= siteTagline %></title>
+    <title><%= data.siteName %> :: <%= data.siteTagline %></title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/util.css">
   </head>
   <body class="text-center">
     <header>
-      <h1 style="font-size:150px"><%= siteName %></h1>
-      <h3 class="text-xl2"><%= siteTagline %></h3>
+      <h1 style="font-size:150px"><%= data.siteName %></h1>
+      <h3 class="text-xl2"><%= data.siteTagline %></h3>
     </header>
 <%- include('inc/footer') %>
