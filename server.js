@@ -27,7 +27,7 @@ else {
 
   // Mount route for 'When user requests base domain, serve the index page'
   app.get("/", (req, res) => {
-    res.render("index", config);
+    res.render("index", config.util.toObject());
   });
 
   // Mount route for 'When user requests a css file, try to dynamically render it'
@@ -36,7 +36,7 @@ else {
     const filepath = `css/${req.params.filename}.ejs`;
     if (fs.existsSync(`src/${filepath}`)) {
       res.contentType("text/css");
-      res.render(filepath, config);
+      res.render(filepath, config.util.toObject());
     } else {
       next();
     }
@@ -46,7 +46,7 @@ else {
   app.get("/:slug", (req, res, next) => {
     // If template exists, render it, else proceed
     if (fs.existsSync(`src/${req.params.slug + ".ejs"}`)) {
-      res.render(req.params.slug, config);
+      res.render(req.params.slug, config.util.toObject());
     } else {
       next();
     }
@@ -61,7 +61,7 @@ else {
   // Mount route for 'When a user requests any template that doesn't exist, render 404 template'
   app.get("*", (req, res) => {
     res.statusCode = 404;
-    res.render("404", config);
+    res.render("404", config.util.toObject());
   });
 }
 
