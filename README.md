@@ -8,22 +8,17 @@ Minimos is a very simple frontend web framework, based on utility css principles
 
 This repo contains the source files for generating static web template files.
 
-To preview your templates, launch the development server with `yarn start` and visit http://localhost:3000. You will see the Minimos default index page, and can click through your other templates.
+To preview your templates, launch the development server with `yarn dev` and visit http://localhost:3000. You will see the Minimos default index page, and can click through your other templates.
 
-To build the static version of your templates, run `yarn build` and explore the generated files in `/dist`. To view these static files, run `yarn start-dist` and visit http://localhost:3000.
+To build the static version of your templates, run `yarn build` and explore the generated files in `/dist`. To view these static files, run `yarn start` and visit http://localhost:3000.
 
 # Source Files
 
 HTML Templates:
 
+- 404.ejs (404 Error Page)
 - index.ejs (Table of Contents)
-- article.ejs (Blog Article)
-- form.ejs (Form Styles)
-- index.ejs (Table of Contents)
-- landing.ejs (Landing Page)
-- layout-2col.ejs (2 Column Example)
-- layout-3col.ejs (3 Column Example)
-- table.ejs (Table Styles)
+- typography.ejs (Typography Examples)
 
 CSS Templates:
 

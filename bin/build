@@ -9,14 +9,13 @@ yarn clean && mkdir dist/
 # For each page template, render html file
 yarn render src/404.ejs dist/404.html
 yarn render src/index.ejs dist/index.html
-yarn render src/table.ejs dist/table.html
-yarn render src/form.ejs dist/form.html
-yarn render src/landing.ejs dist/landing.html
+yarn render src/typography.ejs dist/typography.html
 
 # Create css folder, then for each css file template, render css file
 mkdir dist/css/
 yarn render src/css/base.css.ejs dist/css/base.css
 yarn render src/css/util.css.ejs dist/css/util.css
+yarn render src/css/devices.css.ejs dist/css/devices.css
 
 # Copy asset folders
 cp -r src/js/ dist/js/

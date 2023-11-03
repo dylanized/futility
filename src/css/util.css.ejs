@@ -1,26 +1,26 @@
 /* UTILITY CLASSES */
 
 /* border */
-<% for (const width_suffix in theme.borderWidths) { -%>
+<% for (const width_suffix in styles.borderWidths) { -%>
   .border-<%= width_suffix %> {
-    width: <%= theme.borderWidths[width_suffix] %> !important;
+    width: <%= styles.borderWidths[width_suffix] %> !important;
   }
   .border-top-<%= width_suffix %> {
-    width: <%= theme.borderWidths[width_suffix] %> !important;
+    width: <%= styles.borderWidths[width_suffix] %> !important;
   }
   .border-right-<%= width_suffix %> {
-    width: <%= theme.borderWidths[width_suffix] %> !important;
+    width: <%= styles.borderWidths[width_suffix] %> !important;
   }
   .border-bottom-<%= width_suffix %> {
-    width: <%= theme.borderWidths[width_suffix] %> !important;
+    width: <%= styles.borderWidths[width_suffix] %> !important;
   }
   .border-left-<%= width_suffix %> {
-    width: <%= theme.borderWidths[width_suffix] %> !important;
+    width: <%= styles.borderWidths[width_suffix] %> !important;
   }
 <% } %>
 
 /* colors */
-<% for (const color_slug in theme.colors) { -%>
+<% for (const color_slug in styles.colors) { -%>
   .text-<%= color_slug %> {
     color: var(--color-<%= color_slug %>) !important;
   }
@@ -44,6 +44,9 @@
 .d-flex {
   display: flex !important;
 }
+.d-grid {
+  display: grid !important;
+}
 .d-inline {
   display: inline !important;
 }
@@ -54,16 +57,57 @@
   display: none !important;
 }
 
+/* flex align-items */
+.align-normal {
+  align-items: normal;
+}
+.align-stretch {
+  align-items: stretch;
+}
+.align-center {
+  align-items: center;
+}
+.align-start {
+  align-items: start;
+}
+.align-end {
+  align-items: end;
+}
+.align-flex-start {
+  align-items: flex-start;
+}
+.align-flex-end {
+  align-items: flex-end;
+}
+
+/* flex justify-content */
+.justify-center {
+  justify-content: space-between !important;
+}
+.justify-start {
+  justify-content: space-between !important;
+}
+.justify-space-around {
+  justify-content: space-around !important;
+}
+.justify-space-between {
+  justify-content: space-between !important;
+}
+.justify-space-evenly {
+  justify-content: space-evenly !important;
+}
+
 /* float */
-.f-left {
+.float-left {
   float: left !important;
 }
-.f-right {
+.float-right {
   float: right !important;
 }
 
+
 /* margin */
-<% for (const spacer_id in theme.spacers) { -%>
+<% for (const spacer_id in styles.spacers) { -%>
   .m-<%= spacer_id %> {
     margin: var(--sp-<%= spacer_id %>) !important;
   }
@@ -90,7 +134,7 @@
 <% } %>
 
 /* padding */
-<% for (const spacer_id in theme.spacers) { -%>
+<% for (const spacer_id in styles.spacers) { -%>
   .p-<%= spacer_id %> {
     padding: var(--sp-<%= spacer_id %>) !important;
   }
@@ -110,7 +154,7 @@
     padding-left: var(--sp-<%= spacer_id %>) !important;
     padding-right: var(--sp-<%= spacer_id %>) !important;
   }
-  .py-<%= spacer_id %> {    
+  .py-<%= spacer_id %> {
     padding-bottom: var(--sp-<%= spacer_id %>) !important;
     padding-top: var(--sp-<%= spacer_id %>) !important;
   }
@@ -123,7 +167,7 @@
 .position-absolute {
   position: absolute !important;
 }
-<% for (const spacer_id in theme.spacers) { -%>
+<% for (const spacer_id in styles.spacers) { -%>
   .top-<%= spacer_id %> {
     top: var(--sp-<%= spacer_id %>) !important;
   }
@@ -149,17 +193,35 @@
   text-align: right !important;
 }
 
-/* text transform */
-.text-uppercase {
-  text-transform: uppercase !important;
+/* text decoration */
+.text-italic {
+  font-style: italic !important;
+}
+.text-strike {
+  text-decoration: line-through !important;
+}
+.text-underline {
+  text-decoration: underline !important;
 }
 
-/* text size */
-<% for (const size_suffix in theme.textSizes) { -%>
+/* text font */
+<% for (const size_suffix in styles.textSizes) { -%>
   .text-<%= size_suffix %> {
     font-size: var(--text-<%= size_suffix %>) !important;
   }
 <% } %>
+
+/* text size */
+<% for (const font_slug in styles.textFonts) { -%>
+  .text-<%= font_slug %> {
+    font-family: var(--font-<%= font_slug %>) !important;
+  }
+<% } %>
+
+/* text transform */
+.text-uppercase {
+  text-transform: uppercase !important;
+}
 
 /* text weight */
 .text-bold {
@@ -169,23 +231,46 @@
   font-weight: normal !important;
 }
 
-/* width % */
-<% for (const width_suffix in theme.widths) { -%>
+/* height spacers */
+<% for (const spacer_id in styles.spacers) { -%>
+  .h-<%= spacer_id %> {
+    height: <%= styles.spacers[spacer_id] %> !important;
+  }
+
+  .max-h-<%= spacer_id %> {
+    max-height: <%= styles.spacers[spacer_id] %> !important;
+  }
+
+  .min-h-<%= spacer_id %> {
+    min-height: <%= styles.spacers[spacer_id] %> !important;
+  }
+<% } %>
+
+/* width spacers */
+<% for (const spacer_id in styles.spacers) { -%>
+  .w-<%= spacer_id %> {
+    width: <%= styles.spacers[spacer_id] %> !important;
+  }
+
+  .max-w-<%= spacer_id %> {
+    max-width: <%= styles.spacers[spacer_id] %> !important;
+  }
+
+  .min-w-<%= spacer_id %> {
+    min-width: <%= styles.spacers[spacer_id] %> !important;
+  }
+<% } %>
+
+/* width percentage */
+<% for (const width_suffix in styles.widths) { -%>
   .w-<%= width_suffix %> {
-    width: <%= theme.widths[width_suffix] %> !important;
+    width: <%= styles.widths[width_suffix] %> !important;
   }
 <% } %>
 
 /* width px */
-<% for (const width_suffix in theme.widthsPx) { -%>
-  .w-<%= theme.widthsPx[width_suffix] %> {
-    width: <%= theme.widthsPx[width_suffix] %> !important;
+<% for (const width_suffix in styles.widthsPx) { -%>
+  .w-<%= styles.widthsPx[width_suffix] %> {
+    width: <%= styles.widthsPx[width_suffix] %> !important;
   }
 <% } -%>
-
-/* specialty */
-ul.list-inline {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}

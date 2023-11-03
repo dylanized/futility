@@ -6,18 +6,19 @@
   "scripts": {
     "build": ". bin/build",
     "clean": "rimraf dist/",
-    "dev": "yarn start",
+    "dev": "node server.js",
+    "dev-watch": "onchange -i -k 'config/**/*' -- node server.js",
     "format": "prettier --write .",
     "format-check": "prettier --check .",
     "format-dist": "prettier --log-level silent --write dist/",
     "render": ". bin/render",
-    "start": "node server.js",
-    "start-dist": "node server-static.js",
+    "start": "MODE=static node server.js",
     "validate": "yarn format-check"
   },
   "author": "dylanized",
   "license": "ISC",
   "devDependencies": {
+    "onchange": "^7.1.0",
     "prettier": "^3.0.3",
     "rimraf": "^5.0.5"
   },

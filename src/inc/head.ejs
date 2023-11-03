@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= data.siteName %> :: <%= data.siteTagline %></title>
+    <% stylesheets.forEach((stylesheet) => { %>
+      <link rel="stylesheet" href="<%= stylesheet %>">
+    <% }); %>
+  </head>
+  <body class="p-2">
