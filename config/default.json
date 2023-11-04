@@ -1,6 +1,5 @@
 {
   "app": {
-    "mode": "ssr",
     "port": 3000,
     "srcFolder": "src",
     "staticFolder": "dist"

@@ -11,7 +11,7 @@
     "format-check": "prettier --check .",
     "format-dist": "prettier --log-level silent --write dist/",
     "render": ". bin/render",
-    "start": "MODE=static node server.js",
+    "start": "NODE_ENV=production node server.js",
     "start-server": "node server.js",
     "validate": "yarn format-check"
   },

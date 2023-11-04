@@ -7,8 +7,8 @@ const path = require("path");
 // Instantiate Express app
 const app = express();
 
-// If static mode, mount static middleware to serve /dist folder...
-if (config.get("app.mode") === "static") {
+// If Prod, configure static server
+if (process.env.NODE_ENV === "production") {
   app.use(express.static(config.get("app.staticFolder")));
 }
 // Else configure SSR server
