@@ -1,8 +1,8 @@
 {
-  "name": "minimos",
+  "name": "Futility",
   "version": "1.0.0",
-  "description": "simple ui framework",
-  "main": "index.js",
+  "description": "The simple web framework",
+  "main": "server.js",
   "scripts": {
     "build": ". bin/build",
     "clean": "rimraf dist/",
@@ -11,7 +11,7 @@
     "format-check": "prettier --check .",
     "format-dist": "prettier --log-level silent --write dist/",
     "render": ". bin/render",
-    "start": "NODE_ENV=production node server.js",
+    "start": "NODE_ENV=production yarn start-server",
     "start-server": "node server.js",
     "validate": "yarn format-check"
   },

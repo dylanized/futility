@@ -4,4 +4,4 @@
 set -e
 
 # Render source file to destination, while applying app config
-npx ejs $1 -f config/default.json -o $2
+npx ejs $1 -f src/theme.json -o $2
