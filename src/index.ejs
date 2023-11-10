@@ -2,16 +2,16 @@
 <main class="container">
   <section>
     <h1 class="text-xl2 mb-1">Futility UI</h1>
-    <h4 class="mb-0 bg-feature text-white d-inline-block py-1 px-2 text-bold text-sm">a lightweight starter kit for practical web development.</h4>
+    <h4 class="mb-0 bg-feature text-white d-inline-block py-1 px-2 text-bold text-sm">a lightweight framework for practical web development.</h4>
   </section>
   <section>
     <p class="mb-3">Table of contents:</p>
     <h4>Web Page Templates</h4>
     <ul>
-      <li><code><a href="/404">404.html</a></code> (error page)</li>
+      <li><code><a href="<%= typeof req !== 'undefined' ? '404' : '404.html' %>">404.html</a></code> (error page)</li>
       <li><code>index.html</code> (this page)</li>
-      <li><code><a href="/typography">typography.html</a></code> (typopgraphy examples)</li>
-      <li><code><a href="/tables">tables.html</a></code> (table examples)</li>
+      <li><code><a href="<%= typeof req !== 'undefined' ? 'typography' : 'typography.html' %>">typography.html</a></code> (typopgraphy examples)</li>
+      <li><code><a href="<%= typeof req !== 'undefined' ? 'tables' : 'tables.html' %>">tables.html</a></code> (table examples)</li>
     </ul>
     <h4>CSS Starter Files</h4>
     <ul>

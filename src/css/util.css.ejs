@@ -39,7 +39,7 @@
 
 /* display */
 .d-block {
-  display: inline !important;
+  display: block !important;
 }
 .d-flex {
   display: flex !important;
@@ -51,7 +51,7 @@
   display: inline !important;
 }
 .d-inline-block {
-  display: inline !important;
+  display: inline-block !important;
 }
 .d-none {
   display: none !important;
@@ -130,6 +130,10 @@
   .my-<%= spacer_id %> {
     margin-bottom: var(--sp-<%= spacer_id %>) !important;
     margin-top: var(--sp-<%= spacer_id %>) !important;
+  }
+  .mx-auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 <% } %>
 

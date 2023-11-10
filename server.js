@@ -74,7 +74,6 @@ else {
 
   // Mount route for 'When a user requests any file that doesn't exist, send bare 404'
   app.get(/\./, (req, res) => {
-    console.log(".");
     res.sendStatus(404);
   });
 

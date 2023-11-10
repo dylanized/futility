@@ -109,32 +109,32 @@ h6 {
 
 h1 {
   font-size: var(--text-xl2);
-  margin: 0 0 var(--sp-3) 0;
+  margin: 0 0 var(--sp-4) 0;
 }
 
 h2 {
   font-size: var(--text-xl1);
-  margin: 0 0 var(--sp-3) 0;
+  margin: 0 0 var(--sp-4) 0;
 }
 
 h3 {
   font-size: var(--text-lg);
-  margin: 0 0 var(--sp-2) 0;
+  margin: 0 0 var(--sp-3) 0;
 }
 
 h4 {
   font-size: var(--text-md);
-  margin: 0 0 var(--sp-2) 0;
+  margin: 0 0 var(--sp-3) 0;
 }
 
 h5 {
   font-size: var(--text-base);
-  margin: 0 0 var(--sp-2) 0;
+  margin: 0 0 var(--sp-3) 0;
 }
 
 h6 {
   font-size: var(--text-sm);
-  margin: 0 0 var(--sp-2) 0;
+  margin: 0 0 var(--sp-3) 0;
 }
 
 /* basic typography */
@@ -168,6 +168,29 @@ li {
   margin: 0 0 var(--sp-2) 0;
 }
 
+/* images */
+
+img {
+  vertical-align: middle;
+}
+
+img.float-left {
+  margin-right: var(--sp-3);
+  margin-bottom: var(--sp-2);
+}
+
+img.float-right {
+  margin-left: var(--sp-2);
+  margin-bottom: var(--sp-2);
+}
+
+img.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--sp-3);
+}
+
 /* navigation */
 
 nav {
@@ -193,9 +216,11 @@ table td {
 }
 
 table th {
+  font-family: Verdana;
   border-bottom-width: 3px;
-  color: var(--color-slate);
+  color: var(--color-primary);
   font-weight: bold;
+  font-size: var(--text-xs);
 }
 
 table {
@@ -206,6 +231,12 @@ table {
 table th,
 table td {
   padding: var(--sp-2);
+}
+
+tbody th,
+tfoot th {
+  border-width: 1px;
+  border-right-width: 3px;
 }
 
 /* forms */
@@ -260,12 +291,29 @@ input[type="submit"] {
 }
 
 button {
-  background-color: var(--color-cloud);
+  background-color: red;
   border: none;
   border-radius: 5px;
-  color: var(--color-slate);
+  color: var(--color-white);
   font-weight: bold;
-  margin: 0 0 var(--sp-2) 0;
+  padding: var(--sp-1) var(--sp-2);
+}
+
+.btn-primary {
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  color: var(--color-white);
+  font-weight: bold;
+  padding: var(--sp-1) var(--sp-2);
+}
+
+.btn-secondary {
+  background-color: green;
+  border: none;
+  border-radius: 5px;
+  color: var(--color-white);
+  font-weight: bold;
   padding: var(--sp-1) var(--sp-2);
 }
 
@@ -278,8 +326,8 @@ textarea {
 /* other */
 
 blockquote {
-  border-left: silver solid var(--color-);
+  border-left: 5px solid red;
   color: var(--color-slate);
   margin: 0 0 var(--sp-3) 0;
-  padding: var(--sp-2) var(--sp-2) var(--sp-1) var(--sp-2);
+  padding: var(--sp-2) var(--sp-2) 1px var(--sp-3);
 }
