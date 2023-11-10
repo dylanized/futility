@@ -7,18 +7,18 @@ set -e
 yarn clean && mkdir dist/
 
 # For each page template, render html file
-yarn render src/404.ejs dist/404.html
-yarn render src/index.ejs dist/index.html
-yarn render src/typography.ejs dist/typography.html
+yarn render themes/alpha/404.ejs dist/404.html
+yarn render themes/alpha/index.ejs dist/index.html
+yarn render themes/alpha/typography.ejs dist/typography.html
 
 # Create css folder, then for each css file template, render css file
 mkdir dist/css/
-yarn render src/css/base.css.ejs dist/css/base.css
-yarn render src/css/util.css.ejs dist/css/util.css
-yarn render src/css/devices.css.ejs dist/css/devices.css
+yarn render themes/alpha/css/base.css.ejs dist/css/base.css
+yarn render themes/alpha/css/util.css.ejs dist/css/util.css
+yarn render themes/alpha/css/devices.css.ejs dist/css/devices.css
 
 # Copy asset folders
-cp -r src/js/ dist/js/
+cp -r themes/alpha/js/ dist/js/
 
 # Format files
 yarn format-dist

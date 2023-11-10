@@ -1,7 +1,9 @@
 {
   "app": {
+    "defaultTheme": "alpha",
+    "homeTemplate": "index",
     "port": 3000,
-    "srcFolder": "src",
+    "themesFolder": "themes",
     "staticFolder": "dist"
   }
 }
