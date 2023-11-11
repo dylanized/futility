@@ -1,0 +1,34 @@
+<%- include('inc/head') %>
+<main class="container">
+  <section>
+    <h1 class="text-xl2 mb-1">Futility UI</h1>
+    <h4 class="mb-0 bg-feature text-white d-inline-block py-1 px-2 text-bold text-sm">a lightweight framework for practical web development.</h4>
+  </section>
+  <section>
+    <p class="mb-3">Table of contents:</p>
+    <h4>Web Page Templates</h4>
+    <ul>
+      <li><code><a href="<%= typeof req !== 'undefined' ? '404' : '404.html' %>">404.html</a></code> (error page)</li>
+      <li><code>index.html</code> (this page)</li>
+      <li><code><a href="<%= typeof req !== 'undefined' ? 'typography' : 'typography.html' %>">typography.html</a></code> (typopgraphy examples)</li>
+      <li><code><a href="<%= typeof req !== 'undefined' ? 'tables' : 'tables.html' %>">tables.html</a></code> (table examples)</li>
+    </ul>
+    <h4>CSS Starter Files</h4>
+    <ul>
+      <li><code><a href="css/base.css">css/base.css</a></code> (base elements &amp; variables)</li>
+      <li><code><a href="css/util.css">css/util.css</a></code> (utility classes, based on Tailwind and Bootstrap 4)</li>
+      <li><code><a href="css/devices.css">css/devices.css</a></code> (tablet & desktop overrides)</li>
+    </ul>
+    <h4>Get Started</h4>
+    <ol>
+      <li>Install packages with <code class="tag">yarn install</code></li>
+      <li>Run <code class="tag">yarn start</code> to launch the static server</li>
+      <li>View the generated files in the <code>dist</code> folder at <code>http://localhost:3000</code></li>
+    </ol>
+  </section>
+  <section>
+    <h5>See the <code>README.md</code> file for more info!</h5>
+    <h6><a href="mailto:dylanhassinger@gmail.com">Your feedack welcome</a></h6>
+  </section>
+</main>
+<%- include('inc/foot') %>

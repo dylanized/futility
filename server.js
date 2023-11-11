@@ -3,6 +3,12 @@ const ejs = require("ejs");
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
+const os = require("os");
+
+const logConfig = {
+  level: process.env.LOG_LEVEL || "error",
+  name: config.get("app.name"),
+};
 
 // Instantiate Express app
 const app = express();
@@ -13,29 +19,83 @@ if (process.env.NODE_ENV === "production") {
 }
 // Else configure SSR server
 else {
+  // Calculate theme folder
+  const theme = process.env.THEME || config.get("app.defaultTheme");
+  const themePath = path.join(config.get("app.themesFolder"), theme);
+
   // Setup template engine
   app.set("view engine", "ejs");
-  app.set("views", path.join(__dirname, config.get("app.srcFolder")));
+  app.set("views", path.join(__dirname, themePath));
 
   // Load theme config and build locals object, then define locals helper
-  const theme = JSON.parse(
-    fs.readFileSync(`${config.get("app.srcFolder")}/theme.json`),
-  );
-  const locals = Object.assign({}, config.util.toObject(), theme);
+  const themeConfig = JSON.parse(fs.readFileSync(`${themePath}/theme.json`));
 
   const buildLocals = (req) => {
-    // If ?theme param and child theme exists, load it and merge it into locals, else return locals unchanged
+    // If ?flavor param and flavor config exists, load it and merge it into locals, else return locals unchanged
     if (
-      req.query.theme &&
-      fs.existsSync(`src/theme-${req.query.theme.toLowerCase()}.json`)
+      req.query.flavor &&
+      fs.existsSync(
+        `${themePath}/flavor-${req.query.flavor.toLowerCase()}.json`,
+      )
     ) {
-      const childTheme = JSON.parse(
-        fs.readFileSync(`src/theme-${req.query.theme.toLowerCase()}.json`),
+      const flavorConfig = JSON.parse(
+        fs.readFileSync(
+          `${themePath}/flavor-${req.query.flavor.toLowerCase()}.json`,
+        ),
       );
-      return Object.assign({}, { req }, locals, childTheme);
+      const locals = Object.assign({}, { req }, themeConfig, flavorConfig);
+      return locals;
     }
-    return Object.assign({}, { req }, locals);
+    return Object.assign({}, { req }, themeConfig);
   };
+
+  const renderTemplate = (req, res, template_slug) => {
+    res.render(template_slug, buildLocals(req));
+  };
+
+  // Define helper function for health check
+  const buildMemoryMB = () => {
+    const memoryFormatted = {};
+    // Get memory values
+    const memoryRaw = process.memoryUsage();
+    // For each memory value, calculate in MB and mount it on result, then return result
+    for (const key in memoryRaw) {
+      memoryFormatted[key] = `${
+        Math.round((memoryRaw[key] / 1024 / 1024) * 100) / 100
+      } MB`;
+    }
+    return memoryFormatted;
+  };
+
+  // Mount route for health check
+  app.get("/health-check", (req, res) => {
+    const locals = buildLocals(req);
+    const [one, five, fifteen] = os.loadavg();
+    res.status(404);
+    res.send({
+      app: {
+        environment: process.env["NODE_ENV"],
+        logLevel: logConfig.level,
+        name: logConfig.name,
+        theme,
+        themeConfig,
+        themePath,
+        port: config.get("app.port"),
+      },
+      process: {
+        cpuUsage: process.cpuUsage,
+        memory: buildMemoryMB(),
+        uptime: process.uptime(),
+        version: process.version,
+      },
+      system: {
+        freemem: os.freemem(),
+        loadavg: { 1: one, 5: five, 15: fifteen },
+        timestamp: new Date().toISOString(),
+        uptime: os.uptime(),
+      },
+    });
+  });
 
   // Mount route for 'When user requests an ejs file, reject it with a bare 404'
   app.get("/*.ejs", (req, res) => {
@@ -43,20 +103,20 @@ else {
   });
 
   // Mount middleware for serving static files if they exist
-  app.use(express.static(config.get("app.srcFolder")));
+  app.use(express.static(themePath));
 
-  // Mount route for 'When user requests base domain, serve the index page'
+  // Mount route for 'When user requests base domain, serve the homepage template'
   app.get("/", (req, res) => {
-    res.render("index", buildLocals(req));
+    renderTemplate(req, res, config.get("app.homeTemplate"));
   });
 
   // Mount route for 'When user requests a css file, try to dynamically render it'
   app.get("/css/:filename", (req, res, next) => {
     // Calculate CSS template filepath and if it exists, render it with CSS contentType, else proceed
-    const filepath = `css/${req.params.filename}.ejs`;
-    if (fs.existsSync(`src/${filepath}`)) {
+    const cssFilepath = `css/${req.params.filename}.ejs`;
+    if (fs.existsSync(path.join(themePath, cssFilepath))) {
       res.contentType("text/css");
-      res.render(filepath, buildLocals(req));
+      renderTemplate(req, res, cssFilepath);
     } else {
       next();
     }
@@ -66,7 +126,7 @@ else {
   app.get("/:slug", (req, res, next) => {
     // If template exists, render it, else proceed
     if (fs.existsSync(`src/${req.params.slug + ".ejs"}`)) {
-      res.render(req.params.slug, buildLocals(req));
+      renderTemplate(req, res, req.params.slug);
     } else {
       next();
     }
@@ -80,11 +140,11 @@ else {
   // Mount route for 'When a user requests any template that doesn't exist, render 404 template'
   app.get("*", (req, res) => {
     res.statusCode = 404;
-    res.render("404", buildLocals(req));
+    renderTemplate(req, res, "404");
   });
 }
 
 // Launch app and display msg
 app.listen(config.get("app.port"), () =>
-  console.log(`Server running on port ${config.get("app.port")}`),
+  console.info(`Server running on port ${config.get("app.port")}`),
 );
