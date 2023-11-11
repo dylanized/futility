@@ -1,8 +1,6 @@
 {
   "app": {
-    "mode": "MODE",
     "port": "PORT",
-    "srcFolder": "SRC_FOLDER",
     "staticFolder": "STATIC_FOLDER"
   }
 }
