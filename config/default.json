@@ -2,6 +2,7 @@
   "app": {
     "defaultTheme": "alpha",
     "homeTemplate": "index",
+    "name": "fui-server",
     "port": 3000,
     "themesFolder": "themes",
     "staticFolder": "dist"
