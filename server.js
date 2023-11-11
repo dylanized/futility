@@ -2,19 +2,73 @@ const config = require("config");
 const ejs = require("ejs");
 const express = require("express");
 const fs = require("fs");
-const path = require("path");
 const os = require("os");
+const path = require("path");
+const pino = require("pino-http");
 
+// Instantiate logger
 const logConfig = {
   level: process.env.LOG_LEVEL || "error",
   name: config.get("app.name"),
 };
+const logger = pino(logConfig);
 
-// Instantiate Express app
+// Instantiate Express app, mount logger and error handling middleware
 const app = express();
+app.use(logger);
 
-// If Prod, configure static server
+// Define helper function for health check
+const buildMemoryMB = () => {
+  const memoryFormatted = {};
+  // Get memory values
+  const memoryRaw = process.memoryUsage();
+  // For each memory value, calculate in MB and mount it on result, then return result
+  for (const key in memoryRaw) {
+    memoryFormatted[key] = `${
+      Math.round((memoryRaw[key] / 1024 / 1024) * 100) / 100
+    } MB`;
+  }
+  return memoryFormatted;
+};
+
+function mountHealthCheck(app, options = null) {
+  // Mount route for health check
+  app.get("/health-check", (req, res) => {
+    const [one, five, fifteen] = os.loadavg();
+    const healthDetails = {
+      app: {
+        environment: process.env["NODE_ENV"],
+        logLevel: logConfig.level,
+        name: logConfig.name,
+        ...options,
+        port: config.get("app.port"),
+      },
+      process: {
+        cpuUsage: process.cpuUsage,
+        memory: buildMemoryMB(),
+        uptime: process.uptime(),
+        version: process.version,
+      },
+      system: {
+        freemem: os.freemem(),
+        loadavg: { 1: one, 5: five, 15: fifteen },
+        timestamp: new Date().toISOString(),
+        uptime: os.uptime(),
+      },
+    };
+    req.log.info(healthDetails);
+    res.send(healthDetails);
+  });
+}
+
+//  Mount route for simulating error
+app.get("/error", function (req, res, next) {
+  next(new Error("kaboom"));
+});
+
+// If Prod, mount health check and configure static server
 if (process.env.NODE_ENV === "production") {
+  mountHealthCheck(app);
   app.use(express.static(config.get("app.staticFolder")));
 }
 // Else configure SSR server
@@ -29,6 +83,13 @@ else {
 
   // Load theme config and build locals object, then define locals helper
   const themeConfig = JSON.parse(fs.readFileSync(`${themePath}/theme.json`));
+
+  // Mount health check for dev server
+  mountHealthCheck(app, {
+    theme,
+    themeConfig,
+    themePath,
+  });
 
   const buildLocals = (req) => {
     // If ?flavor param and flavor config exists, load it and merge it into locals, else return locals unchanged
@@ -52,50 +113,6 @@ else {
   const renderTemplate = (req, res, template_slug) => {
     res.render(template_slug, buildLocals(req));
   };
-
-  // Define helper function for health check
-  const buildMemoryMB = () => {
-    const memoryFormatted = {};
-    // Get memory values
-    const memoryRaw = process.memoryUsage();
-    // For each memory value, calculate in MB and mount it on result, then return result
-    for (const key in memoryRaw) {
-      memoryFormatted[key] = `${
-        Math.round((memoryRaw[key] / 1024 / 1024) * 100) / 100
-      } MB`;
-    }
-    return memoryFormatted;
-  };
-
-  // Mount route for health check
-  app.get("/health-check", (req, res) => {
-    const locals = buildLocals(req);
-    const [one, five, fifteen] = os.loadavg();
-    res.status(404);
-    res.send({
-      app: {
-        environment: process.env["NODE_ENV"],
-        logLevel: logConfig.level,
-        name: logConfig.name,
-        theme,
-        themeConfig,
-        themePath,
-        port: config.get("app.port"),
-      },
-      process: {
-        cpuUsage: process.cpuUsage,
-        memory: buildMemoryMB(),
-        uptime: process.uptime(),
-        version: process.version,
-      },
-      system: {
-        freemem: os.freemem(),
-        loadavg: { 1: one, 5: five, 15: fifteen },
-        timestamp: new Date().toISOString(),
-        uptime: os.uptime(),
-      },
-    });
-  });
 
   // Mount route for 'When user requests an ejs file, reject it with a bare 404'
   app.get("/*.ejs", (req, res) => {
@@ -144,7 +161,18 @@ else {
   });
 }
 
+// Mount error handler
+app.use(function (err, req, res, next) {
+  req.log.error(err);
+  res.statusCode = 500;
+  res.end("Server Error");
+});
+
 // Launch app and display msg
 app.listen(config.get("app.port"), () =>
-  console.info(`Server running on port ${config.get("app.port")}`),
+  console.info(
+    `Server ${logConfig.name} running on port ${config.get(
+      "app.port",
+    )} with log level ${logConfig.level}`,
+  ),
 );
