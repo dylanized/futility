@@ -1,34 +1,30 @@
 <%- include('inc/head') %>
 <main class="container">
   <section>
-    <h1 class="text-xl2 mb-1">Futility UI</h1>
-    <h4 class="mb-0 bg-feature text-white d-inline-block py-1 px-2 text-bold text-sm">a lightweight framework for practical web development.</h4>
+    <h1 class="mb-1">Futility UI</h1>
+    <h4 class="text-normal text-xs text-yellow">The Simple Web Framework</h4>
+    <blockquote class="border-blue">
+      <p class="text-base">Futility UI is a lightweight toolkit for practical web development, usable as a website boilerplate, design styleguide, drop-in utility package - or more.</p>
+    </blockquote>
   </section>
   <section>
-    <p class="mb-3">Table of contents:</p>
-    <h4>Web Page Templates</h4>
+    <p>The Futility system consists of these main parts:</p>
     <ul>
-      <li><code><a href="<%= typeof req !== 'undefined' ? '404' : '404.html' %>">404.html</a></code> (error page)</li>
-      <li><code>index.html</code> (this page)</li>
-      <li><code><a href="<%= typeof req !== 'undefined' ? 'typography' : 'typography.html' %>">typography.html</a></code> (typopgraphy examples)</li>
-      <li><code><a href="<%= typeof req !== 'undefined' ? 'tables' : 'tables.html' %>">tables.html</a></code> (table examples)</li>
+      <li><strong>CSS Framework</strong> &mdash; A minimalist, utility-based CSS schema, inspired by Bootstrap 4 and Tailwind.</li>
+      <li><strong>Template Collection</strong> &mdash; Helpful starter pages showcasing typical web layouts, in HTML and EJS.</li>
+      <li><strong>Dev Server</strong> &mdash; Live reloading Express.js server for previewing your custom Futility site.</li>
+      <li><strong>Build Script</strong> &mdash; Bash-based static site generator for rendering your custom Futility site.</li>
     </ul>
-    <h4>CSS Starter Files</h4>
-    <ul>
-      <li><code><a href="css/base.css">css/base.css</a></code> (base elements &amp; variables)</li>
-      <li><code><a href="css/util.css">css/util.css</a></code> (utility classes, based on Tailwind and Bootstrap 4)</li>
-      <li><code><a href="css/devices.css">css/devices.css</a></code> (tablet & desktop overrides)</li>
-    </ul>
-    <h4>Get Started</h4>
-    <ol>
-      <li>Install packages with <code class="tag">yarn install</code></li>
-      <li>Run <code class="tag">yarn start</code> to launch the static server</li>
-      <li>View the generated files in the <code>dist</code> folder at <code>http://localhost:3000</code></li>
-    </ol>
+    <p>Putting this all together, #FUI is intended for any project seeking to craft robust, bespoke design system. In fact, this page itself is built with Futility!</p>
+    <p><a href="/contents">Explore more templates here &rarr;</a></p>
+    <p>Or get started customizing Futility yourself:</p>
+    <p>
+      <a class="btn bg-blue" href="#">Download</a>
+      <a class="btn bg-green" href="#">Documentation</a>
+    </p>
   </section>
   <section>
-    <h5>See the <code>README.md</code> file for more info!</h5>
-    <h6><a href="mailto:dylanhassinger@gmail.com">Your feedack welcome</a></h6>
+    <p><small><em>Thanks for visiting, always under construction!</em></small></p>
   </section>
 </main>
 <%- include('inc/foot') %>
