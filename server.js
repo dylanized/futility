@@ -8,7 +8,7 @@ const pino = require("pino-http");
 
 // Instantiate logger
 const logConfig = {
-  level: process.env.LOG_LEVEL || "error",
+  level: config.get("app.logLevel"),
   name: config.get("app.name"),
 };
 const logger = pino(logConfig);
@@ -143,6 +143,7 @@ else {
   app.get("/:slug", (req, res, next) => {
     // If template exists, render it, else proceed
     if (fs.existsSync(`src/${req.params.slug + ".ejs"}`)) {
+      console.log("foo");
       renderTemplate(req, res, req.params.slug);
     } else {
       next();

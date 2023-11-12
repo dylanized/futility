@@ -1,5 +1,7 @@
 {
   "app": {
+    "logLevel": "LOG_LEVEL",
+    "name": "NAME",
     "port": "PORT",
     "staticFolder": "STATIC_FOLDER"
   }

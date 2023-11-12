@@ -6,13 +6,13 @@
   "scripts": {
     "build": ". bin/build",
     "clean": "rimraf dist/",
-    "dev": "onchange -i -k 'config/**/*' 'package.json' 'server.js' -- yarn start-server",
+    "dev": "onchange -i -k 'config/**/*' 'package.json' 'server.js' -- yarn start-dev",
     "format": "prettier --write .",
     "format-check": "prettier --check .",
     "format-dist": "prettier --log-level silent --write dist/",
     "render": ". bin/render",
-    "start": "NODE_ENV=production yarn start-server",
-    "start-server": "node server.js",
+    "start": "NODE_ENV=production node server.js",
+    "start-dev": "NODE_ENV=development node server.js",
     "validate": "yarn format-check"
   },
   "author": "dylanized",
