@@ -10,6 +10,20 @@ else
   theme=$1
 fi
 
+# If no css argument was passed, use default
+if [ -z "$2" ]; then
+  css_folder="css"
+else
+  css_folder=$1
+fi
+
+# If no js argument was passed, use default
+if [ -z "$1" ]; then
+  js_folder="js"
+else
+  js_folder=$1
+fi
+
 # Delete dist folder and recreate it
 yarn clean && mkdir dist/
 
@@ -20,19 +34,20 @@ for file in themes/$theme/*; do
   fi
 done
 
-# Create css folder and copy CSS files
-mkdir dist/css/
-cp themes/$theme/css/*.css dist/css/
+# Create css folder and copy static CSS files
+mkdir dist/$css_folder/
+cp themes/$theme/$css_folder/*.css dist/$css_folder/
 
 # For each file in the theme folder...
-for file in themes/$theme/css/*; do
+for file in themes/$theme/$css_folder/*; do
   if [[ "$file" == *".ejs" ]]; then
-    yarn render $file dist/css/$(basename "$file" .ejs)
+    yarn render $file dist/$css_folder/$(basename "$file" .ejs)
   fi
 done
 
-# Copy asset folders
-cp -r themes/$theme/js/ dist/js/
+# Copy js folder and copy static JS files
+mkdir dist/$js_folder/
+cp themes/$theme/$js_folder/*.js dist/$js_folder
 
 # Format files
 yarn format-dist
