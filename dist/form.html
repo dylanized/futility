@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Futility UI :: The Simple Web Framework</title>
+
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/base.css" />
+
+    <link rel="stylesheet" href="/css/util.css" />
+
+    <link rel="stylesheet" href="/css/devices.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  </head>
+  <body class="p-2">
+    <main class="container">
+      <section>
+        <h1>Futility Form Example</h1>
+        <form name="" method="" class="mb-4">
+          <fieldset>
+            <label for="text-input">Text Input</label>
+            <input
+              class="w-300px"
+              id="text-input"
+              type="text"
+              value=""
+              placeholder="Placeholder..."
+            />
+          </fieldset>
+          <fieldset>
+            <label for="text-input">Number Input</label>
+            <input
+              class="w-100px"
+              id="text-input"
+              type="number"
+              min="0"
+              max="100"
+              value=""
+              placeholder="Num"
+            />
+          </fieldset>
+          <fieldset>
+            <label for="select-input">Select Input</label>
+            <select class="w-200px" id="select-input" name="">
+              <option value="01">January</option>
+              <option value="02" selected>February</option>
+              <option value="03">March</option>
+              <option value="04">April</option>
+            </select>
+          </fieldset>
+          <fieldset>
+            <label for="radio-input">Radio Inputs</label>
+            <input id="radio-input" type="radio" name="foo" value="bar" />
+            <small class="va-text-top">Bar</small><br />
+            <input type="radio" name="foo" value="baz" checked />
+            <small class="va-text-top">Baz</small><br />
+            <input type="radio" name="foo" value="buzz" />
+            <small class="va-text-top">Buzz</small>
+          </fieldset>
+          <fieldset>
+            <label for="checkbox-input">Checkbox Inputs</label>
+            <input id="checkbox1" type="checkbox" value="checkbox1" />
+            <label
+              for="checkbox1"
+              class="d-inline text-serif text-charcoal va-baseline"
+              >Foo</label
+            ><br />
+            <input id="checkbox2" type="checkbox" value="checkbox2" checked />
+            <label
+              for="checkbox2"
+              class="d-inline text-serif text-charcoal va-baseline"
+              >Bar</label
+            ><br />
+            <input id="checkbox3" type="checkbox" value="checkbox3" />
+            <label
+              for="checkbox3"
+              class="d-inline text-serif text-charcoal va-baseline"
+              >Baz</label
+            ><br />
+          </fieldset>
+          <fieldset>
+            <label for="textarea-input">Textarea Input</label>
+            <textarea class="w-500px h-5" id="textarea-input">
+Placeholder...</textarea
+            >
+          </fieldset>
+          <fieldset>
+            <label for="file-input">File Input</label>
+            <input id="file-input" type="file" name="file" />
+          </fieldset>
+          <input type="submit" name="submit" value="Input Element" />
+          <button>Button Element</button>
+          <a href="#" class="btn">Link Element</a>
+          <input
+            disabled="true"
+            type="submit"
+            name="submit"
+            value="Input Disabled"
+          />
+        </form>
+        <p><a title="Futility UI Home" href="/">&larr; Back Home</a></p>
+      </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+
+    <script src="/js/app.js"></script>
+  </body>
+</html>

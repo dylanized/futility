@@ -1,60 +1,28 @@
 <%- include('inc/head') %>
 <main class="container">
   <section>
-    <h1>Template Collection</h1>
+    <h1>Futility Templates</h1>
     <table>
       <thead>
         <tr>
-          <th>Rank</th>
+          <th>Id</th>
           <th>Name</th>
-          <th>Slug</th>
-          <th>Desc</th>
+          <th>Path</th>
+          <th>Example Content</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>001</td>
-          <td>Homepage</td>
-          <td><a href="/">index</a></td>
-          <td>Introduction to Futility UI</td>
-        </tr>
-        <tr>
-          <td>002</td>
-          <td><a href="/error">Error</a></td>
-          <td>404</td>
-          <td>Example error page</td>
-        </tr>
-        <tr>
-          <td>003</td>
-          <td>Table of Contents</td>
-          <td>contents</td>
-          <td>(This page) list of templates, table example</td>
-        </tr>
-        <tr>
-          <td>004</td>
-          <td><a href="/form">Typography</a></td>
-          <td>typography</td>
-          <td>Paragraphs, lists, images</td>
-        </tr>
-        <tr>
-          <td>005</td>
-          <td><a href="/form">Form</a></td>
-          <td>form</td>
-          <td>Form example with fields &amp; buttons</td>
-        </tr>
-        <tr>
-          <td>006</td>
-          <td>Utilities</td>
-          <td>utilities</td>
-          <td>Text sizes, other utility classes</td>
-        </tr>
-        <tr>
-          <td>007</td>
-          <td>Colors</td>
-          <td>colors</td>
-          <td>Color pallette</td>
-        </tr>
+        <% for (const template in data.contents) { %>
+          <tr>
+            <td><%= data.contents[template].id %></td>
+            <td><a href="<%= data.contents[template].path %>"><%= data.contents[template].name %></a></td>
+            <td><code class="tag"><%= data.contents[template].path %></code></td>
+            <td class="text-slate"><%= data.contents[template].desc %></td>
+          </tr>
+        <% } %>
       </tbody>
+    </table>
+    <p><a title="Futility UI Home" href="/">&larr; Back Home</a></p>
   </section>
 </main>
 <%- include('inc/foot') %>

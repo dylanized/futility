@@ -6,7 +6,7 @@
   "scripts": {
     "build": ". bin/build",
     "clean": "rimraf dist/",
-    "dev": "onchange -i -k 'config/**/*' 'package.json' 'server.js' -- yarn start-dev",
+    "dev": "onchange -i -k 'config/**/*' 'package.json' 'server.js' 'themes/**/*' -- yarn start-dev",
     "format": "prettier --write .",
     "format-check": "prettier --check .",
     "format-dist": "prettier --log-level silent --write dist/",

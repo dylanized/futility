@@ -71,7 +71,7 @@ if (process.env.NODE_ENV === "production") {
   mountHealthCheck(app);
   app.use(express.static(config.get("app.staticFolder")));
 }
-// Else configure SSR server
+// Else Dev, configure SSR server
 else {
   // Calculate theme folder
   const theme = process.env.THEME || config.get("app.defaultTheme");
@@ -81,7 +81,7 @@ else {
   app.set("view engine", "ejs");
   app.set("views", path.join(__dirname, themePath));
 
-  // Load theme config and build locals object, then define locals helper
+  // Load theme config
   const themeConfig = JSON.parse(fs.readFileSync(`${themePath}/theme.json`));
 
   // Mount health check for dev server
@@ -91,6 +91,7 @@ else {
     themePath,
   });
 
+  // Define view helpers
   const buildLocals = (req) => {
     // If ?flavor param and flavor config exists, load it and merge it into locals, else return locals unchanged
     if (
@@ -142,8 +143,7 @@ else {
   // Mount route for 'When user requests a template, try to render it'
   app.get("/:slug", (req, res, next) => {
     // If template exists, render it, else proceed
-    if (fs.existsSync(`src/${req.params.slug + ".ejs"}`)) {
-      console.log("foo");
+    if (fs.existsSync(`${themePath}/${req.params.slug + ".ejs"}`)) {
       renderTemplate(req, res, req.params.slug);
     } else {
       next();
@@ -172,7 +172,7 @@ app.use(function (err, req, res, next) {
 // Launch app and display msg
 app.listen(config.get("app.port"), () =>
   console.info(
-    `Server ${logConfig.name} running on port ${config.get(
+    `Launched ${logConfig.name} on port ${config.get(
       "app.port",
     )} with log level ${logConfig.level}`,
   ),

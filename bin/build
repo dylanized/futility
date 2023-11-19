@@ -3,22 +3,36 @@
 # Fail on errors
 set -e
 
+# If no theme argument was passed, use default
+if [ -z "$1" ]; then
+  theme="alpha"
+else
+  theme=$1
+fi
+
 # Delete dist folder and recreate it
 yarn clean && mkdir dist/
 
-# For each page template, render html file
-yarn render themes/alpha/404.ejs dist/404.html
-yarn render themes/alpha/index.ejs dist/index.html
-yarn render themes/alpha/typography.ejs dist/typography.html
+# For each file in the theme folder...
+for file in themes/$theme/*; do
+  if [[ "$file" == *".ejs" ]]; then
+    yarn render $file dist/$(basename "$file" .ejs).html
+  fi
+done
 
-# Create css folder, then for each css file template, render css file
+# Create css folder and copy CSS files
 mkdir dist/css/
-yarn render themes/alpha/css/base.css.ejs dist/css/base.css
-yarn render themes/alpha/css/util.css.ejs dist/css/util.css
-yarn render themes/alpha/css/devices.css.ejs dist/css/devices.css
+cp themes/$theme/css/*.css dist/css/
+
+# For each file in the theme folder...
+for file in themes/$theme/css/*; do
+  if [[ "$file" == *".ejs" ]]; then
+    yarn render $file dist/css/$(basename "$file" .ejs)
+  fi
+done
 
 # Copy asset folders
-cp -r themes/alpha/js/ dist/js/
+cp -r themes/$theme/js/ dist/js/
 
 # Format files
 yarn format-dist

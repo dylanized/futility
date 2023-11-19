@@ -1,5 +1,17 @@
 /* UTILITY CLASSES */
 
+/* a11y */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0,0,0,0) !important;
+  border: 0 !important;
+}
+
 /* border */
 <% for (const width_suffix in styles.borderWidths) { -%>
   .border-<%= width_suffix %> {
@@ -18,6 +30,11 @@
     width: <%= styles.borderWidths[width_suffix] %> !important;
   }
 <% } %>
+
+/* border radius */
+.rounded {
+  border-radius: .3rem;
+}
 
 /* colors */
 <% for (const color_slug in styles.colors) { -%>
@@ -55,6 +72,20 @@
 }
 .d-none {
   display: none !important;
+}
+
+/* flex direction */
+.flex-column {
+  flex-direction: column !important;
+}
+.flex-column-reverse {
+  flex-direction: column-reverse !important;
+}
+.flex-row {
+  flex-direction: row !important;
+}
+.flex-row-reverse {
+  flex-direction: row-reverse !important;
 }
 
 /* flex align-items */
@@ -104,12 +135,42 @@
 .float-right {
   float: right !important;
 }
+.clear-left {
+  clear: left !important;
+}
+.clear-right {
+  clear: right !important;
+}
+.clear-both {
+  clear: both !important;
+}
 
+/* list style */
+.list-style-circle {
+  list-style-type: circle !important;
+}
+.list-style-dot {
+  list-style-type: dot !important;
+}
+.list-style-none {
+  list-style-type: none !important;
+}
+.list-style-square {
+  list-style-type: square !important;
+}
 
 /* margin */
 <% for (const spacer_id in styles.spacers) { -%>
   .m-<%= spacer_id %> {
     margin: var(--sp-<%= spacer_id %>) !important;
+  }
+  .mx-<%= spacer_id %> {
+    margin-left: var(--sp-<%= spacer_id %>) !important;
+    margin-right: var(--sp-<%= spacer_id %>) !important;
+  }
+  .my-<%= spacer_id %> {
+    margin-bottom: var(--sp-<%= spacer_id %>) !important;
+    margin-top: var(--sp-<%= spacer_id %>) !important;
   }
   .mt-<%= spacer_id %> {
     margin-top: var(--sp-<%= spacer_id %>) !important;
@@ -123,14 +184,6 @@
   .ml-<%= spacer_id %> {
     margin-left:var(--sp-<%= spacer_id %>) !important;
   }
-  .mx-<%= spacer_id %> {
-    margin-left: var(--sp-<%= spacer_id %>) !important;
-    margin-right: var(--sp-<%= spacer_id %>) !important;
-  }
-  .my-<%= spacer_id %> {
-    margin-bottom: var(--sp-<%= spacer_id %>) !important;
-    margin-top: var(--sp-<%= spacer_id %>) !important;
-  }
   .mx-auto {
     margin-left: auto !important;
     margin-right: auto !important;
@@ -141,6 +194,14 @@
 <% for (const spacer_id in styles.spacers) { -%>
   .p-<%= spacer_id %> {
     padding: var(--sp-<%= spacer_id %>) !important;
+  }
+  .px-<%= spacer_id %> {
+    padding-left: var(--sp-<%= spacer_id %>) !important;
+    padding-right: var(--sp-<%= spacer_id %>) !important;
+  }
+  .py-<%= spacer_id %> {
+    padding-bottom: var(--sp-<%= spacer_id %>) !important;
+    padding-top: var(--sp-<%= spacer_id %>) !important;
   }
   .pt-<%= spacer_id %> {
     padding-top: var(--sp-<%= spacer_id %>) !important;
@@ -153,14 +214,6 @@
   }
   .pl-<%= spacer_id %> {
     padding-left: var(--sp-<%= spacer_id %>) !important;
-  }
-  .px-<%= spacer_id %> {
-    padding-left: var(--sp-<%= spacer_id %>) !important;
-    padding-right: var(--sp-<%= spacer_id %>) !important;
-  }
-  .py-<%= spacer_id %> {
-    padding-bottom: var(--sp-<%= spacer_id %>) !important;
-    padding-top: var(--sp-<%= spacer_id %>) !important;
   }
 <% } %>
 
@@ -185,6 +238,26 @@
     left: var(--sp-<%= spacer_id %>) !important;
   }
 <% } %>
+
+/* vertical alignment */
+.va-baseline {
+  vertical-align: baseline !important;
+}
+.va-bottom {
+  vertical-align: bottom !important;
+}
+.va-middle {
+  vertical-align: middle !important;
+}
+.va-top {
+  vertical-align: top !important;
+}
+.va-text-top {
+  vertical-align: text-top !important;
+}
+.va-sub {
+  vertical-align: sub !important;
+}
 
 /* text alignment */
 .text-left {

@@ -26,7 +26,7 @@ body {
   background-color: var(--color-<%= theme.bodyBgColor %>);
   color: var(--color-<%= theme.bodyTextColor %>);
   font-family: var(--font-<%= theme.bodyFont %>);
-  font-size: 120%;
+  font-size: var(--text-base);
   line-height: 1.4;
   margin: 0;
   padding: 0;
@@ -39,7 +39,7 @@ a:active { color: var(--color-purple); font-weight: normal; text-decoration: und
 
 code {
   font-family: var(--font-monospace);
-  font-size: var(--text-xs);
+  font-size: .8em;
 }
 
 .tag {
@@ -49,6 +49,13 @@ code {
   border: 1px solid var(--color-cloud);
   border-radius: .25rem;
   padding: 3px 5px;
+}
+
+.mark {
+  display: inline-block;
+  padding: 1px 3px;
+  background-color: var(--color-canary);
+  color: var(--color-black);
 }
 
 hr {
@@ -73,7 +80,7 @@ header {
 
 main {
   margin: 0;
-  padding: var(--sp-3) var(--sp-2) var(--sp-2) var(--sp-2);
+  padding: var(--sp-3) var(--sp-2) 0 var(--sp-2);
 }
 
 section {
@@ -88,39 +95,32 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--color-<%= theme.headingColor %>);
+  color: var(--color-<%= theme.primaryColor %>);
   font-family: var(--font-<%= theme.headingFont %>);
+  font-weight: bold;
   line-height: 1.15;
+  font-size: var(--text-base);
+  margin: 0 0 var(--sp-4) 0;
 }
 
 h1 {
-  font-size: var(--text-xl2);
-  margin: 0 0 var(--sp-4) 0;
+  font-size: var(--text-xl);
 }
 
 h2 {
-  font-size: var(--text-xl1);
-  margin: 0 0 var(--sp-4) 0;
+  font-size: var(--text-lg);
 }
 
 h3 {
-  font-size: var(--text-lg);
-  margin: 0 0 var(--sp-3) 0;
-}
-
-h4 {
   font-size: var(--text-md);
-  margin: 0 0 var(--sp-3) 0;
 }
 
 h5 {
-  font-size: var(--text-base);
-  margin: 0 0 var(--sp-3) 0;
+  font-size: var(--text-sm);
 }
 
 h6 {
-  font-size: var(--text-sm);
-  margin: 0 0 var(--sp-3) 0;
+  font-size: var(--text-xs);
 }
 
 /* basic typography */
@@ -129,8 +129,13 @@ p {
   margin: 0 0 var(--sp-3) 0;
 }
 
-small {
-  font-size: var(--text-xs);
+small,
+.small {
+  font-size: .8em;
+}
+
+.lead {
+  font-size: 1.1em;
 }
 
 ul {
@@ -191,67 +196,53 @@ nav {
 table {
   border: <%= theme.tableBorderWidth %> solid var(--color-<%= theme.tableBorderColor %>);
   border-collapse: collapse;
-  margin: 0;
+  margin: 0 0 var(--sp-4) 0;
 }
 
 table th,
 table td {
   border: 1px solid var(--color-<%= theme.tableBorderColor %>);
   line-height: 1.1;
-  padding: var(--sp-1) var(--sp-2);
-}
-
-table th {
-  font-family: Verdana;
-  border-bottom-width: 3px;
-  color: var(--color-primary);
-  font-weight: bold;
-  font-size: var(--text-xs);
-}
-
-table {
-  background-color: #fff;
-  margin-bottom: var(--sp-2);
-}
-
-table th,
-table td {
   padding: var(--sp-2);
 }
 
-tbody th,
-tfoot th {
-  border-width: 1px;
-  border-right-width: 3px;
+table th {
+  background-color: var(--color-cloud);
+  font-family: Verdana;
+  border-bottom-width: 3px;
+  color: var(--color-slate);
+  font-weight: normal;
+  font-size: var(--text-sm);
 }
 
 /* forms */
 
-form {
-  max-width: 600px;
-}
-
 fieldset {
   display: block;
-  margin: 0 0 var(--sp-2) 0;
-  padding: var(--sp-2) var(--sp-2) var(--sp-1);
+  border: none;
+  margin: 0 0 var(--sp-3) 0;
+  padding: 0;
 }
 
 label {
-  color: var(--color-slate);
+  color: var(--color-feature);
+  font-family: var(--font-verdana);
   display: block;
-  font-size: 0.9rem;
-  font-weight: bold;
+  font-size: var(--text-sm);
+  font-weight: normal;
   line-height: 1.1;
   margin: 0 0 var(--sp-1) 0;
   padding: 0;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="number"],
+textarea {
   border: 1px solid var(--color-cloud);
   border-radius: 3px;
   display: block;
   font-size: 1rem;
+  font-family: var(--font-monospace);
   margin: 0 0 var(--sp-1) 0;
   padding: var(--sp-1) var(--sp-2);
 }
@@ -287,15 +278,16 @@ button {
   padding: var(--sp-1) var(--sp-2);*/
 }
 
-a.btn {
+a.btn,
+button {
   background-color: var(--color-charcoal);
   border: none;
   border-radius: 5px;
   color: var(--color-white);
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   font-family: var(--font-verdana);
   font-weight: normal;
-  line-height: 1.5;
+  line-height: 2.0;
   padding: var(--sp-2) var(--sp-3);
   text-decoration: none;
 }
@@ -308,16 +300,10 @@ a.btn:hover {
   backgrond-color: var(--color-cloud);
 }
 
-textarea {
-  font-family: var(--font-main);
-  margin-bottom: var(--sp-2);
-  width: 100%;
-}
-
 /* other */
 
 blockquote {
-  border-left: 5px solid var(--color-aluminum);
+  border-left: 5px solid var(--color-<%= theme.borderColor %>);
   color: var(--color-slate);
   margin: 0 0 var(--sp-3) 0;
   padding: var(--sp-2) var(--sp-2) 1px var(--sp-3);

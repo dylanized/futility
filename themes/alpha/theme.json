@@ -1,5 +1,49 @@
 {
   "data": {
+    "contents": [
+      {
+        "desc": "Basic typography elements",
+        "id": "01",
+        "name": "Homepage",
+        "path": "/"
+      },
+      {
+        "desc": "Error message",
+        "id": "02",
+        "name": "404",
+        "path": "/404"
+      },
+      {
+        "desc": "(This page) Simple table",
+        "id": "03",
+        "name": "Table of Contents",
+        "path": "/contents"
+      },
+      {
+        "desc": "Paragraphs, lists, images",
+        "id": "04",
+        "name": "Typography",
+        "path": "/typography"
+      },
+      {
+        "desc": "Form with fields & buttons",
+        "id": "05",
+        "name": "Form",
+        "path": "/form"
+      },
+      {
+        "desc": "Color palette with utility classes",
+        "id": "06",
+        "name": "Colors",
+        "path": "/colors"
+      },
+      {
+        "desc": "Text sizes, other utility classes",
+        "id": "07",
+        "name": "Utilities",
+        "path": "/utilities"
+      }
+    ],
     "footerText": "Created 2023",
     "primaryNav": [
       {
@@ -27,7 +71,12 @@
     "siteTagline": "The Simple Web Framework"
   },
   "scripts": ["https://code.jquery.com/jquery-3.7.1.slim.min.js", "/js/app.js"],
-  "stylesheets": ["/css/base.css", "/css/util.css", "/css/devices.css"],
+  "stylesheets": [
+    "/css/reset.css",
+    "/css/base.css",
+    "/css/util.css",
+    "/css/devices.css"
+  ],
   "theme": {
     "blockquoteBorderColor": "5px",
     "blockquoteBorderWidth": "silver",
@@ -38,15 +87,18 @@
     "breakpointTablet": "600px",
     "breakpointDesktop": "975px",
     "containerWidth": "900px",
-    "headingColor": "feature",
+    "primaryColor": "salmon",
+    "secondaryColor": "charcoal",
+    "tertiaryColor": "gray",
+    "borderColor": "cloud",
     "headingFont": "verdana",
-    "tableBorderColor": "cloud",
+    "tableBorderColor": "gray",
     "tableBorderWidth": "5px",
     "tableTdBgColor": "white",
     "tableTdBorderColor": "cloud",
     "tableTdBorderWidth": "1px",
     "tableTdTextColor": "white",
-    "tableThBgColor": "charcoal",
+    "tableThBgColor": "cloud",
     "tableThBorderColor": "charcoal",
     "tableThBorderWidth": "1px",
     "tableThTextColor": "white"
@@ -59,11 +111,10 @@
       "3": "3px"
     },
     "colors": {
-      "feature": "#ff5349",
       "cloud": "#e8e8e8",
       "chalk": "#ddd",
       "aluminum": "silver",
-      "gray": "#adb5bd",
+      "whale": "#adb5bd",
       "slate": "#777",
       "charcoal": "#111",
       "black": "#000",
@@ -73,20 +124,22 @@
       "purple": "#6f42c1",
       "pink": "#d63384",
       "red": "#dc3545",
+      "salmon": "#ff5349",
       "orange": "#fd7e14",
       "yellow": "#ffc107",
       "green": "#198754",
       "teal": "#20c997",
-      "cyan": "#0dcaf0"
+      "cyan": "#0dcaf0",
+      "canary": "#ffff8f"
     },
     "spacers": {
       "0": "0",
-      "05": "0.15rem",
-      "1": "0.3rem",
-      "2": "0.7rem",
-      "3": "1.2rem",
-      "4": "1.7rem",
-      "5": "2.1rem"
+      "05": "0.25rem",
+      "1": "0.5rem",
+      "2": "0.85rem",
+      "3": "1.35rem",
+      "4": "2.1rem",
+      "5": "3.0rem"
     },
     "textFonts": {
       "monospace": "Courier, monospace",
@@ -95,14 +148,12 @@
       "verdana": "Verdana, sans-serif"
     },
     "textSizes": {
-      "xl3": "3em",
-      "xl2": "2.5em",
-      "xl1": "2em",
-      "lg": "1.8em",
-      "md": "1.5em",
-      "base": "1.2em",
-      "sm": "1.1em",
-      "xs": "0.9em"
+      "xl": "2.5rem",
+      "lg": "2.0rem",
+      "md": "1.5rem",
+      "base": "1.2rem",
+      "sm": "1.0rem",
+      "xs": "0.8rem"
     },
     "widths": {
       "25": "25%",
