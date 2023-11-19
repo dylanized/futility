@@ -7,28 +7,40 @@
   --color-slate: #777;
   --color-charcoal: #111;
   --color-black: #000;
-  --color-white: #fff;
-  --color-blue: #0d6efd;
-  --color-indigo: #6610f2;
-  --color-purple: #6f42c1;
-  --color-pink: #d63384;
-  --color-red: #dc3545;
-  --color-salmon: #ff5349;
-  --color-orange: #fd7e14;
-  --color-yellow: #ffc107;
-  --color-green: #198754;
-  --color-teal: #20c997;
-  --color-cyan: #0dcaf0;
+  --color-cardinal: #cf142b;
+  --color-rosey: #f5ab9e;
+  --color-grapefruit: #ff5349;
+  --color-tangerine: #ff851b;
+  --color-sunshine: #ffc107;
   --color-canary: #ffff8f;
+  --color-manilla: #fcebbd;
+  --color-peach: #ffca95;
+  --color-mustard: #af9540;
+  --color-lima: #d3eda3;
+  --color-canvas: #72962e;
+  --color-slime: #2ecc40;
+  --color-pine: #198754;
+  --color-tropical: #20c997;
+  --color-skyline: #e1f2fa;
+  --color-aquarium: #7fdbff;
+  --color-slushy: #0dcaf0;
+  --color-seastone: #5992aa;
+  --color-cobalt: #0d6efd;
+  --color-ocean: #000080;
+  --color-nurple: #6f42c1;
+  --color-prince: #ddaeff;
+  --color-maple: #85144b;
+  --color-fuschia: #d63384;
+  --color-white: #fff;
 
   /* spacer vars */
   --sp-0: 0;
-  --sp-1: 0.5rem;
-  --sp-2: 0.85rem;
-  --sp-3: 1.35rem;
-  --sp-4: 2.1rem;
-  --sp-5: 3rem;
-  --sp-05: 0.25rem;
+  --sp-1: 0.66rem;
+  --sp-2: 1.33rem;
+  --sp-3: 1.75rem;
+  --sp-4: 2.33rem;
+  --sp-5: 3.33rem;
+  --sp-05: 0.33rem;
 
   /* text font vars */
   --font-monospace: Courier, monospace;
@@ -52,20 +64,20 @@ body {
   color: var(--color-charcoal);
   font-family: var(--font-serif);
   font-size: var(--text-base);
-  line-height: 1.4;
+  line-height: 1.45;
   margin: 0;
   padding: 0;
 }
 
 a:link,
 a:visited {
-  color: var(--color-blue);
+  color: var(--color-cobalt);
   font-weight: normal;
   text-decoration: none;
 }
 a:hover,
 a:active {
-  color: var(--color-purple);
+  color: var(--color-nurple);
   font-weight: normal;
   text-decoration: underline;
 }
@@ -87,7 +99,7 @@ code {
 .mark {
   display: inline-block;
   padding: 1px 3px;
-  background-color: var(--color-canary);
+  background-color: var(--color-manilla);
   color: var(--color-black);
 }
 
@@ -128,7 +140,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--color-salmon);
+  color: var(--color-grapefruit);
   font-family: var(--font-verdana);
   font-weight: bold;
   line-height: 1.15;
@@ -235,7 +247,6 @@ table {
 table th,
 table td {
   border: 1px solid var(--color-whale);
-  line-height: 1.1;
   padding: var(--sp-2);
 }
 
@@ -263,7 +274,6 @@ label {
   display: block;
   font-size: var(--text-sm);
   font-weight: normal;
-  line-height: 1.1;
   margin: 0 0 var(--sp-1) 0;
   padding: 0;
 }
@@ -320,8 +330,7 @@ button {
   font-size: var(--text-sm);
   font-family: var(--font-verdana);
   font-weight: normal;
-  line-height: 2;
-  padding: var(--sp-2) var(--sp-3);
+  padding: 0.95rem 1.3rem;
   text-decoration: none;
 }
 

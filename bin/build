@@ -25,9 +25,11 @@ else
 fi
 
 # Delete dist folder and recreate it
+echo "Creating destination folder..."
 yarn clean && mkdir dist/
 
 # For each file in the theme folder...
+echo "Rendering html files..."
 for file in themes/$theme/*; do
   if [[ "$file" == *".ejs" ]]; then
     yarn render $file dist/$(basename "$file" .ejs).html
@@ -35,10 +37,13 @@ for file in themes/$theme/*; do
 done
 
 # Create css folder and copy static CSS files
+echo "Creating css folder..."
 mkdir dist/$css_folder/
+echo "Copying css files..."
 cp themes/$theme/$css_folder/*.css dist/$css_folder/
 
 # For each file in the theme folder...
+echo "Rendering css files..."
 for file in themes/$theme/$css_folder/*; do
   if [[ "$file" == *".ejs" ]]; then
     yarn render $file dist/$css_folder/$(basename "$file" .ejs)
@@ -46,8 +51,15 @@ for file in themes/$theme/$css_folder/*; do
 done
 
 # Copy js folder and copy static JS files
+echo "Creating css folder..."
 mkdir dist/$js_folder/
+echo "Copying js files..."
 cp themes/$theme/$js_folder/*.js dist/$js_folder
 
 # Format files
+echo "Formatting..."
 yarn format-dist
+
+# List files
+echo "Build complete!"
+ls -hal dist/

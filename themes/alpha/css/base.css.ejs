@@ -22,20 +22,26 @@
 
 /* BASE ELEMENTS */
 
+/* focus styles */
+:focus {  }
+
+/* keyboard only focus styles */
+:focus-visible { }
+
 body {
   background-color: var(--color-<%= theme.bodyBgColor %>);
   color: var(--color-<%= theme.bodyTextColor %>);
   font-family: var(--font-<%= theme.bodyFont %>);
   font-size: var(--text-base);
-  line-height: 1.4;
+  line-height: 1.45;
   margin: 0;
   padding: 0;
 }
 
 a:link,
-a:visited { color: var(--color-blue); font-weight: normal; text-decoration: none; }
+a:visited { color: var(--color-cobalt); font-weight: normal; text-decoration: none; }
 a:hover,
-a:active { color: var(--color-purple); font-weight: normal; text-decoration: underline; }
+a:active { color: var(--color-nurple); font-weight: normal; text-decoration: underline; }
 
 code {
   font-family: var(--font-monospace);
@@ -54,7 +60,7 @@ code {
 .mark {
   display: inline-block;
   padding: 1px 3px;
-  background-color: var(--color-canary);
+  background-color: var(--color-manilla);
   color: var(--color-black);
 }
 
@@ -202,7 +208,6 @@ table {
 table th,
 table td {
   border: 1px solid var(--color-<%= theme.tableBorderColor %>);
-  line-height: 1.1;
   padding: var(--sp-2);
 }
 
@@ -225,12 +230,11 @@ fieldset {
 }
 
 label {
-  color: var(--color-feature);
+  color: var(--color-grapefruit);
   font-family: var(--font-verdana);
   display: block;
   font-size: var(--text-sm);
   font-weight: normal;
-  line-height: 1.1;
   margin: 0 0 var(--sp-1) 0;
   padding: 0;
 }
@@ -244,7 +248,17 @@ textarea {
   font-size: 1rem;
   font-family: var(--font-monospace);
   margin: 0 0 var(--sp-1) 0;
-  padding: var(--sp-1) var(--sp-2);
+  padding: var(--sp-1);
+}
+
+input::placeholder {
+  color: var(--color-slate);
+}
+
+textarea {
+  padding: var(--sp-05) var(--sp-1);
+  min-height: 5rem;
+  margin: 0 0 var(--sp-0) 0;
 }
 
 select {
@@ -252,19 +266,20 @@ select {
   border-radius: 3px;
   display: block;
   font-size: 1rem;
+  font-family: var(--font-monospace);
   margin: 0 0 var(--sp-2) 0;
-  padding: var(--sp-1) var(--sp-2);
+  padding: var(--sp-1);
 }
 
-input[type="submit"] {
-  background-color: var(--color-cloud);
-  border: none;
-  border-radius: 5px;
-  color: var(--color-slate);
+input[type="checkbox"],
+input[type="radio"] {
+  all: revert;
+}
+
+input[type="file"] {
   cursor: pointer;
-  font-weight: bold;
-  margin: 0 0 var(--sp-2) 0;
-  padding: var(--sp-1) var(--sp-2);
+  font-family: var(--font-monospace);
+  font-size: 1rem;
 }
 
 /* buttons */
@@ -279,17 +294,31 @@ button {
 }
 
 a.btn,
-button {
+button,
+input[type=submit] {
   background-color: var(--color-charcoal);
   border: none;
   border-radius: 5px;
   color: var(--color-white);
+  cursor: pointer;
   font-size: var(--text-sm);
   font-family: var(--font-verdana);
   font-weight: normal;
-  line-height: 2.0;
-  padding: var(--sp-2) var(--sp-3);
+  padding: .95rem 1.3rem;
   text-decoration: none;
+  line-height: 1.45;
+  display: inline-block;
+}
+
+button:hover,
+input[type=submit]:not([disabled]):hover {
+  text-decoration: underline;
+}
+
+input[type=submit][disabled] {
+  background-color: var(--color-cloud);
+  color: var(--color-aluminum);
+  cursor: default;
 }
 
 a.btn:hover {

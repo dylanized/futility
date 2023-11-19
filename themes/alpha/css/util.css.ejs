@@ -49,6 +49,30 @@
   }
 <% } %>
 
+/* col gap */
+<% for (const spacer_id in styles.spacers) { -%>
+  .col-gap-<%= spacer_id %> {
+    column-gap: <%= styles.spacers[spacer_id] %> !important;
+  }
+<% } %>
+
+/* columns */
+.cols-2 {
+  grid-template-columns: 1fr 1fr !important;
+}
+.cols-3 {
+  grid-template-columns: 1fr 1fr 1fr !important;
+}
+.cols-4 {
+  grid-template-columns: 1fr 1fr 1fr 1fr !important;
+}
+.cols-5 {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr !important;
+}
+.cols-6 {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr !important;
+}
+
 /* cursor */
 .cursor-pointer {
   cursor: pointer !important;
