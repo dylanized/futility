@@ -20,28 +20,52 @@
         "path": "/contents"
       },
       {
-        "desc": "Paragraphs, lists, images",
+        "desc": "Paragraphs, lists, blockquote",
         "id": "04",
         "name": "Typography",
         "path": "/typography"
       },
       {
-        "desc": "Form with fields & buttons",
+        "desc": "Image alignment & styles",
         "id": "05",
+        "name": "Images",
+        "path": "/images"
+      },
+      {
+        "desc": "Form with fields & buttons",
+        "id": "06",
         "name": "Form",
         "path": "/form"
       },
       {
         "desc": "Color palette and grid example",
-        "id": "06",
+        "id": "07",
         "name": "Colors",
         "path": "/colors"
       },
       {
         "desc": "Text sizes, other utility classes",
-        "id": "07",
+        "id": "08",
         "name": "Utilities",
         "path": "/utilities"
+      },
+      {
+        "desc": "Blockquotes with alert styles",
+        "id": "09",
+        "name": "Quotes",
+        "path": "/quotes"
+      },
+      {
+        "desc": "Panel component with alert styles",
+        "id": "10",
+        "name": "Panels",
+        "path": "/panels"
+      },
+      {
+        "desc": "Card component",
+        "id": "11",
+        "name": "Cards",
+        "path": "/cards"
       }
     ],
     "footerText": "Created 2023",
@@ -93,7 +117,7 @@
     "tertiaryColor": "whale",
     "headingFont": "verdana",
     "tableBorderColor": "whale",
-    "tableBorderWidth": "5px",
+    "tableBorderWidth": "4px",
     "tableTdBgColor": "white",
     "tableTdBorderColor": "cloud",
     "tableTdBorderWidth": "1px",

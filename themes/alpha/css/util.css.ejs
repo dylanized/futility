@@ -15,25 +15,39 @@
 /* border */
 <% for (const width_suffix in styles.borderWidths) { -%>
   .border-<%= width_suffix %> {
-    width: <%= styles.borderWidths[width_suffix] %> !important;
+    border-width: <%= styles.borderWidths[width_suffix] %> !important;
   }
   .border-top-<%= width_suffix %> {
-    width: <%= styles.borderWidths[width_suffix] %> !important;
+    border-width: <%= styles.borderWidths[width_suffix] %> !important;
   }
   .border-right-<%= width_suffix %> {
-    width: <%= styles.borderWidths[width_suffix] %> !important;
+    border-width: <%= styles.borderWidths[width_suffix] %> !important;
   }
   .border-bottom-<%= width_suffix %> {
-    width: <%= styles.borderWidths[width_suffix] %> !important;
+    border-width: <%= styles.borderWidths[width_suffix] %> !important;
   }
   .border-left-<%= width_suffix %> {
-    width: <%= styles.borderWidths[width_suffix] %> !important;
+    border-width: <%= styles.borderWidths[width_suffix] %> !important;
   }
 <% } %>
 
 /* border radius */
 .rounded {
   border-radius: .3rem;
+}
+
+/* border styles */
+.border-dashed {
+  border-style: dashed !important;
+}
+.border-dotted {
+  border-style: dotted !important;
+}
+.border-solid {
+  border-style: solid !important;
+}
+.border-none {
+  border-style: none !important;
 }
 
 /* colors */
@@ -167,6 +181,17 @@
 }
 .clear-both {
   clear: both !important;
+}
+
+/* line height */
+.lh-10 {
+  line-height: 1.0 !important;
+}
+.lh-11 {
+  line-height: 1.1 !important;
+}
+.lh-12 {
+  line-height: 1.2 !important;
 }
 
 /* list style */

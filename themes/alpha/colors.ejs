@@ -2,20 +2,20 @@
 <main class="container">
   <section>
     <h1>Futility Color Palette</h1>
-    <div class="mb-2 d-grid cols-5 col-gap-3">
+    <div class="mb-2 d-grid cols-4 col-gap-3">
       <% for (const color_slug in styles.colors) { %>
-        <div class="text-verdana border-<%= color_slug %> mb-2 text-center" style="min-height:180px;">
+        <div class="text-verdana panel border-<%= color_slug %> bg-white rounded p-05 mb-2 text-center" style="min-height:180px;">
           <div class="px-1 py-3 bg-<%= color_slug %> text-white rounded mb-05">
             <div class="text-bold clippy"><%= color_slug %></div>
             <div class="text-sm clippy"><%= styles.colors[color_slug] %></div>
             <div class="text-xs clippy">.bg-<%= color_slug %></div>
           </div>
-          <div class="text-bold text-sm text-<%= color_slug %> clippy">.text-<%= color_slug %></div>
-          <div class="text-xs text-<%= color_slug %> clippy">.border-<%= color_slug %></div>
+          <div class="text-bold text-sm mb-0 text-<%= color_slug %> clippy lh-12">.text-<%= color_slug %></div>
+          <div class="text-xs text-<%= color_slug %> clippy mb-05 lh-11">.border-<%= color_slug %></div>
         </div>
       <% } %>
     </div>
-    <p><a title="Futility UI Home" href="/">&larr; Back Home</a></p>
+    <p><a title="Futility UI Home" href="/contents">&larr; Back to Contents</a></p>
   </section>
 </main>
 <%- include('inc/foot') %>
