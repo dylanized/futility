@@ -32,40 +32,52 @@
         "path": "/images"
       },
       {
-        "desc": "Form with fields & buttons",
+        "desc": "Form with fields & basic buttons",
         "id": "06",
         "name": "Form",
         "path": "/form"
       },
       {
-        "desc": "Color palette and grid example",
+        "desc": "Button styles",
         "id": "07",
+        "name": "Buttons",
+        "path": "/buttons"
+      },
+      {
+        "desc": "Color palette and grid example",
+        "id": "08",
         "name": "Colors",
         "path": "/colors"
       },
       {
         "desc": "Text sizes, other utility classes",
-        "id": "08",
+        "id": "09",
         "name": "Utilities",
         "path": "/utilities"
       },
       {
         "desc": "Blockquotes with alert styles",
-        "id": "09",
+        "id": "10",
         "name": "Quotes",
         "path": "/quotes"
       },
       {
         "desc": "Panel component with alert styles",
-        "id": "10",
+        "id": "11",
         "name": "Panels",
         "path": "/panels"
       },
       {
         "desc": "Card component",
-        "id": "11",
+        "id": "12",
         "name": "Cards",
         "path": "/cards"
+      },
+      {
+        "desc": "Cards with images",
+        "id": "13",
+        "name": "Image Cards",
+        "path": "/image-cards"
       }
     ],
     "footerText": "Created 2023",
@@ -196,7 +208,8 @@
       "33": "33%",
       "50": "50%",
       "66": "66%",
-      "75": "75%"
+      "75": "75%",
+      "100": "100%"
     },
     "widthsPx": {
       "1px": "1px",
