@@ -50,32 +50,38 @@
         "path": "/colors"
       },
       {
-        "desc": "Text sizes, other utility classes",
+        "desc": "Reusable groupings of colors",
         "id": "09",
+        "name": "Stylesets",
+        "path": "/stylesets"
+      },
+      {
+        "desc": "Text sizes, other utility classes",
+        "id": "10",
         "name": "Utilities",
         "path": "/utilities"
       },
       {
         "desc": "Blockquotes with alert styles",
-        "id": "10",
+        "id": "11",
         "name": "Quotes",
         "path": "/quotes"
       },
       {
         "desc": "Panel component with alert styles",
-        "id": "11",
+        "id": "12",
         "name": "Panels",
         "path": "/panels"
       },
       {
         "desc": "Card component",
-        "id": "12",
+        "id": "13",
         "name": "Cards",
         "path": "/cards"
       },
       {
         "desc": "Cards with images",
-        "id": "13",
+        "id": "14",
         "name": "Image Cards",
         "path": "/image-cards"
       }
@@ -138,6 +144,72 @@
     "tableThBorderColor": "charcoal",
     "tableThBorderWidth": "1px",
     "tableThTextColor": "white"
+  },
+  "stylesets": {
+    "success": {
+      "highlight": "canvas",
+      "link": "canvas",
+      "matte": "lima"
+    },
+    "danger": {
+      "highlight": "cardinal",
+      "link": "maple",
+      "matte": "rosey"
+    },
+    "warning": {
+      "highlight": "sunshine",
+      "link": "charcoal",
+      "matte": "manilla"
+    },
+    "info": {
+      "highlight": "cobalt",
+      "link": "ocean",
+      "matte": "skyline"
+    },
+    "success-alt": {
+      "highlight": "lima",
+      "link": "white",
+      "matte": "canvas",
+      "text": "white"
+    },
+    "danger-alt": {
+      "highlight": "rosey",
+      "link": "white",
+      "matte": "cardinal",
+      "text": "white"
+    },
+    "warning-alt": {
+      "highlight": "manilla",
+      "link": "charcoal",
+      "matte": "sunshine",
+      "text": "charcoal"
+    },
+    "info-alt": {
+      "highlight": "skyline",
+      "link": "white",
+      "matte": "cobalt",
+      "text": "white"
+    },
+    "contrast": {
+      "highlight": "charcoal",
+      "matte": "white"
+    },
+    "grayscale": {
+      "highlight": "aluminum",
+      "matte": "cloud"
+    },
+    "midnite": {
+      "highlight": "slate",
+      "link": "white",
+      "matte": "charcoal",
+      "text": "white"
+    },
+    "nautical": {
+      "highlight": "manilla",
+      "link": "sunshine",
+      "matte": "ocean",
+      "text": "white"
+    }
   },
   "styles": {
     "borderWidths": {

@@ -5,19 +5,10 @@
     <blockquote>
       <p class="mb-2">A normal blockquote</p>
     </blockquote>
-    <blockquote class="border-success">
-      <p class="mb-2">A blockquote with .border-success</p>
-    </blockquote>
-    <blockquote class="border-danger">
-      <p class="mb-2">A blockquote with .border-danger</p>
-    </blockquote>
-    <blockquote class="border-warning">
-      <p class="mb-2">A blockquote with .border-warning</p>
-    </blockquote>
-    <blockquote class="border-info">
-      <p class="mb-2">A blockquote with .border-info</p>
-    </blockquote>
-    <p><a title="Futility UI Home" href="/contents">&larr; Back to Contents</a></p>
-  </section>
+    <% for (const styleset_slug in stylesets) { -%>
+      <blockquote class="border-<%= styleset_slug %>">
+        <p class="mb-2">A blockquote with .border-<%= styleset_slug %>, with <a href="#">a hyperlink</a></p>
+      </blockquote>
+    <% } %>
 </main>
 <%- include('inc/foot') %>

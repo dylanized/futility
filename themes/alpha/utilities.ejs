@@ -1,10 +1,106 @@
 <%- include('inc/head') %>
 <main class="container">
+  <h1>Futility Utilities</h1>
   <section>
-    <h1>Futility Utilities</h1>
+    <h3>Text Sizes</h3>
     <% for (const size_suffix in styles.textSizes) { -%>
       <p class="text-<%= size_suffix %>">.text-<%= size_suffix %> The quick brown fox jumps over the lazy dog, while the quick brown fox jumps over the lazy dog</p>
     <% } %>
   </section>
+  <section>
+    <h3>Text Styles</h3>
+    <table class="text-sm">
+      <thead>
+        <tr>
+          <th class="text-xs">Style</th>
+          <th class="text-xs">Class</th>
+          <th class="text-xs">Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Code</td>
+          <td><code>code</code></td>
+          <td><code>The quick brown fox jumps over the lazy dog</code></td>
+        </tr>
+        <tr>
+          <td>Mark</td>
+          <td><code>.mark</code></td>
+          <td><span class="mark">The quick brown fox jumps over the lazy dog</span></td>
+        </tr>
+        <tr>
+          <td>Bold Weight</td>
+          <td><code>.text-bold</code></td>
+          <td><span class="text-bold">The quick brown fox jumps over the lazy dog</span></td>
+        </tr>
+        <tr>
+          <td>Capitalize</td>
+          <td><code>.text-capitalize</code></td>
+          <td><span class="text-capitalize">The quick brown fox jumps over the lazy dog</span></td>
+        </tr>
+        <tr>
+          <td>Italic</td>
+          <td><code>.text-italic</code></td>
+          <td><span class="text-italic">The quick brown fox jumps over the lazy dog</span></td>
+        </tr>
+        <tr>
+          <td>Lowercase</td>
+          <td><code>.text-lowercase</code></td>
+          <td><span class="text-lowercase">The quick brown fox jumps over the lazy dog</span></td>
+        </tr>
+        <tr>
+          <td>Normal Weight</td>
+          <td><code>.text-normal</code></td>
+          <td><span class="text-normal">The quick brown fox jumps over the lazy dog</span></td>
+        </tr>
+        <tr>
+          <td>Strikethrough</td>
+          <td><code>.text-strike</code></td>
+          <td><span class="text-strike">The quick brown fox jumps over the lazy dog</span></td>
+        </tr>
+        <tr>
+          <td>Underline</td>
+          <td><code>.text-underline</code></td>
+          <td><span class="text-underline">The quick brown fox jumps over the lazy dog</span></td>
+        </tr>
+        <tr>
+          <td>Uppercase</td>
+          <td><code>.text-uppercase</code></td>
+          <td><span class="text-uppercase">The quick brown fox jumps over the lazy dog</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section>
+    <h3>Fonts</h3>
+    <table class="text-sm">
+      <thead>
+        <tr>
+          <th class="text-xs">Font</th>
+          <th class="text-xs w-175px">Class</th>
+          <th class="text-xs">Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for (const font_slug in styles.textFonts) { -%>
+          <tr>
+            <td class="text-capitalize"><%= font_slug %></td>
+            <td><code>.text-<%= font_slug %></code></td>
+            <td><code class="text-md text-<%= font_slug %>">The quick brown fox jumps over the lazy dog, while the quick brown fox jumps over the lazy dog</code></td>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </section>
+  <section>
+    <h3>Tags</h3>
+    <ul>
+      <li><code class="tag text-xs">.tag</code></li>
+      <% for (const styleset_slug in stylesets) { -%>
+        <li><code class="tag text-xs <%= styleset_slug %>">.tag .<%= styleset_slug %></code></li>
+      <% } %>
+    </ul>
+  <section>
+  <p class="mt-4"><a title="Futility UI Home" href="/contents">&larr; Back to Contents</a></p>
 </main>
 <%- include('inc/foot') %>

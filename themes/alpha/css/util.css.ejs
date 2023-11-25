@@ -12,47 +12,33 @@
   border: 0 !important;
 }
 
-/* alert styles */
-.success {
-  background-color: var(--color-lima) !important;
-  border-color: var(--color-canvas) !important;
-}
-.danger {
-  background-color: var(--color-rosey) !important;
-  border-color: var(--color-cardinal) !important;
-}
-.warning {
-  background-color: var(--color-manilla) !important;
-  border-color: var(--color-sunshine) !important;
-}
-.info {
-  background-color: var(--color-skyline) !important;
-  border-color: var(--color-cobalt) !important;
-}
-.border-success {
-  border-color: var(--color-canvas) !important;
-}
-.border-danger {
-  border-color: var(--color-cardinal) !important;
-}
-.border-warning {
-  border-color: var(--color-sunshine) !important;
-}
-.border-info {
-  border-color: var(--color-cobalt) !important;
-}
-.bg-success {
-  background-color: var(--color-canvas) !important;
-}
-.bg-danger {
-  background-color: var(--color-cardinal) !important;
-}
-.bg-warning {
-  background-color: var(--color-sunshine) !important;
-}
-.bg-info {
-  background-color: var(--color-cobalt) !important;
-}
+/* stylesets */
+<% for (const styleset_slug in stylesets) { -%>
+  .<%= styleset_slug %> {
+    background-color: var(--color-<%= stylesets[styleset_slug].matte %>) !important;
+    border-color: var(--color-<%= stylesets[styleset_slug].highlight %>) !important;
+    <% if (stylesets[styleset_slug].text) { %>
+      color: var(--color-<%= stylesets[styleset_slug].text %>);
+    <% } %>
+  }
+  <% if (stylesets[styleset_slug].link) { %>
+  .<%= styleset_slug %> a:link,
+  .<%= styleset_slug %> a:visited,
+  .<%= styleset_slug %> a:hover,
+  .<%= styleset_slug %> a:active {
+    color: var(--color-<%= stylesets[styleset_slug].link %>) !important;
+  }
+  <% } %>
+  .border-<%= styleset_slug %> {
+    border-color: var(--color-<%= stylesets[styleset_slug].highlight %>) !important;
+  }
+  .bg-<%= styleset_slug %> {
+    background-color: var(--color-<%= stylesets[styleset_slug].matte %>) !important;
+  }
+  .text-<%= styleset_slug %> {
+    color: var(--color-<%= stylesets[styleset_slug].highlight %>) !important;
+  }
+<% } %>
 
 /* border */
 <% for (const width_suffix in styles.borderWidths) { -%>
@@ -405,6 +391,12 @@
 <% } %>
 
 /* text transform */
+.text-capitalize {
+  text-transform: capitalize !important;
+}
+.text-lowercase {
+  text-transform: lowercase !important;
+}
 .text-uppercase {
   text-transform: uppercase !important;
 }
