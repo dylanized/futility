@@ -17,6 +17,8 @@ const logger = pino(logConfig);
 const app = express();
 app.use(logger);
 
+let servePath;
+
 // Define helper function for health check
 const buildMemoryMB = () => {
   const memoryFormatted = {};
@@ -69,13 +71,15 @@ app.get("/error", function (req, res, next) {
 // If Prod, mount health check and configure static server
 if (process.env.NODE_ENV === "production") {
   mountHealthCheck(app);
-  app.use(express.static(config.get("app.staticFolder")));
+  servePath = config.get("app.staticFolder");
+  app.use(express.static(servePath));
 }
 // Else Dev, configure SSR server
 else {
   // Calculate theme folder
   const theme = process.env.THEME || config.get("app.defaultTheme");
   const themePath = path.join(config.get("app.themesFolder"), theme);
+  servePath = themePath;
 
   // Setup template engine
   app.set("view engine", "ejs");
@@ -172,7 +176,7 @@ app.use(function (err, req, res, next) {
 // Launch app and display msg
 app.listen(config.get("app.port"), () =>
   console.info(
-    `Launched ${logConfig.name} on port ${config.get(
+    `Launched ${logConfig.name} serving ${servePath} on port ${config.get(
       "app.port",
     )} with log level ${logConfig.level}`,
   ),
