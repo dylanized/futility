@@ -86,7 +86,7 @@ else {
   app.set("views", path.join(__dirname, themePath));
 
   // Load theme config
-  const themeConfig = JSON.parse(fs.readFileSync(`${themePath}/theme.json`));
+  const themeConfig = JSON.parse(fs.readFileSync(`${themePath}/config/theme.json`));
 
   // Mount health check for dev server
   mountHealthCheck(app, {
@@ -101,12 +101,12 @@ else {
     if (
       req.query.flavor &&
       fs.existsSync(
-        `${themePath}/flavor-${req.query.flavor.toLowerCase()}.json`,
+        `${themePath}/config/flavor-${req.query.flavor.toLowerCase()}.json`,
       )
     ) {
       const flavorConfig = JSON.parse(
         fs.readFileSync(
-          `${themePath}/flavor-${req.query.flavor.toLowerCase()}.json`,
+          `${themePath}/config/flavor-${req.query.flavor.toLowerCase()}.json`,
         ),
       );
       const locals = Object.assign({}, { req }, themeConfig, flavorConfig);
