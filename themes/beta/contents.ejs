@@ -1,0 +1,28 @@
+<%- include('inc/head') %>
+<main class="container">
+  <section>
+    <h1>Futility Templates</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Path</th>
+          <th>Example Content</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for (const template in data.contents) { %>
+          <tr>
+            <td><%= data.contents[template].id %></td>
+            <td><a href="<%= data.contents[template].path %>"><%= data.contents[template].name %></a></td>
+            <td><code><%= data.contents[template].path %></code></td>
+            <td class="text-slate"><%= data.contents[template].desc %></td>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+    <p><a title="Futility UI Home" href="/">&larr; Back Home</a></p>
+  </section>
+</main>
+<%- include('inc/foot') %>

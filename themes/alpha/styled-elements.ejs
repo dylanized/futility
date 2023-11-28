@@ -1,0 +1,61 @@
+<%- include('inc/head') %>
+<main class="container">
+  <section>
+    <h1>Styled Elements</h1>
+    <h3>Tags</h3>
+    <ul>
+      <li><code class="tag text-xs">.tag</code></li>
+      <% for (const styleset_slug in stylesets) { -%>
+        <li><code class="tag text-xs <%= styleset_slug %>">.tag .<%= styleset_slug %></code></li>
+      <% } %>
+    </ul>
+  </section>
+  <section>
+    <h3>Blockquotes</h3>
+    <blockquote>
+      <p class="mb-2">A normal blockquote</p>
+    </blockquote>
+    <% for (const styleset_slug in stylesets) { -%>
+      <blockquote class="border-<%= styleset_slug %>">
+        <p class="mb-2">A blockquote with .border-<%= styleset_slug %>, with <a href="#">a hyperlink</a></p>
+      </blockquote>
+    <% } %>
+  </section>
+  <section>
+    <h3>Buttons</h3>
+    <table>
+      <thead>
+        <th>Input</th>
+        <th>Button</th>
+        <th>Link</th>
+        <th>Disabled</th>
+      </thead>
+      <tbody>
+        <td><input class="btn-success d-block w-100 text-centers" type="submit" name="submit" value=".btn-success"></td>
+        <td><button class="btn-success d-block w-100 text-center">.btn-success</button></td>
+        <td><a href="#" class="btn btn-success d-block w-100 text-center">.btn-success</a></td>
+        <td><input class="btn-success d-block w-100 text-center" disabled="true" type="submit" name="submit" value=".btn-success"></td>
+      </tbody>
+      <tbody>
+        <td><input class="btn-danger d-block w-100 text-centers" type="submit" name="submit" value=".btn-danger"></td>
+        <td><button class="btn-danger d-block w-100 text-center">.btn-danger</button></td>
+        <td><a href="#" class="btn btn-danger d-block w-100 text-center">.btn-danger</a></td>
+        <td><input class="btn-danger d-block w-100 text-center" disabled="true" type="submit" name="submit" value=".btn-danger"></td>
+      </tbody>
+      <tbody>
+        <td><input class="btn-warning d-block w-100 text-centers" type="submit" name="submit" value=".btn-warning"></td>
+        <td><button class="btn-warning d-block w-100 text-center">.btn-warning</button></td>
+        <td><a href="#" class="btn btn-warning d-block w-100 text-center">.btn-warning</a></td>
+        <td><input class="btn-warning d-block w-100 text-center" disabled="true" type="submit" name="submit" value=".btn-warning"></td>
+      </tbody>
+      <tbody>
+        <td><input class="btn-info d-block w-100 text-centers" type="submit" name="submit" value=".btn-info"></td>
+        <td><button class="btn-info d-block w-100 text-center">.btn-info</button></td>
+        <td><a href="#" class="btn btn-info d-block w-100 text-center">.btn-info</a></td>
+        <td><input class="btn-info d-block w-100 text-center" disabled="true" type="submit" name="submit" value=".btn-info"></td>
+      </tbody>
+    </table>
+  </section>
+  <p class="mt-4"><a title="Futility UI Home" href="/contents">&larr; Back to Contents</a></p>
+</main>
+<%- include('inc/foot') %>

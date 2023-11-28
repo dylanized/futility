@@ -22,30 +22,18 @@
     <% } %>
   }
   <% if (stylesets[styleset_slug].link) { %>
-    .<%= styleset_slug %> a:link,
-    .<%= styleset_slug %> a:visited {
-      color: var(--color-<%= stylesets[styleset_slug].link %>) !important;
-    }
-  <% } %>
-  <% if (stylesets[styleset_slug].hover) { %>
-    .<%= styleset_slug %> a:hover,
-    .<%= styleset_slug %> a:active {
-      color: var(--color-<%= stylesets[styleset_slug].hover %>) !important;
-    }
-  <% } else { %>
-    .<%= styleset_slug %> a:hover,
-    .<%= styleset_slug %> a:active {
-      color: var(--color-<%= stylesets[styleset_slug].highlight %>) !important;
-    }
+  .<%= styleset_slug %> a:link,
+  .<%= styleset_slug %> a:visited,
+  .<%= styleset_slug %> a:hover,
+  .<%= styleset_slug %> a:active {
+    color: var(--color-<%= stylesets[styleset_slug].link %>) !important;
+  }
   <% } %>
   .border-<%= styleset_slug %> {
     border-color: var(--color-<%= stylesets[styleset_slug].highlight %>) !important;
   }
   .bg-<%= styleset_slug %> {
     background-color: var(--color-<%= stylesets[styleset_slug].matte %>) !important;
-  }
-  .btn-<%= styleset_slug %> {
-    background-color: var(--color-<%= stylesets[styleset_slug].highlight %>) !important;
   }
   .text-<%= styleset_slug %> {
     color: var(--color-<%= stylesets[styleset_slug].highlight %>) !important;

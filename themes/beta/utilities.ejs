@@ -92,6 +92,15 @@
       </tbody>
     </table>
   </section>
+  <section>
+    <h3>Tags</h3>
+    <ul>
+      <li><code class="tag text-xs">.tag</code></li>
+      <% for (const styleset_slug in stylesets) { -%>
+        <li><code class="tag text-xs <%= styleset_slug %>">.tag .<%= styleset_slug %></code></li>
+      <% } %>
+    </ul>
+  <section>
   <p class="mt-4"><a title="Futility UI Home" href="/contents">&larr; Back to Contents</a></p>
 </main>
 <%- include('inc/foot') %>

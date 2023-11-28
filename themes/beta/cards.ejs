@@ -9,19 +9,11 @@
       <h4 class="mb-1">Here is a card title</h4>
       <p class="mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In <a href="#">consequat vel est</a> vitae hendrerit. Cras tortor libero, hendrerit ut vestibulum eu, hendrerit pretium nibh.</p>
     </div>
-    <div class="d-grid col-gap-1 cols-3">
-      <div class="card shadow p-1 pb-2">
-        <h5 class="mb-1">Card with an image</h5>
-        <img src="https://picsum.photos/200/200">
+    <% for (const styleset_slug in stylesets) { -%>
+      <div class="card <%= styleset_slug %>">
+        <p class="mb-2">Card with .<%= styleset_slug %> styleset, lorem ipsum dolor sit amet, <a href="#">and here is a hyperlink</a>. In consequat vel est vitae hendrerit. Cras tortor libero, hendrerit ut vestibulum eu, hendrerit pretium nibh.</p>
       </div>
-      <div class="card shadow p-1 pb-2">
-        <img src="https://picsum.photos/200/200">
-      </div>
-      <div class="card shadow p-1 pb-2">
-        <img src="https://picsum.photos/200/200">
-        <caption>Here is an image caption</caption>
-      </div>
-    </div>
+    <% } %>
     <p class="mt-4"><a title="Futility UI Home" href="/contents">&larr; Back to Contents</a></p>
   </section>
 </main>

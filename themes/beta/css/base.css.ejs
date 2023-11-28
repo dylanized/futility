@@ -1,76 +1,37 @@
 :root {
   /* color vars */
-  --color-cloud: #e8e8e8;
-  --color-chalk: #ddd;
-  --color-aluminum: silver;
-  --color-whale: #adb5bd;
-  --color-slate: #777;
-  --color-charcoal: #111;
-  --color-black: #000;
-  --color-cardinal: #cf142b;
-  --color-rosey: #f5ab9e;
-  --color-grapefruit: #ff5349;
-  --color-tangerine: #ff851b;
-  --color-sunshine: #ffc107;
-  --color-canary: #ffff8f;
-  --color-manilla: #fcebbd;
-  --color-peach: #ffca95;
-  --color-mustard: #af9540;
-  --color-lima: #d3eda3;
-  --color-canvas: #72962e;
-  --color-slime: #2ecc40;
-  --color-pine: #198754;
-  --color-tropical: #20c997;
-  --color-skyline: #e1f2fa;
-  --color-aquarium: #7fdbff;
-  --color-slushy: #0dcaf0;
-  --color-seastone: #5992aa;
-  --color-cobalt: #0d6efd;
-  --color-ocean: #000080;
-  --color-royal: #6f42c1;
-  --color-lavish: #ddaeff;
-  --color-maple: #85144b;
-  --color-fuschia: #d63384;
-  --color-white: #fff;
+  <% for (const color_slug in styles.colors) { -%>
+    --color-<%= color_slug %>: <%= styles.colors[color_slug] %>;
+  <% } %>
 
   /* spacer vars */
-  --sp-0: 0;
-  --sp-1: 0.66rem;
-  --sp-2: 1.33rem;
-  --sp-3: 1.75rem;
-  --sp-4: 2.33rem;
-  --sp-5: 3.33rem;
-  --sp-05: 0.33rem;
+  <% for (const spacer_id in styles.spacers) { -%>
+    --sp-<%= spacer_id %>: <%= styles.spacers[spacer_id] %>;
+  <% } %>
 
   /* text font vars */
-  --font-monospace: Courier, monospace;
-  --font-sans: Helvetica, Arial, sans-serif;
-  --font-serif: Georgia, serif;
-  --font-verdana: Verdana, sans-serif;
+  <% for (const font_slug in styles.textFonts) { -%>
+    --font-<%= font_slug %>: <%= styles.textFonts[font_slug] %>;
+  <% } %>
 
   /* text size vars */
-  --text-xl: 2.5rem;
-  --text-lg: 2rem;
-  --text-md: 1.5rem;
-  --text-base: 1.2rem;
-  --text-sm: 1rem;
-  --text-xs: 0.8rem;
+  <% for (const size_suffix in styles.textSizes) { -%>
+    --text-<%= size_suffix %>: <%= styles.textSizes[size_suffix] %>;
+  <% } %>
 }
 
 /* BASE ELEMENTS */
 
 /* focus styles */
-:focus {
-}
+:focus {  }
 
 /* keyboard only focus styles */
-:focus-visible {
-}
+:focus-visible { }
 
 body {
-  background-color: var(--color-white);
-  color: var(--color-charcoal);
-  font-family: var(--font-serif);
+  background-color: var(--color-<%= theme.bodyBgColor %>);
+  color: var(--color-<%= theme.bodyTextColor %>);
+  font-family: var(--font-<%= theme.bodyFont %>);
   font-size: var(--text-base);
   line-height: 1.45;
   margin: 0;
@@ -78,21 +39,13 @@ body {
 }
 
 a:link,
-a:visited {
-  color: var(--color-cobalt);
-  font-weight: normal;
-  text-decoration: underline;
-}
+a:visited { color: var(--color-cobalt); font-weight: normal; text-decoration: none; }
 a:hover,
-a:active {
-  color: var(--color-royal);
-  font-weight: normal;
-  text-decoration: underline;
-}
+a:active { color: var(--color-royal); font-weight: normal; text-decoration: underline; }
 
 code {
   font-family: var(--font-monospace);
-  font-size: 0.8em;
+  font-size: .8em;
 }
 
 .tag {
@@ -100,7 +53,7 @@ code {
   display: inline-block;
   background-color: #fff;
   border: 1px solid var(--color-cloud);
-  border-radius: 0.25rem;
+  border-radius: .25rem;
   padding: 3px 5px;
 }
 
@@ -123,7 +76,7 @@ hr {
 
 .container {
   margin: 0 auto;
-  max-width: 900px;
+  max-width: <%= theme.containerWidth %>;
 }
 
 header {
@@ -148,8 +101,8 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--color-grapefruit);
-  font-family: var(--font-verdana);
+  color: var(--color-<%= theme.primaryColor %>);
+  font-family: var(--font-<%= theme.headingFont %>);
   font-weight: bold;
   line-height: 1.15;
   font-size: var(--text-base);
@@ -184,7 +137,7 @@ p {
 
 small,
 .small {
-  font-size: 0.8em;
+  font-size: .8em;
 }
 
 .lead {
@@ -192,7 +145,7 @@ small,
 }
 
 ul {
-  list-style-type: square;
+  list-style-type: <%= theme.bodyListType %>;
   margin: 0 0 var(--sp-3) var(--sp-2);
   padding: 0 0 0 var(--sp-2);
 }
@@ -237,8 +190,8 @@ img.centered {
 
 img.border {
   border: 1px solid var(--color-cloud);
-  border-radius: 0.3rem;
-  padding: 0.75rem;
+  border-radius: .3rem;
+  padding: .75rem;
 }
 
 caption {
@@ -258,14 +211,14 @@ nav {
 /* table */
 
 table {
-  border: 4px solid var(--color-whale);
+  border: <%= theme.tableBorderWidth %> solid var(--color-<%= theme.tableBorderColor %>);
   border-collapse: collapse;
   margin: 0 0 var(--sp-4) 0;
 }
 
 table th,
 table td {
-  border: 1px solid var(--color-whale);
+  border: 1px solid var(--color-<%= theme.tableBorderColor %>);
   padding: var(--sp-2);
 }
 
@@ -343,9 +296,18 @@ input[type="file"] {
 
 /* buttons */
 
+button {
+  /*background-color: red;
+  border: none;
+  border-radius: 5px;
+  color: var(--color-white);
+  font-weight: bold;
+  padding: var(--sp-1) var(--sp-2);*/
+}
+
 a.btn,
 button,
-input[type="submit"] {
+input[type=submit] {
   background-color: var(--color-charcoal);
   border: none;
   border-radius: 5px;
@@ -354,19 +316,18 @@ input[type="submit"] {
   font-size: var(--text-sm);
   font-family: var(--font-verdana);
   font-weight: normal;
-  padding: 0.95rem 1.3rem;
+  padding: .95rem 1.3rem;
   text-decoration: none;
   line-height: 1.45;
   display: inline-block;
-  text-align: center;
 }
 
 button:hover,
-input[type="submit"]:not([disabled]):hover {
+input[type=submit]:not([disabled]):hover {
   text-decoration: underline;
 }
 
-input[type="submit"][disabled] {
+input[type=submit][disabled] {
   background-color: var(--color-cloud) !important;
   color: var(--color-aluminum);
   cursor: default;
@@ -383,7 +344,7 @@ a.btn:hover {
 /* other */
 
 blockquote {
-  border-left: 5px solid var(--color-cloud);
+  border-left: 5px solid var(--color-<%= theme.borderColor %>);
   color: var(--color-slate);
   margin: 0 0 var(--sp-3) 0;
   padding: var(--sp-2) var(--sp-2) 1px var(--sp-3);
@@ -402,7 +363,7 @@ blockquote {
 }
 
 .card {
-  border-radius: 0.3rem;
+  border-radius: .3rem;
   border: 1px solid var(--color-cloud);
   padding: 1.35rem 1.5rem 0 1.5rem;
   margin: 0 0 1rem 0;

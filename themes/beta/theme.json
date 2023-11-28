@@ -17,7 +17,7 @@
         "path": "/contents"
       },
       {
-        "desc": "Paragraphs, lists, blockquote",
+        "desc": "Basic type elements",
         "name": "Typography",
         "path": "/typography"
       },
@@ -27,14 +27,14 @@
         "path": "/images"
       },
       {
+        "desc": "Form fields & basic buttons",
+        "name": "Form",
+        "path": "/form"
+      },
+      {
         "desc": "Text sizes, other utility classes",
         "name": "Utilities",
         "path": "/utilities"
-      },
-      {
-        "desc": "Form with fields & basic buttons",
-        "name": "Form",
-        "path": "/form"
       },
       {
         "desc": "Color palette and grid example",
@@ -42,9 +42,19 @@
         "path": "/colors"
       },
       {
-        "desc": "Reusable groupings of colors",
+        "desc": "Reusable color groupings",
         "name": "Stylesets",
         "path": "/stylesets"
+      },
+      {
+        "desc": "Blockquote styles",
+        "name": "Quotes",
+        "path": "/quotes"
+      },
+      {
+        "desc": "Button styles",
+        "name": "Buttons",
+        "path": "/buttons"
       },
       {
         "desc": "Panel component with stylesets",
@@ -52,19 +62,14 @@
         "path": "/panels"
       },
       {
-        "desc": "Cards",
-        "name": "Basic Cards",
+        "desc": "Card component",
+        "name": "Cards",
         "path": "/cards"
       },
       {
-        "desc": "Card styles",
-        "name": "Card Styles",
-        "path": "/card-styles"
-      },
-      {
-        "desc": "Tags, quotes & buttons",
-        "name": "Styled Elements",
-        "path": "/styled-elements"
+        "desc": "Cards with images",
+        "name": "Image Cards",
+        "path": "/image-cards"
       }
     ],
     "footerText": "Created 2023",
@@ -90,7 +95,7 @@
         "title": "Baz"
       }
     ],
-    "siteName": "Futility UI",
+    "siteName": "Beta UI",
     "siteTagline": "The Simple Web Framework"
   },
   "scripts": ["https://code.jquery.com/jquery-3.7.1.slim.min.js", "/js/app.js"],
@@ -129,7 +134,6 @@
   "stylesets": {
     "success": {
       "highlight": "canvas",
-      "hover": "white",
       "link": "canvas",
       "matte": "lima"
     },
@@ -140,7 +144,6 @@
     },
     "warning": {
       "highlight": "sunshine",
-      "hover": "mustard",
       "link": "charcoal",
       "matte": "manilla"
     },
@@ -163,7 +166,6 @@
     },
     "warning-alt": {
       "highlight": "manilla",
-      "hover": "mustard",
       "link": "charcoal",
       "matte": "sunshine",
       "text": "charcoal"
@@ -176,17 +178,14 @@
     },
     "contrast": {
       "highlight": "charcoal",
-      "hover": "royal",
       "matte": "white"
     },
     "grayscale": {
       "highlight": "aluminum",
-      "hover": "royal",
       "matte": "cloud"
     },
     "midnite": {
       "highlight": "slate",
-      "hover": "aluminum",
       "link": "white",
       "matte": "charcoal",
       "text": "white"

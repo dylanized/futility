@@ -39,9 +39,9 @@ body {
 }
 
 a:link,
-a:visited { color: var(--color-cobalt); font-weight: normal; text-decoration: none; }
+a:visited { color: var(--color-cobalt); font-weight: normal; text-decoration: underline; }
 a:hover,
-a:active { color: var(--color-nurple); font-weight: normal; text-decoration: underline; }
+a:active { color: var(--color-royal); font-weight: normal; text-decoration: underline; }
 
 code {
   font-family: var(--font-monospace);
@@ -101,7 +101,6 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--color-<%= theme.primaryColor %>);
   font-family: var(--font-<%= theme.headingFont %>);
   font-weight: bold;
   line-height: 1.15;
@@ -110,6 +109,7 @@ h6 {
 }
 
 h1 {
+  color: var(--color-<%= theme.primaryColor %>);  
   font-size: var(--text-xl);
 }
 
@@ -192,6 +192,12 @@ img.border {
   border: 1px solid var(--color-cloud);
   border-radius: .3rem;
   padding: .75rem;
+}
+
+a:hover,
+a:active img {
+  opacity: 0.85;
+  transition: opacity .1s;
 }
 
 caption {
@@ -296,15 +302,6 @@ input[type="file"] {
 
 /* buttons */
 
-button {
-  /*background-color: red;
-  border: none;
-  border-radius: 5px;
-  color: var(--color-white);
-  font-weight: bold;
-  padding: var(--sp-1) var(--sp-2);*/
-}
-
 a.btn,
 button,
 input[type=submit] {
@@ -320,6 +317,7 @@ input[type=submit] {
   text-decoration: none;
   line-height: 1.45;
   display: inline-block;
+  text-align: center;
 }
 
 button:hover,

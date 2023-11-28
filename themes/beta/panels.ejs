@@ -1,0 +1,16 @@
+<%- include('inc/head') %>
+<main class="container">
+  <section>
+    <h1 class="text-xl1 mb-1">Panels</h1>
+    <div class="panel">
+      <p class="mb-2">A normal .panel, including <a href="#">a hyperlink</a>.</p>
+    </div>
+    <% for (const styleset_slug in stylesets) { -%>
+      <div class="panel <%= styleset_slug %>">
+        <p class="mb-2">A .panel with .<%= styleset_slug %> styleset, including <a href="#">a hyperlink</a>.</p>
+      </div>
+    <% } %>
+    <p class="mt-4"><a title="Futility UI Home" href="/contents">&larr; Back to Contents</a></p>
+  </section>
+</main>
+<%- include('inc/foot') %>
