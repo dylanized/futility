@@ -16,7 +16,7 @@
       "path": "/contents"
     },
     {
-      "desc": "Paragraphs, lists, blockquote",
+      "desc": "Basic text elements",
       "name": "Typography",
       "path": "/typography"
     },
@@ -26,14 +26,34 @@
       "path": "/images"
     },
     {
-      "desc": "Text sizes, other utility classes",
+      "desc": "Form with fields & basic buttons",
+      "name": "Form",
+      "path": "/form"
+    },
+    {
+      "desc": "Blockquote variations",
+      "name": "Quotes",
+      "path": "/quotes"
+    },
+    {
+      "desc": "Table variations",
+      "name": "Tables",
+      "path": "/tables"
+    },
+    {
+      "desc": "Text utilities",
       "name": "Utilities",
       "path": "/utilities"
     },
     {
-      "desc": "Form with fields & basic buttons",
-      "name": "Form",
-      "path": "/form"
+      "desc": "Panel component & variations",
+      "name": "Panels",
+      "path": "/panels"
+    },
+    {
+      "desc": "Card component & variations",
+      "name": "Cards",
+      "path": "/cards"
     },
     {
       "desc": "Color palette and grid example",
@@ -46,24 +66,24 @@
       "path": "/stylesets"
     },
     {
-      "desc": "Panel component with stylesets",
-      "name": "Panels",
-      "path": "/panels"
-    },
-    {
-      "desc": "Cards",
-      "name": "Basic Cards",
-      "path": "/cards"
-    },
-    {
-      "desc": "Card styles",
-      "name": "Card Styles",
-      "path": "/card-styles"
-    },
-    {
       "desc": "Tags, quotes & buttons",
       "name": "Styled Elements",
       "path": "/styled-elements"
+    },
+    {
+      "desc": "Tables with stylesets",
+      "name": "Styled Tables",
+      "path": "/styled-tables"
+    },
+    {
+      "desc": "Panels with stylesets",
+      "name": "Styled Panels",
+      "path": "/styled-panels"
+    },
+    {
+      "desc": "Cards with stylesets",
+      "name": "Styled Cards",
+      "path": "/styled-cards"
     }
   ],
   "footerText": "Created 2023",

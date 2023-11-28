@@ -413,3 +413,302 @@ blockquote {
   padding: 1.35rem 1.5rem 0 1.5rem;
   margin: 0 0 1rem 0;
 }
+
+/* stylesets */
+.success {
+  background-color: var(--color-lima) !important;
+  border-color: var(--color-canvas) !important;
+}
+
+.success a:link,
+.success a:visited {
+  color: var(--color-canvas) !important;
+}
+
+.success a:hover,
+.success a:active {
+  color: var(--color-white) !important;
+}
+
+.border-success {
+  border-color: var(--color-canvas) !important;
+}
+.bg-success {
+  background-color: var(--color-lima) !important;
+}
+.btn-success {
+  background-color: var(--color-canvas) !important;
+}
+.text-success {
+  color: var(--color-canvas) !important;
+}
+.danger {
+  background-color: var(--color-rosey) !important;
+  border-color: var(--color-cardinal) !important;
+}
+
+.danger a:link,
+.danger a:visited {
+  color: var(--color-maple) !important;
+}
+
+.danger a:hover,
+.danger a:active {
+  color: var(--color-cardinal) !important;
+}
+
+.border-danger {
+  border-color: var(--color-cardinal) !important;
+}
+.bg-danger {
+  background-color: var(--color-rosey) !important;
+}
+.btn-danger {
+  background-color: var(--color-cardinal) !important;
+}
+.text-danger {
+  color: var(--color-cardinal) !important;
+}
+.warning {
+  background-color: var(--color-manilla) !important;
+  border-color: var(--color-sunshine) !important;
+}
+
+.warning a:link,
+.warning a:visited {
+  color: var(--color-charcoal) !important;
+}
+
+.warning a:hover,
+.warning a:active {
+  color: var(--color-mustard) !important;
+}
+
+.border-warning {
+  border-color: var(--color-sunshine) !important;
+}
+.bg-warning {
+  background-color: var(--color-manilla) !important;
+}
+.btn-warning {
+  background-color: var(--color-sunshine) !important;
+}
+.text-warning {
+  color: var(--color-sunshine) !important;
+}
+.info {
+  background-color: var(--color-skyline) !important;
+  border-color: var(--color-cobalt) !important;
+}
+
+.info a:link,
+.info a:visited {
+  color: var(--color-ocean) !important;
+}
+
+.info a:hover,
+.info a:active {
+  color: var(--color-cobalt) !important;
+}
+
+.border-info {
+  border-color: var(--color-cobalt) !important;
+}
+.bg-info {
+  background-color: var(--color-skyline) !important;
+}
+.btn-info {
+  background-color: var(--color-cobalt) !important;
+}
+.text-info {
+  color: var(--color-cobalt) !important;
+}
+.success-alt {
+  background-color: var(--color-canvas) !important;
+  border-color: var(--color-lima) !important;
+
+  color: var(--color-white);
+}
+
+.success-alt a:link,
+.success-alt a:visited {
+  color: var(--color-white) !important;
+}
+
+.success-alt a:hover,
+.success-alt a:active {
+  color: var(--color-lima) !important;
+}
+
+.border-success-alt {
+  border-color: var(--color-lima) !important;
+}
+.bg-success-alt {
+  background-color: var(--color-canvas) !important;
+}
+.btn-success-alt {
+  background-color: var(--color-lima) !important;
+}
+.text-success-alt {
+  color: var(--color-lima) !important;
+}
+.danger-alt {
+  background-color: var(--color-cardinal) !important;
+  border-color: var(--color-rosey) !important;
+
+  color: var(--color-white);
+}
+
+.danger-alt a:link,
+.danger-alt a:visited {
+  color: var(--color-white) !important;
+}
+
+.danger-alt a:hover,
+.danger-alt a:active {
+  color: var(--color-rosey) !important;
+}
+
+.border-danger-alt {
+  border-color: var(--color-rosey) !important;
+}
+.bg-danger-alt {
+  background-color: var(--color-cardinal) !important;
+}
+.btn-danger-alt {
+  background-color: var(--color-rosey) !important;
+}
+.text-danger-alt {
+  color: var(--color-rosey) !important;
+}
+.warning-alt {
+  background-color: var(--color-sunshine) !important;
+  border-color: var(--color-manilla) !important;
+
+  color: var(--color-white);
+}
+
+.warning-alt a:link,
+.warning-alt a:visited {
+  color: var(--color-charcoal) !important;
+}
+
+.warning-alt a:hover,
+.warning-alt a:active {
+  color: var(--color-mustard) !important;
+}
+
+.border-warning-alt {
+  border-color: var(--color-manilla) !important;
+}
+.bg-warning-alt {
+  background-color: var(--color-sunshine) !important;
+}
+.btn-warning-alt {
+  background-color: var(--color-manilla) !important;
+}
+.text-warning-alt {
+  color: var(--color-manilla) !important;
+}
+.info-alt {
+  background-color: var(--color-cobalt) !important;
+  border-color: var(--color-skyline) !important;
+
+  color: var(--color-white);
+}
+
+.info-alt a:link,
+.info-alt a:visited {
+  color: var(--color-white) !important;
+}
+
+.info-alt a:hover,
+.info-alt a:active {
+  color: var(--color-skyline) !important;
+}
+
+.border-info-alt {
+  border-color: var(--color-skyline) !important;
+}
+.bg-info-alt {
+  background-color: var(--color-cobalt) !important;
+}
+.btn-info-alt {
+  background-color: var(--color-skyline) !important;
+}
+.text-info-alt {
+  color: var(--color-skyline) !important;
+}
+.contrast {
+  background-color: var(--color-white) !important;
+  border-color: var(--color-charcoal) !important;
+}
+
+.contrast a:hover,
+.contrast a:active {
+  color: var(--color-royal) !important;
+}
+
+.border-contrast {
+  border-color: var(--color-charcoal) !important;
+}
+.bg-contrast {
+  background-color: var(--color-white) !important;
+}
+.btn-contrast {
+  background-color: var(--color-charcoal) !important;
+}
+.text-contrast {
+  color: var(--color-charcoal) !important;
+}
+.grayscale {
+  background-color: var(--color-cloud) !important;
+  border-color: var(--color-aluminum) !important;
+}
+
+.grayscale a:hover,
+.grayscale a:active {
+  color: var(--color-royal) !important;
+}
+
+.border-grayscale {
+  border-color: var(--color-aluminum) !important;
+}
+.bg-grayscale {
+  background-color: var(--color-cloud) !important;
+}
+.btn-grayscale {
+  background-color: var(--color-aluminum) !important;
+}
+.text-grayscale {
+  color: var(--color-aluminum) !important;
+}
+.midnite {
+  background-color: var(--color-charcoal) !important;
+  border-color: var(--color-slate) !important;
+
+  color: var(--color-white);
+}
+
+.midnite a:link,
+.midnite a:visited {
+  color: var(--color-white) !important;
+}
+
+.midnite a:hover,
+.midnite a:active {
+  color: var(--color-aluminum) !important;
+}
+
+.border-midnite {
+  border-color: var(--color-slate) !important;
+}
+.bg-midnite {
+  background-color: var(--color-charcoal) !important;
+}
+.btn-midnite {
+  background-color: var(--color-slate) !important;
+}
+.text-midnite {
+  color: var(--color-slate) !important;
+}
