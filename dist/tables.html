@@ -1,19 +1,243 @@
-<header class="row">
-  <div class="container">
-    <h1>Futility UI</h1>
-    <h3>The Simple Web Framework</h3>
-  </div>
-</header>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Futility UI :: The Simple Web Framework</title>
 
-<main class="row">
-  <article class="container">
-    <section>
-      <h1>Table Examples</h1>
-    </section>
-  </article>
-</main>
-<footer class="row">
-  <div class="container">
-    <h5>Created 2023</h5>
-  </div>
-</footer>
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/base.css" />
+
+    <link rel="stylesheet" href="/css/util.css" />
+
+    <link rel="stylesheet" href="/css/devices.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  </head>
+  <body class="page-slug p-2">
+    <main class="row">
+      <article class="container">
+        <section>
+          <h1>Table Examples</h1>
+          <h3>Simple Table</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+                <th>Sun</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Red</td>
+                <td>Orange</td>
+                <td>Yellow</td>
+                <td>Green</td>
+                <td>Blue</td>
+                <td>Indigo</td>
+                <td>Violet</td>
+              </tr>
+              <tr>
+                <td>Red</td>
+                <td>Orange</td>
+                <td>Yellow</td>
+                <td>Green</td>
+                <td>Blue</td>
+                <td>Indigo</td>
+                <td>Violet</td>
+              </tr>
+              <tr class="bg-canary">
+                <td>Red</td>
+                <td>Orange</td>
+                <td>Yellow</td>
+                <td>Green</td>
+                <td>Blue</td>
+                <td>Indigo</td>
+                <td>Violet</td>
+              </tr>
+              <tr>
+                <td>Red</td>
+                <td>Orange</td>
+                <td>Yellow</td>
+                <td>Green</td>
+                <td>Blue</td>
+                <td>Indigo</td>
+                <td>Violet</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>01</td>
+                <td>02</td>
+                <td>03</td>
+                <td>04</td>
+                <td>05</td>
+                <td>06</td>
+                <td>07</td>
+              </tr>
+            </tfoot>
+          </table>
+        </section>
+        <section>
+          <h3>Compact Table</h3>
+          <table class="table-sm">
+            <thead>
+              <tr>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+                <th>Sun</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Red</td>
+                <td>Orange</td>
+                <td>Yellow</td>
+                <td>Green</td>
+                <td>Blue</td>
+                <td>Indigo</td>
+                <td>Violet</td>
+              </tr>
+              <tr>
+                <td>Red</td>
+                <td>Orange</td>
+                <td>Yellow</td>
+                <td>Green</td>
+                <td>Blue</td>
+                <td>Indigo</td>
+                <td>Violet</td>
+              </tr>
+              <tr>
+                <td>Red</td>
+                <td>Orange</td>
+                <td>Yellow</td>
+                <td>Green</td>
+                <td>Blue</td>
+                <td>Indigo</td>
+                <td>Violet</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>01</td>
+                <td>02</td>
+                <td>03</td>
+                <td>04</td>
+                <td>05</td>
+                <td>06</td>
+                <td>07</td>
+              </tr>
+            </tfoot>
+          </table>
+        </section>
+        <section>
+          <h3>Table w/ Vertical Headers</h3>
+          <table>
+            <tbody>
+              <tr>
+                <th class="border-right border-3 border-solid">Mon</th>
+                <td>01</td>
+                <td>02</td>
+                <td>03</td>
+                <td>04</td>
+              </tr>
+              <tr>
+                <th class="border-right border-3 border-solid">Tue</th>
+                <td>01</td>
+                <td>02</td>
+                <td>03</td>
+                <td>04</td>
+              </tr>
+              <tr>
+                <th class="border-right border-3 border-solid">Wed</th>
+                <td>01</td>
+                <td>02</td>
+                <td>03</td>
+                <td>04</td>
+              </tr>
+              <tr>
+                <th class="border-right border-3 border-solid">Thu</th>
+                <td>01</td>
+                <td>02</td>
+                <td>03</td>
+                <td>04</td>
+              </tr>
+              <tr>
+                <th class="border-right border-3 border-solid">Fri</th>
+                <td>01</td>
+                <td>02</td>
+                <td>03</td>
+                <td>04</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section>
+          <h3>Table w/ No Border</h3>
+          <table class="table-borderless">
+            <thead>
+              <tr>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+                <th>Sun</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Red</td>
+                <td>Orange</td>
+                <td>Yellow</td>
+                <td>Green</td>
+                <td>Blue</td>
+                <td>Indigo</td>
+                <td>Violet</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>01</td>
+                <td>02</td>
+                <td>03</td>
+                <td>04</td>
+                <td>05</td>
+                <td>06</td>
+                <td>07</td>
+              </tr>
+            </tfoot>
+          </table>
+        </section>
+        <p class="mt-4">
+          <a title="Futility UI Home" href="/contents"
+            >&larr; Back to Contents</a
+          >
+        </p>
+      </article>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+
+    <script src="/js/app.js"></script>
+  </body>
+</html>

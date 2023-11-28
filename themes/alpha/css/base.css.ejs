@@ -228,7 +228,13 @@ table td {
   padding: var(--sp-2);
 }
 
-table th {
+table.table-sm th,
+table.table-sm td {
+  padding: .95rem;
+}
+
+table th,
+table tfoot td {
   background-color: var(--color-cloud);
   font-family: Verdana;
   border-bottom-width: 3px;
@@ -236,6 +242,17 @@ table th {
   font-weight: normal;
   font-size: var(--text-sm);
   text-align: center;
+}
+
+table tfoot td {
+  border-top: 3px solid var(--color-<%= theme.tableBorderColor %>);
+}
+
+table.table-borderless,
+table.table-borderless th,
+table.table-borderless td {
+  border: none !important;
+  background-color: transparent !important;
 }
 
 /* forms */
@@ -375,6 +392,15 @@ blockquote {
     <% if (stylesets[styleset_slug].text) { %>
       color: var(--color-<%= stylesets[styleset_slug].text %>);
     <% } %>
+  }
+  .<%= styleset_slug %> th,
+  .<%= styleset_slug %> td {
+    background-color: var(--color-<%= stylesets[styleset_slug].matte %>) !important;
+    border-color: var(--color-<%= stylesets[styleset_slug].highlight %>) !important;
+  }
+  .<%= styleset_slug %> th,
+  .<%= styleset_slug %> tfoot td {
+    color: var(--color-<%= stylesets[styleset_slug].highlight %>) !important;
   }
   <% if (stylesets[styleset_slug].link) { %>
     .<%= styleset_slug %> a:link,

@@ -275,7 +275,13 @@ table td {
   padding: var(--sp-2);
 }
 
-table th {
+table.table-sm th,
+table.table-sm td {
+  padding: 0.95rem;
+}
+
+table th,
+table tfoot td {
   background-color: var(--color-cloud);
   font-family: Verdana;
   border-bottom-width: 3px;
@@ -283,6 +289,17 @@ table th {
   font-weight: normal;
   font-size: var(--text-sm);
   text-align: center;
+}
+
+table tfoot td {
+  border-top: 3px solid var(--color-whale);
+}
+
+table.table-borderless,
+table.table-borderless th,
+table.table-borderless td {
+  border: none !important;
+  background-color: transparent !important;
 }
 
 /* forms */
@@ -419,6 +436,13 @@ blockquote {
   background-color: var(--color-lima) !important;
   border-color: var(--color-canvas) !important;
 }
+.success th {
+  background-color: var(--color-lima) !important;
+  border-color: var(--color-canvas) !important;
+}
+.success tfoot td {
+  border-top-color: var(--color-canvas) !important;
+}
 
 .success a:link,
 .success a:visited {
@@ -445,6 +469,13 @@ blockquote {
 .danger {
   background-color: var(--color-rosey) !important;
   border-color: var(--color-cardinal) !important;
+}
+.danger th {
+  background-color: var(--color-rosey) !important;
+  border-color: var(--color-cardinal) !important;
+}
+.danger tfoot td {
+  border-top-color: var(--color-cardinal) !important;
 }
 
 .danger a:link,
@@ -473,6 +504,13 @@ blockquote {
   background-color: var(--color-manilla) !important;
   border-color: var(--color-sunshine) !important;
 }
+.warning th {
+  background-color: var(--color-manilla) !important;
+  border-color: var(--color-sunshine) !important;
+}
+.warning tfoot td {
+  border-top-color: var(--color-sunshine) !important;
+}
 
 .warning a:link,
 .warning a:visited {
@@ -499,6 +537,13 @@ blockquote {
 .info {
   background-color: var(--color-skyline) !important;
   border-color: var(--color-cobalt) !important;
+}
+.info th {
+  background-color: var(--color-skyline) !important;
+  border-color: var(--color-cobalt) !important;
+}
+.info tfoot td {
+  border-top-color: var(--color-cobalt) !important;
 }
 
 .info a:link,
@@ -529,6 +574,13 @@ blockquote {
 
   color: var(--color-white);
 }
+.success-alt th {
+  background-color: var(--color-canvas) !important;
+  border-color: var(--color-lima) !important;
+}
+.success-alt tfoot td {
+  border-top-color: var(--color-lima) !important;
+}
 
 .success-alt a:link,
 .success-alt a:visited {
@@ -557,6 +609,13 @@ blockquote {
   border-color: var(--color-rosey) !important;
 
   color: var(--color-white);
+}
+.danger-alt th {
+  background-color: var(--color-cardinal) !important;
+  border-color: var(--color-rosey) !important;
+}
+.danger-alt tfoot td {
+  border-top-color: var(--color-rosey) !important;
 }
 
 .danger-alt a:link,
@@ -587,6 +646,13 @@ blockquote {
 
   color: var(--color-white);
 }
+.warning-alt th {
+  background-color: var(--color-sunshine) !important;
+  border-color: var(--color-manilla) !important;
+}
+.warning-alt tfoot td {
+  border-top-color: var(--color-manilla) !important;
+}
 
 .warning-alt a:link,
 .warning-alt a:visited {
@@ -616,6 +682,13 @@ blockquote {
 
   color: var(--color-white);
 }
+.info-alt th {
+  background-color: var(--color-cobalt) !important;
+  border-color: var(--color-skyline) !important;
+}
+.info-alt tfoot td {
+  border-top-color: var(--color-skyline) !important;
+}
 
 .info-alt a:link,
 .info-alt a:visited {
@@ -643,6 +716,13 @@ blockquote {
   background-color: var(--color-white) !important;
   border-color: var(--color-charcoal) !important;
 }
+.contrast th {
+  background-color: var(--color-white) !important;
+  border-color: var(--color-charcoal) !important;
+}
+.contrast tfoot td {
+  border-top-color: var(--color-charcoal) !important;
+}
 
 .contrast a:hover,
 .contrast a:active {
@@ -664,6 +744,13 @@ blockquote {
 .grayscale {
   background-color: var(--color-cloud) !important;
   border-color: var(--color-aluminum) !important;
+}
+.grayscale th {
+  background-color: var(--color-cloud) !important;
+  border-color: var(--color-aluminum) !important;
+}
+.grayscale tfoot td {
+  border-top-color: var(--color-aluminum) !important;
 }
 
 .grayscale a:hover,
@@ -688,6 +775,13 @@ blockquote {
   border-color: var(--color-slate) !important;
 
   color: var(--color-white);
+}
+.midnite th {
+  background-color: var(--color-charcoal) !important;
+  border-color: var(--color-slate) !important;
+}
+.midnite tfoot td {
+  border-top-color: var(--color-slate) !important;
 }
 
 .midnite a:link,
