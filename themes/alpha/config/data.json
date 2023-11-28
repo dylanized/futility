@@ -1,0 +1,94 @@
+{
+  "contents": [
+    {
+      "desc": "Basic typography elements",
+      "name": "Homepage",
+      "path": "/"
+    },
+    {
+      "desc": "Error message",
+      "name": "404",
+      "path": "/404"
+    },
+    {
+      "desc": "(This page) Simple table",
+      "name": "Table of Contents",
+      "path": "/contents"
+    },
+    {
+      "desc": "Paragraphs, lists, blockquote",
+      "name": "Typography",
+      "path": "/typography"
+    },
+    {
+      "desc": "Image alignment & styles",
+      "name": "Images",
+      "path": "/images"
+    },
+    {
+      "desc": "Text sizes, other utility classes",
+      "name": "Utilities",
+      "path": "/utilities"
+    },
+    {
+      "desc": "Form with fields & basic buttons",
+      "name": "Form",
+      "path": "/form"
+    },
+    {
+      "desc": "Color palette and grid example",
+      "name": "Colors",
+      "path": "/colors"
+    },
+    {
+      "desc": "Reusable groupings of colors",
+      "name": "Stylesets",
+      "path": "/stylesets"
+    },
+    {
+      "desc": "Panel component with stylesets",
+      "name": "Panels",
+      "path": "/panels"
+    },
+    {
+      "desc": "Cards",
+      "name": "Basic Cards",
+      "path": "/cards"
+    },
+    {
+      "desc": "Card styles",
+      "name": "Card Styles",
+      "path": "/card-styles"
+    },
+    {
+      "desc": "Tags, quotes & buttons",
+      "name": "Styled Elements",
+      "path": "/styled-elements"
+    }
+  ],
+  "footerText": "Created 2023",
+  "primaryNav": [
+    {
+      "href": "/",
+      "text": "Home",
+      "title": "Home"
+    },
+    {
+      "href": "/foo",
+      "text": "Foo",
+      "title": "footer"
+    },
+    {
+      "href": "/bar",
+      "text": "Bar",
+      "title": "Bar"
+    },
+    {
+      "href": "/baz",
+      "text": "Baz",
+      "title": "Baz"
+    }
+  ],
+  "siteName": "Futility UI",
+  "siteTagline": "The Simple Web Framework"
+}

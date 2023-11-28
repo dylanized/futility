@@ -86,7 +86,12 @@ else {
   app.set("views", path.join(__dirname, themePath));
 
   // Load theme config
-  const themeConfig = JSON.parse(fs.readFileSync(`${themePath}/config/theme.json`));
+  const themeConfig = JSON.parse(
+    fs.readFileSync(`${themePath}/config/theme.json`),
+  );
+  const themeData = JSON.parse(
+    fs.readFileSync(`${themePath}/config/data.json`),
+  );
 
   // Mount health check for dev server
   mountHealthCheck(app, {
@@ -109,10 +114,16 @@ else {
           `${themePath}/config/flavor-${req.query.flavor.toLowerCase()}.json`,
         ),
       );
-      const locals = Object.assign({}, { req }, themeConfig, flavorConfig);
+      const locals = Object.assign(
+        {},
+        { req },
+        themeConfig,
+        flavorConfig,
+        themeData,
+      );
       return locals;
     }
-    return Object.assign({}, { req }, themeConfig);
+    return Object.assign({}, { req }, themeConfig, themeData);
   };
 
   const renderTemplate = (req, res, template_slug) => {
