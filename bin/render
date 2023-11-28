@@ -3,5 +3,8 @@
 # Fail on errors
 set -e
 
+# Combine config files
+npx node-jq -s '.[0] * .[1]' themes/alpha/config/theme.json themes/alpha/config/data.json > .tmp/combined.json
+
 # Render source file to destination, while applying app config
-npx ejs $1 -f themes/alpha/theme.json -o $2
+npx ejs $1 -f .tmp/combined.json -o $2
