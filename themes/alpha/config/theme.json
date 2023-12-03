@@ -3,6 +3,7 @@
   "stylesheets": [
     "/css/reset.css",
     "/css/base.css",
+    "/css/variants.css",
     "/css/util.css",
     "/css/devices.css"
   ],
