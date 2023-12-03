@@ -5,13 +5,14 @@
   "main": "server.js",
   "scripts": {
     "build": ". bin/build",
+    "bundle-css": "cleancss --output dist/css/bundle.min.css dist/css/*.css !dist/css/*.min.css",
     "clean": "rimraf dist/",
     "dev": "onchange -i -k 'config/**/*' 'package.json' 'server.js' 'themes/**/*' -- yarn start-dev",
     "format": "prettier --write .",
     "format-check": "prettier --check .",
     "format-dist": "prettier --log-level silent --write dist/",
     "minify-css": "cleancss --batch-suffix '.min' --batch dist/css/*.css !dist/css/*.min.css",
-    "bundle-css": "cleancss --output dist/css/bundle.min.css dist/css/*.css !dist/css/*.min.css",
+    "minify-js": "terser dist/js/app.js --compress --mangle --output dist/js/app.min.js",
     "render": ". bin/render",
     "start": "NODE_ENV=production node server.js",
     "start-dev": "NODE_ENV=development node server.js",
@@ -23,7 +24,8 @@
     "clean-css-cli": "^5.6.3",
     "onchange": "^7.1.0",
     "prettier": "^3.0.3",
-    "rimraf": "^5.0.5"
+    "rimraf": "^5.0.5",
+    "terser": "^5.24.0"
   },
   "dependencies": {
     "config": "^3.3.9",
