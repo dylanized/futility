@@ -1,0 +1,129 @@
+<%- include('inc/head') %>
+<main class="container">
+  <section>
+    <h1>Styled Elements</h1>
+    <h3>Tags</h3>
+    <ul>
+      <li><code class="tag text-xs">code .tag</code> <a class="tag code text-xs" href="#">a .tag</a></li>
+      <% for (const variant_slug in variants) { -%>
+        <li><code class="tag text-xs <%= variant_slug %>">code .tag .<%= variant_slug %></code> <a href="#" class="tag code text-xs <%= variant_slug %>">a .tag .<%= variant_slug %></a></li>
+      <% } %>
+    </ul>
+  </section>
+  <section>
+    <h3>Blockquotes</h3>
+    <blockquote>
+      <p class="mb-2">A normal blockquote</p>
+    </blockquote>
+    <blockquote class="border-success">
+      <p class="mb-2">A blockquote with .border-success, with <a href="#">a hyperlink</a></p>
+    </blockquote>
+    <blockquote class="border-danger">
+      <p class="mb-2">A blockquote with .border-danger, with <a href="#">a hyperlink</a></p>
+    </blockquote>
+    <blockquote class="border-warning">
+      <p class="mb-2">A blockquote with .border-warning, with <a href="#">a hyperlink</a></p>
+    </blockquote>
+    <blockquote class="border-info">
+      <p class="mb-2">A blockquote with .border-info, with <a href="#">a hyperlink</a></p>
+    </blockquote>
+  </section>
+  <section>
+    <h3>Buttons</h3>
+    <table class="table-sm">
+      <thead>
+        <th>Input</th>
+        <th>Button</th>
+        <th>Link</th>
+        <th>Input Disabled</th>
+        <th>Button Disabled</th>
+      </thead>
+      <tbody>
+        <td><input class="btn-sm btn-success d-block w-100 text-centers" type="submit" name="submit" value=".btn-success"></td>
+        <td><button class="btn-sm btn-success d-block w-100 text-center">.btn-success</button></td>
+        <td><a href="#" class="btn-sm btn btn-success d-block w-100 text-center">.btn-success</a></td>
+        <td><input class="btn-sm btn-success d-block w-100 text-center" disabled="true" type="submit" name="submit" value=".btn-success"></td>
+        <td><button class="btn-sm btn-success d-block w-100 text-center" disabled="true">.btn-success</button></td>
+      </tbody>
+      <tbody>
+        <td><input class="btn-sm btn-danger d-block w-100 text-centers" type="submit" name="submit" value=".btn-danger"></td>
+        <td><button class="btn-sm btn-danger d-block w-100 text-center">.btn-danger</button></td>
+        <td><a href="#" class="btn-sm btn btn-danger d-block w-100 text-center">.btn-danger</a></td>
+        <td><input class="btn-sm btn-danger d-block w-100 text-center" disabled="true" type="submit" name="submit" value=".btn-danger"></td>
+        <td><button class="btn-sm btn-danger d-block w-100 text-center" disabled="true">.btn-danger</button></td>
+      </tbody>
+      <tbody>
+        <td><input class="btn-sm btn-warning d-block w-100 text-centers" type="submit" name="submit" value=".btn-warning"></td>
+        <td><button class="btn-sm btn-warning d-block w-100 text-center">.btn-warning</button></td>
+        <td><a href="#" class="btn-sm btn btn-warning d-block w-100 text-center">.btn-warning</a></td>
+        <td><input class="btn-sm btn-warning d-block w-100 text-center" disabled="true" type="submit" name="submit" value=".btn-warning"></td>
+        <td><button class="btn-sm btn-warning d-block w-100 text-center" disabled="true">.btn-warning</button></td>
+      </tbody>
+      <tbody>
+        <td><input class="btn-sm btn-info d-block w-100 text-centers" type="submit" name="submit" value=".btn-info"></td>
+        <td><button class="btn-sm btn-info d-block w-100 text-center">.btn-info</button></td>
+        <td><a href="#" class="btn-sm btn btn-info d-block w-100 text-center">.btn-info</a></td>
+        <td><input class="btn-sm btn-info d-block w-100 text-center" disabled="true" type="submit" name="submit" value=".btn-info"></td>
+        <td><button class="btn-sm btn-info d-block w-100 text-center" disabled="true">.btn-info</button></td>
+      </tbody>
+      <tbody>
+        <td><input class="btn-sm btn-outline btn-success d-block w-100 text-centers" type="submit" name="submit" value=".btn-success"></td>
+        <td><button class="btn-sm btn-outline btn-success d-block w-100 text-center">.btn-success</button></td>
+        <td><a href="#" class="btn-sm btn-outline btn btn-success d-block w-100 text-center">.btn-success</a></td>
+        <td><input class="btn-sm btn-outline btn-success d-block w-100 text-center" disabled="true" type="submit" name="submit" value=".btn-success"></td>
+        <td><button class="btn-sm btn-outline btn-success d-block w-100 text-center" disabled="true">.btn-success</button></td>
+      </tbody>
+      <tbody>
+        <td><input class="btn-sm btn-outline btn-danger d-block w-100 text-centers" type="submit" name="submit" value=".btn-danger"></td>
+        <td><button class="btn-sm btn-outline btn-danger d-block w-100 text-center">.btn-danger</button></td>
+        <td><a href="#" class="btn-sm btn-outline btn btn-danger d-block w-100 text-center">.btn-danger</a></td>
+        <td><input class="btn-sm btn-outline btn-danger d-block w-100 text-center" disabled="true" type="submit" name="submit" value=".btn-danger"></td>
+        <td><button class="btn-sm btn-outline btn-danger d-block w-100 text-center" disabled="true">.btn-danger</button></td>
+      </tbody>
+      <tbody>
+        <td><input class="btn-sm btn-outline btn-warning d-block w-100 text-centers" type="submit" name="submit" value=".btn-warning"></td>
+        <td><button class="btn-sm btn-outline btn-warning d-block w-100 text-center">.btn-warning</button></td>
+        <td><a href="#" class="btn-sm btn-outline btn btn-warning d-block w-100 text-center">.btn-warning</a></td>
+        <td><input class="btn-sm btn-outline btn-warning d-block w-100 text-center" disabled="true" type="submit" name="submit" value=".btn-warning"></td>
+        <td><button class="btn-sm btn-outline btn-warning d-block w-100 text-center" disabled="true">.btn-warning</button></td>
+      </tbody>
+      <tbody>
+        <td><input class="btn-sm btn-outline btn-info d-block w-100 text-centers" type="submit" name="submit" value=".btn-info"></td>
+        <td><button class="btn-sm btn-outline btn-info d-block w-100 text-center">.btn-info</button></td>
+        <td><a href="#" class="btn-sm btn-outline btn btn-info d-block w-100 text-center">.btn-info</a></td>
+        <td><input class="btn-sm btn-outline btn-info d-block w-100 text-center" disabled="true" type="submit" name="submit" value=".btn-info"></td>
+        <td><button class="btn-sm btn-outline btn-info d-block w-100 text-center" disabled="true">.btn-info</button></td>
+      </tbody>
+      <tbody>
+        <td><input class="btn-sm btn-clear btn-success d-block w-100 text-centers" type="submit" name="submit" value=".btn-success"></td>
+        <td><button class="btn-sm btn-clear btn-success d-block w-100 text-center">.btn-success</button></td>
+        <td><a href="#" class="btn-sm btn-clear btn btn-success d-block w-100 text-center">.btn-success</a></td>
+        <td><input class="btn-sm btn-clear btn-success d-block w-100 text-center" disabled="true" type="submit" name="submit" value=".btn-success"></td>
+        <td><button class="btn-sm btn-clear btn-success d-block w-100 text-center" disabled="true">.btn-success</button></td>
+      </tbody>
+      <tbody>
+        <td><input class="btn-sm btn-clear btn-danger d-block w-100 text-centers" type="submit" name="submit" value=".btn-danger"></td>
+        <td><button class="btn-sm btn-clear btn-danger d-block w-100 text-center">.btn-danger</button></td>
+        <td><a href="#" class="btn-sm btn-clear btn btn-danger d-block w-100 text-center">.btn-danger</a></td>
+        <td><input class="btn-sm btn-clear btn-danger d-block w-100 text-center" disabled="true" type="submit" name="submit" value=".btn-danger"></td>
+        <td><button class="btn-sm btn-clear btn-danger d-block w-100 text-center" disabled="true">.btn-danger</button></td>
+      </tbody>
+      <tbody>
+        <td><input class="btn-sm btn-clear btn-warning d-block w-100 text-centers" type="submit" name="submit" value=".btn-warning"></td>
+        <td><button class="btn-sm btn-clear btn-warning d-block w-100 text-center">.btn-warning</button></td>
+        <td><a href="#" class="btn-sm btn-clear btn btn-warning d-block w-100 text-center">.btn-warning</a></td>
+        <td><input class="btn-sm btn-clear btn-warning d-block w-100 text-center" disabled="true" type="submit" name="submit" value=".btn-warning"></td>
+        <td><button class="btn-sm btn-clear btn-warning d-block w-100 text-center" disabled="true">.btn-warning</button></td>
+      </tbody>
+      <tbody>
+        <td><input class="btn-sm btn-clear btn-info d-block w-100 text-centers" type="submit" name="submit" value=".btn-info"></td>
+        <td><button class="btn-sm btn-clear btn-info d-block w-100 text-center">.btn-info</button></td>
+        <td><a href="#" class="btn-sm btn-clear btn btn-info d-block w-100 text-center">.btn-info</a></td>
+        <td><input class="btn-sm btn-clear btn-info d-block w-100 text-center" disabled="true" type="submit" name="submit" value=".btn-info"></td>
+        <td><button class="btn-sm btn-clear btn-info d-block w-100 text-center" disabled="true">.btn-info</button></td>
+      </tbody>
+    </table>
+  </section>
+  <p class="mt-4"><a title="Futility UI Contents" href="/contents">&larr; Back to Contents</a></p>
+</main>
+<%- include('inc/foot') %>

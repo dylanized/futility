@@ -43,7 +43,8 @@ a:visited { color: var(--color-cobalt); font-weight: normal; text-decoration: un
 a:hover,
 a:active { color: var(--color-royal); font-weight: normal; text-decoration: underline; }
 
-code {
+code,
+.code {
   font-family: var(--font-monospace);
   font-size: .8em;
 }
@@ -55,6 +56,10 @@ code {
   border: 1px solid var(--color-cloud);
   border-radius: .25rem;
   padding: 3px 5px;
+}
+a.tag {
+  text-decoration: none;
+  color: var(--color-charcoal);
 }
 
 .mark {
@@ -255,6 +260,14 @@ table.table-borderless td {
   background-color: transparent !important;
 }
 
+table.table-hover tbody tr:hover td {
+  background-color: var(--color-canary);
+}
+
+table.table-striped tr:nth-child(even) td {
+  background-color: var(--color-cloud);
+}
+
 /* forms */
 
 fieldset {
@@ -274,8 +287,8 @@ label {
   padding: 0;
 }
 
-input[type="text"],
-input[type="number"],
+input[type=text],
+input[type=number],
 textarea {
   border: 1px solid var(--color-cloud);
   border-radius: 3px;
@@ -324,7 +337,7 @@ button,
 input[type=submit] {
   background-color: var(--color-charcoal);
   border: none;
-  border-radius: 5px;
+  border-radius: 7px;
   color: var(--color-white);
   cursor: pointer;
   font-size: var(--text-sm);
@@ -335,6 +348,7 @@ input[type=submit] {
   line-height: 1.45;
   display: inline-block;
   text-align: center;
+  vertical-align: text;
 }
 
 button:hover,
@@ -342,18 +356,64 @@ input[type=submit]:not([disabled]):hover {
   text-decoration: underline;
 }
 
-input[type=submit][disabled] {
-  background-color: var(--color-cloud) !important;
-  color: var(--color-aluminum);
-  cursor: default;
-}
-
 a.btn:hover {
   text-decoration: underline;
+  color: #fff !important;
 }
 
 .btn-secondary {
   backgrond-color: var(--color-cloud);
+}
+
+.btn-outline {
+  background-color: white !important;
+  border: 2px solid #000 !important;
+  color: var(--color-charcoal) !important;
+}
+
+.btn-sm {
+  border-radius: 5px !important;
+  border-width: 1px !important;
+  padding: .35rem !important;
+  font-size: var(--text-xs) !important;
+}
+
+.btn-lg {
+  border-radius: 10px !important;
+  border-width: 3px !important;
+  padding: 1.1rem !important;
+  font-size: var(--text-lg) !important;
+}
+
+.btn-clear {
+  background-color: transparent !important;
+  border: none !important;
+  color: var(--color-charcoal) !important;
+}
+
+a.btn-outline:hover,
+a.btn-outline:active {
+  color: var(--color-charcoal) !important;
+}
+
+input[type=submit][disabled],
+button[disabled] {
+  background-color: var(--color-cloud) !important;
+  color: var(--color-aluminum) !important;
+  cursor: default;
+}
+
+input[type=submit][disabled].btn-outline,
+button[disabled].btn-outline,
+input[type=submit][disabled].btn-clear,
+button[disabled].btn-clear {
+  color: var(--color-aluminum) !important;
+  border-color: var(--color-aluminum) !important;
+  background-color: transparent !important;
+}
+
+button[disabled]:hover {
+  text-decoration: none;
 }
 
 /* other */
@@ -384,51 +444,63 @@ blockquote {
   margin: 0 0 1rem 0;
 }
 
-/* stylesets */
-<% for (const styleset_slug in stylesets) { -%>
-  .<%= styleset_slug %> {
-    background-color: var(--color-<%= stylesets[styleset_slug].matte %>) !important;
-    border-color: var(--color-<%= stylesets[styleset_slug].highlight %>) !important;
-    <% if (stylesets[styleset_slug].text) { %>
-      color: var(--color-<%= stylesets[styleset_slug].text %>);
+/* variants */
+<% for (const variant_slug in variants) { -%>
+  .<%= variant_slug %> {
+    background-color: var(--color-<%= variants[variant_slug].matte %>) !important;
+    border-color: var(--color-<%= variants[variant_slug].highlight %>) !important;
+    <% if (variants[variant_slug].text) { %>
+      color: var(--color-<%= variants[variant_slug].text %>);
     <% } %>
   }
-  .<%= styleset_slug %> th,
-  .<%= styleset_slug %> td {
-    background-color: var(--color-<%= stylesets[styleset_slug].matte %>) !important;
-    border-color: var(--color-<%= stylesets[styleset_slug].highlight %>) !important;
+  .<%= variant_slug %> th,
+  .<%= variant_slug %> td {
+    background-color: var(--color-<%= variants[variant_slug].matte %>) !important;
+    border-color: var(--color-<%= variants[variant_slug].highlight %>) !important;
   }
-  .<%= styleset_slug %> th,
-  .<%= styleset_slug %> tfoot td {
-    color: var(--color-<%= stylesets[styleset_slug].highlight %>) !important;
+  .<%= variant_slug %> th,
+  .<%= variant_slug %> tfoot td {
+    color: var(--color-<%= variants[variant_slug].highlight %>) !important;
   }
-  <% if (stylesets[styleset_slug].link) { %>
-    .<%= styleset_slug %> a:link,
-    .<%= styleset_slug %> a:visited {
-      color: var(--color-<%= stylesets[styleset_slug].link %>) !important;
+  <% if (variants[variant_slug].link) { %>
+    .<%= variant_slug %> a:link,
+    .<%= variant_slug %> a:visited {
+      color: var(--color-<%= variants[variant_slug].link %>) !important;
     }
   <% } %>
-  <% if (stylesets[styleset_slug].hover) { %>
-    .<%= styleset_slug %> a:hover,
-    .<%= styleset_slug %> a:active {
-      color: var(--color-<%= stylesets[styleset_slug].hover %>) !important;
+  <% if (variants[variant_slug].hover) { %>
+    .<%= variant_slug %> a:hover,
+    .<%= variant_slug %> a:active {
+      color: var(--color-<%= variants[variant_slug].hover %>) !important;
     }
   <% } else { %>
-    .<%= styleset_slug %> a:hover,
-    .<%= styleset_slug %> a:active {
-      color: var(--color-<%= stylesets[styleset_slug].highlight %>) !important;
+    .<%= variant_slug %> a:hover,
+    .<%= variant_slug %> a:active {
+      color: var(--color-<%= variants[variant_slug].highlight %>) !important;
     }
   <% } %>
-  .border-<%= styleset_slug %> {
-    border-color: var(--color-<%= stylesets[styleset_slug].highlight %>) !important;
+  .border-<%= variant_slug %> {
+    border-color: var(--color-<%= variants[variant_slug].highlight %>) !important;
   }
-  .bg-<%= styleset_slug %> {
-    background-color: var(--color-<%= stylesets[styleset_slug].matte %>) !important;
+  .bg-<%= variant_slug %> {
+    background-color: var(--color-<%= variants[variant_slug].matte %>) !important;
   }
-  .btn-<%= styleset_slug %> {
-    background-color: var(--color-<%= stylesets[styleset_slug].highlight %>) !important;
+  .btn-<%= variant_slug %> {
+    background-color: var(--color-<%= variants[variant_slug].highlight %>) !important;
   }
-  .text-<%= styleset_slug %> {
-    color: var(--color-<%= stylesets[styleset_slug].highlight %>) !important;
+  .text-<%= variant_slug %> {
+    color: var(--color-<%= variants[variant_slug].highlight %>) !important;
+  }
+  .btn-outline.btn-<%= variant_slug %> {
+    background-color: white !important;
+    border-color: var(--color-<%= variants[variant_slug].highlight %>) !important;
+    color: var(--color-<%= variants[variant_slug].highlight %>) !important;
+  }
+  .btn-clear.btn-<%= variant_slug %> {
+    background-color: white !important;
+    color: var(--color-<%= variants[variant_slug].highlight %>) !important;
+  }
+  a.<%= variant_slug %> {
+    color: var(--color-<%= variants[variant_slug].highlight %>) !important;
   }
 <% } %>

@@ -1,0 +1,25 @@
+<%- include('inc/head') %>
+<main class="container">
+  <section>
+    <h1 class="text-xl1 mb-1">Styled Cards</h1>
+    <% for (const variant_slug in variants) { -%>
+      <div class="card <%= variant_slug %>">
+        <p class="mb-2">Card with .<%= variant_slug %> variant, lorem ipsum dolor sit amet, <a href="#">and here is a hyperlink</a>. In consequat vel est vitae hendrerit. Cras tortor libero, hendrerit ut vestibulum eu, hendrerit pretium nibh.</p>
+      </div>
+    <% } %>
+    <div class="card success bg-white">
+      <p class="mb-2">Card with variant and .bg-white, lorem ipsum dolor sit amet, <a href="#">and here is a hyperlink</a>. In consequat vel est vitae hendrerit. Cras tortor libero, hendrerit ut vestibulum eu, hendrerit pretium nibh.</p>
+    </div>
+    <div class="card danger bg-white">
+      <p class="mb-2">Card with variant and .bg-white, lorem ipsum dolor sit amet, <a href="#">and here is a hyperlink</a>. In consequat vel est vitae hendrerit. Cras tortor libero, hendrerit ut vestibulum eu, hendrerit pretium nibh.</p>
+    </div>
+    <div class="card warning bg-white">
+      <p class="mb-2">Card with variant and .bg-white, lorem ipsum dolor sit amet, <a href="#">and here is a hyperlink</a>. In consequat vel est vitae hendrerit. Cras tortor libero, hendrerit ut vestibulum eu, hendrerit pretium nibh.</p>
+    </div>
+    <div class="card info bg-white">
+      <p class="mb-2">Card with variant and .bg-white, lorem ipsum dolor sit amet, <a href="#">and here is a hyperlink</a>. In consequat vel est vitae hendrerit. Cras tortor libero, hendrerit ut vestibulum eu, hendrerit pretium nibh.</p>
+    </div>
+    <p class="mt-4"><a title="Futility UI Contents" href="/contents">&larr; Back to Contents</a></p>
+  </section>
+</main>
+<%- include('inc/foot') %>

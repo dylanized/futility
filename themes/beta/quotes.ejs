@@ -5,9 +5,9 @@
     <blockquote>
       <p class="mb-2">A normal blockquote</p>
     </blockquote>
-    <% for (const styleset_slug in stylesets) { -%>
-      <blockquote class="border-<%= styleset_slug %>">
-        <p class="mb-2">A blockquote with .border-<%= styleset_slug %>, with <a href="#">a hyperlink</a></p>
+    <% for (const variant_slug in variants) { -%>
+      <blockquote class="border-<%= variant_slug %>">
+        <p class="mb-2">A blockquote with .border-<%= variant_slug %>, with <a href="#">a hyperlink</a></p>
       </blockquote>
     <% } %>
 </main>

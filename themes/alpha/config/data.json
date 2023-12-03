@@ -46,12 +46,17 @@
       "path": "/utilities"
     },
     {
-      "desc": "Panel component & variations",
+      "desc": "Button sizes and styles",
+      "name": "Buttons",
+      "path": "/buttons"
+    },
+    {
+      "desc": "Panel component",
       "name": "Panels",
       "path": "/panels"
     },
     {
-      "desc": "Card component & variations",
+      "desc": "Card component",
       "name": "Cards",
       "path": "/cards"
     },
@@ -62,28 +67,28 @@
     },
     {
       "desc": "Reusable groupings of colors",
-      "name": "Stylesets",
-      "path": "/stylesets"
+      "name": "Variants",
+      "path": "/variants"
     },
     {
       "desc": "Tags, quotes & buttons",
-      "name": "Styled Elements",
-      "path": "/styled-elements"
+      "name": "Element Variants",
+      "path": "/element-variants"
     },
     {
-      "desc": "Tables with stylesets",
-      "name": "Styled Tables",
-      "path": "/styled-tables"
+      "desc": "Tables with variants",
+      "name": "Table Variants",
+      "path": "/table-variants"
     },
     {
-      "desc": "Panels with stylesets",
-      "name": "Styled Panels",
-      "path": "/styled-panels"
+      "desc": "Panels with variants",
+      "name": "Panel Variants",
+      "path": "/panel-variants"
     },
     {
-      "desc": "Cards with stylesets",
-      "name": "Styled Cards",
-      "path": "/styled-cards"
+      "desc": "Cards with variants",
+      "name": "Card Variants",
+      "path": "/card-variants"
     }
   ],
   "footerText": "Created 2023",

@@ -16,8 +16,8 @@
         </tr>
       </thead>
       <tbody>
-        <% for (const styleset_slug in stylesets) { -%>
-          <tr class="<%= styleset_slug %>">
+        <% for (const variant_slug in variants) { -%>
+          <tr class="<%= variant_slug %>">
             <td>Red</td>
             <td>Orange</td>
             <td>Yellow</td>
@@ -43,8 +43,8 @@
   </section>
   <section>
     <h3>Styled Tables</h3>
-    <% for (const styleset_slug in stylesets) { -%>
-      <table class="<%= styleset_slug %>">
+    <% for (const variant_slug in variants) { -%>
+      <table class="<%= variant_slug %>">
         <thead>
           <tr>
             <th>Mon</th>

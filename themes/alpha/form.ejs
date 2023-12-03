@@ -1,7 +1,7 @@
 <%- include('inc/head') %>
 <main class="container">
   <section>
-    <h1>Futility Form Example</h1>
+    <h1>Form Example</h1>
     <form name="" method="" class="mb-4">
       <fieldset>
         <label for="text-input">Text Input</label>
@@ -40,10 +40,12 @@
         <label for="file-input">File Input</label>
         <input id="file-input" type="file" name="file">
       </fieldset>
-      <input type="submit" name="submit" value="Input Element">
-      <button>Button Element</button>
-      <a href="#" class="btn">Link Element</a>
-      <input disabled="true" type="submit" name="submit" value="Input Disabled">
+      <fieldset>
+        <input type="submit" name="submit" value="Input Element">
+        <button>Button Element</button>
+        <input disabled="true" type="submit" name="submit" value="Input Disabled">
+        <button disabled="true">Button Disabled</button>
+      </fieldset>
     </form>
     <p><a title="Futility UI Contents" href="/contents">&larr; Back to Contents</a></p>
   </section>

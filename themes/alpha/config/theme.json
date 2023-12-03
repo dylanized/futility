@@ -32,7 +32,7 @@
     "tableThBorderWidth": "1px",
     "tableThTextColor": "white"
   },
-  "stylesets": {
+  "variants": {
     "success": {
       "highlight": "canvas",
       "hover": "white",

@@ -90,7 +90,8 @@ a:active {
   text-decoration: underline;
 }
 
-code {
+code,
+.code {
   font-family: var(--font-monospace);
   font-size: 0.8em;
 }
@@ -102,6 +103,10 @@ code {
   border: 1px solid var(--color-cloud);
   border-radius: 0.25rem;
   padding: 3px 5px;
+}
+a.tag {
+  text-decoration: none;
+  color: var(--color-charcoal);
 }
 
 .mark {
@@ -302,6 +307,14 @@ table.table-borderless td {
   background-color: transparent !important;
 }
 
+table.table-hover tbody tr:hover td {
+  background-color: var(--color-canary);
+}
+
+table.table-striped tr:nth-child(even) td {
+  background-color: var(--color-cloud);
+}
+
 /* forms */
 
 fieldset {
@@ -371,7 +384,7 @@ button,
 input[type="submit"] {
   background-color: var(--color-charcoal);
   border: none;
-  border-radius: 5px;
+  border-radius: 7px;
   color: var(--color-white);
   cursor: pointer;
   font-size: var(--text-sm);
@@ -382,6 +395,7 @@ input[type="submit"] {
   line-height: 1.45;
   display: inline-block;
   text-align: center;
+  vertical-align: text;
 }
 
 button:hover,
@@ -389,18 +403,64 @@ input[type="submit"]:not([disabled]):hover {
   text-decoration: underline;
 }
 
-input[type="submit"][disabled] {
-  background-color: var(--color-cloud) !important;
-  color: var(--color-aluminum);
-  cursor: default;
-}
-
 a.btn:hover {
   text-decoration: underline;
+  color: #fff !important;
 }
 
 .btn-secondary {
   backgrond-color: var(--color-cloud);
+}
+
+.btn-outline {
+  background-color: white !important;
+  border: 2px solid #000 !important;
+  color: var(--color-charcoal) !important;
+}
+
+.btn-sm {
+  border-radius: 5px !important;
+  border-width: 1px !important;
+  padding: 0.35rem !important;
+  font-size: var(--text-xs) !important;
+}
+
+.btn-lg {
+  border-radius: 10px !important;
+  border-width: 3px !important;
+  padding: 1.1rem !important;
+  font-size: var(--text-lg) !important;
+}
+
+.btn-clear {
+  background-color: transparent !important;
+  border: none !important;
+  color: var(--color-charcoal) !important;
+}
+
+a.btn-outline:hover,
+a.btn-outline:active {
+  color: var(--color-charcoal) !important;
+}
+
+input[type="submit"][disabled],
+button[disabled] {
+  background-color: var(--color-cloud) !important;
+  color: var(--color-aluminum) !important;
+  cursor: default;
+}
+
+input[type="submit"][disabled].btn-outline,
+button[disabled].btn-outline,
+input[type="submit"][disabled].btn-clear,
+button[disabled].btn-clear {
+  color: var(--color-aluminum) !important;
+  border-color: var(--color-aluminum) !important;
+  background-color: transparent !important;
+}
+
+button[disabled]:hover {
+  text-decoration: none;
 }
 
 /* other */
@@ -431,17 +491,19 @@ blockquote {
   margin: 0 0 1rem 0;
 }
 
-/* stylesets */
+/* variants */
 .success {
   background-color: var(--color-lima) !important;
   border-color: var(--color-canvas) !important;
 }
-.success th {
+.success th,
+.success td {
   background-color: var(--color-lima) !important;
   border-color: var(--color-canvas) !important;
 }
+.success th,
 .success tfoot td {
-  border-top-color: var(--color-canvas) !important;
+  color: var(--color-canvas) !important;
 }
 
 .success a:link,
@@ -466,16 +528,30 @@ blockquote {
 .text-success {
   color: var(--color-canvas) !important;
 }
+.btn-outline.btn-success {
+  background-color: white !important;
+  border-color: var(--color-canvas) !important;
+  color: var(--color-canvas) !important;
+}
+.btn-clear.btn-success {
+  background-color: white !important;
+  color: var(--color-canvas) !important;
+}
+a.success {
+  color: var(--color-canvas) !important;
+}
 .danger {
   background-color: var(--color-rosey) !important;
   border-color: var(--color-cardinal) !important;
 }
-.danger th {
+.danger th,
+.danger td {
   background-color: var(--color-rosey) !important;
   border-color: var(--color-cardinal) !important;
 }
+.danger th,
 .danger tfoot td {
-  border-top-color: var(--color-cardinal) !important;
+  color: var(--color-cardinal) !important;
 }
 
 .danger a:link,
@@ -500,16 +576,30 @@ blockquote {
 .text-danger {
   color: var(--color-cardinal) !important;
 }
+.btn-outline.btn-danger {
+  background-color: white !important;
+  border-color: var(--color-cardinal) !important;
+  color: var(--color-cardinal) !important;
+}
+.btn-clear.btn-danger {
+  background-color: white !important;
+  color: var(--color-cardinal) !important;
+}
+a.danger {
+  color: var(--color-cardinal) !important;
+}
 .warning {
   background-color: var(--color-manilla) !important;
   border-color: var(--color-sunshine) !important;
 }
-.warning th {
+.warning th,
+.warning td {
   background-color: var(--color-manilla) !important;
   border-color: var(--color-sunshine) !important;
 }
+.warning th,
 .warning tfoot td {
-  border-top-color: var(--color-sunshine) !important;
+  color: var(--color-sunshine) !important;
 }
 
 .warning a:link,
@@ -534,16 +624,30 @@ blockquote {
 .text-warning {
   color: var(--color-sunshine) !important;
 }
+.btn-outline.btn-warning {
+  background-color: white !important;
+  border-color: var(--color-sunshine) !important;
+  color: var(--color-sunshine) !important;
+}
+.btn-clear.btn-warning {
+  background-color: white !important;
+  color: var(--color-sunshine) !important;
+}
+a.warning {
+  color: var(--color-sunshine) !important;
+}
 .info {
   background-color: var(--color-skyline) !important;
   border-color: var(--color-cobalt) !important;
 }
-.info th {
+.info th,
+.info td {
   background-color: var(--color-skyline) !important;
   border-color: var(--color-cobalt) !important;
 }
+.info th,
 .info tfoot td {
-  border-top-color: var(--color-cobalt) !important;
+  color: var(--color-cobalt) !important;
 }
 
 .info a:link,
@@ -568,18 +672,32 @@ blockquote {
 .text-info {
   color: var(--color-cobalt) !important;
 }
+.btn-outline.btn-info {
+  background-color: white !important;
+  border-color: var(--color-cobalt) !important;
+  color: var(--color-cobalt) !important;
+}
+.btn-clear.btn-info {
+  background-color: white !important;
+  color: var(--color-cobalt) !important;
+}
+a.info {
+  color: var(--color-cobalt) !important;
+}
 .success-alt {
   background-color: var(--color-canvas) !important;
   border-color: var(--color-lima) !important;
 
   color: var(--color-white);
 }
-.success-alt th {
+.success-alt th,
+.success-alt td {
   background-color: var(--color-canvas) !important;
   border-color: var(--color-lima) !important;
 }
+.success-alt th,
 .success-alt tfoot td {
-  border-top-color: var(--color-lima) !important;
+  color: var(--color-lima) !important;
 }
 
 .success-alt a:link,
@@ -604,18 +722,32 @@ blockquote {
 .text-success-alt {
   color: var(--color-lima) !important;
 }
+.btn-outline.btn-success-alt {
+  background-color: white !important;
+  border-color: var(--color-lima) !important;
+  color: var(--color-lima) !important;
+}
+.btn-clear.btn-success-alt {
+  background-color: white !important;
+  color: var(--color-lima) !important;
+}
+a.success-alt {
+  color: var(--color-lima) !important;
+}
 .danger-alt {
   background-color: var(--color-cardinal) !important;
   border-color: var(--color-rosey) !important;
 
   color: var(--color-white);
 }
-.danger-alt th {
+.danger-alt th,
+.danger-alt td {
   background-color: var(--color-cardinal) !important;
   border-color: var(--color-rosey) !important;
 }
+.danger-alt th,
 .danger-alt tfoot td {
-  border-top-color: var(--color-rosey) !important;
+  color: var(--color-rosey) !important;
 }
 
 .danger-alt a:link,
@@ -640,18 +772,32 @@ blockquote {
 .text-danger-alt {
   color: var(--color-rosey) !important;
 }
+.btn-outline.btn-danger-alt {
+  background-color: white !important;
+  border-color: var(--color-rosey) !important;
+  color: var(--color-rosey) !important;
+}
+.btn-clear.btn-danger-alt {
+  background-color: white !important;
+  color: var(--color-rosey) !important;
+}
+a.danger-alt {
+  color: var(--color-rosey) !important;
+}
 .warning-alt {
   background-color: var(--color-sunshine) !important;
   border-color: var(--color-manilla) !important;
 
   color: var(--color-white);
 }
-.warning-alt th {
+.warning-alt th,
+.warning-alt td {
   background-color: var(--color-sunshine) !important;
   border-color: var(--color-manilla) !important;
 }
+.warning-alt th,
 .warning-alt tfoot td {
-  border-top-color: var(--color-manilla) !important;
+  color: var(--color-manilla) !important;
 }
 
 .warning-alt a:link,
@@ -676,18 +822,32 @@ blockquote {
 .text-warning-alt {
   color: var(--color-manilla) !important;
 }
+.btn-outline.btn-warning-alt {
+  background-color: white !important;
+  border-color: var(--color-manilla) !important;
+  color: var(--color-manilla) !important;
+}
+.btn-clear.btn-warning-alt {
+  background-color: white !important;
+  color: var(--color-manilla) !important;
+}
+a.warning-alt {
+  color: var(--color-manilla) !important;
+}
 .info-alt {
   background-color: var(--color-cobalt) !important;
   border-color: var(--color-skyline) !important;
 
   color: var(--color-white);
 }
-.info-alt th {
+.info-alt th,
+.info-alt td {
   background-color: var(--color-cobalt) !important;
   border-color: var(--color-skyline) !important;
 }
+.info-alt th,
 .info-alt tfoot td {
-  border-top-color: var(--color-skyline) !important;
+  color: var(--color-skyline) !important;
 }
 
 .info-alt a:link,
@@ -712,16 +872,30 @@ blockquote {
 .text-info-alt {
   color: var(--color-skyline) !important;
 }
+.btn-outline.btn-info-alt {
+  background-color: white !important;
+  border-color: var(--color-skyline) !important;
+  color: var(--color-skyline) !important;
+}
+.btn-clear.btn-info-alt {
+  background-color: white !important;
+  color: var(--color-skyline) !important;
+}
+a.info-alt {
+  color: var(--color-skyline) !important;
+}
 .contrast {
   background-color: var(--color-white) !important;
   border-color: var(--color-charcoal) !important;
 }
-.contrast th {
+.contrast th,
+.contrast td {
   background-color: var(--color-white) !important;
   border-color: var(--color-charcoal) !important;
 }
+.contrast th,
 .contrast tfoot td {
-  border-top-color: var(--color-charcoal) !important;
+  color: var(--color-charcoal) !important;
 }
 
 .contrast a:hover,
@@ -741,16 +915,30 @@ blockquote {
 .text-contrast {
   color: var(--color-charcoal) !important;
 }
+.btn-outline.btn-contrast {
+  background-color: white !important;
+  border-color: var(--color-charcoal) !important;
+  color: var(--color-charcoal) !important;
+}
+.btn-clear.btn-contrast {
+  background-color: white !important;
+  color: var(--color-charcoal) !important;
+}
+a.contrast {
+  color: var(--color-charcoal) !important;
+}
 .grayscale {
   background-color: var(--color-cloud) !important;
   border-color: var(--color-aluminum) !important;
 }
-.grayscale th {
+.grayscale th,
+.grayscale td {
   background-color: var(--color-cloud) !important;
   border-color: var(--color-aluminum) !important;
 }
+.grayscale th,
 .grayscale tfoot td {
-  border-top-color: var(--color-aluminum) !important;
+  color: var(--color-aluminum) !important;
 }
 
 .grayscale a:hover,
@@ -770,18 +958,32 @@ blockquote {
 .text-grayscale {
   color: var(--color-aluminum) !important;
 }
+.btn-outline.btn-grayscale {
+  background-color: white !important;
+  border-color: var(--color-aluminum) !important;
+  color: var(--color-aluminum) !important;
+}
+.btn-clear.btn-grayscale {
+  background-color: white !important;
+  color: var(--color-aluminum) !important;
+}
+a.grayscale {
+  color: var(--color-aluminum) !important;
+}
 .midnite {
   background-color: var(--color-charcoal) !important;
   border-color: var(--color-slate) !important;
 
   color: var(--color-white);
 }
-.midnite th {
+.midnite th,
+.midnite td {
   background-color: var(--color-charcoal) !important;
   border-color: var(--color-slate) !important;
 }
+.midnite th,
 .midnite tfoot td {
-  border-top-color: var(--color-slate) !important;
+  color: var(--color-slate) !important;
 }
 
 .midnite a:link,
@@ -804,5 +1006,17 @@ blockquote {
   background-color: var(--color-slate) !important;
 }
 .text-midnite {
+  color: var(--color-slate) !important;
+}
+.btn-outline.btn-midnite {
+  background-color: white !important;
+  border-color: var(--color-slate) !important;
+  color: var(--color-slate) !important;
+}
+.btn-clear.btn-midnite {
+  background-color: white !important;
+  color: var(--color-slate) !important;
+}
+a.midnite {
   color: var(--color-slate) !important;
 }

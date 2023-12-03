@@ -1,12 +1,12 @@
 <%- include('inc/head') %>
 <main class="container">
   <section>
-    <h1>Futility Variants</h1>
+    <h1>Variants</h1>
     <div class="mb-2 d-grid cols-4 col-gap-3">
       <% for (const variant_slug in variants) { %>
         <div class="text-verdana panel border-<%= variant_slug %> bg-white rounded p-05 mb-2 text-center" style="min-height:180px;">
-          <div class="px-1 py-3 bg-<%= variant_slug %> text-<%= variant_slug %> rounded mb-05">
-            <div class="text-bold clippy"><%= variant_slug %></div>
+          <div class="px-1 py-3 <%= variant_slug %> rounded mb-05">
+            <div class="text-bold clippy">.<%= variant_slug %></div>
             <div class="text-xs clippy">.bg-<%= variant_slug %></div>
           </div>
           <div class="text-bold text-sm mb-0 text-<%= variant_slug %> clippy lh-12">.text-<%= variant_slug %></div>
@@ -14,7 +14,7 @@
         </div>
       <% } %>
     </div>
-    <p><a title="Futility UI Home" href="/contents">&larr; Back to Contents</a></p>
+    <p><a title="Futility UI Contents" href="/contents">&larr; Back to Contents</a></p>
   </section>
 </main>
 <%- include('inc/foot') %>

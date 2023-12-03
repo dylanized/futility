@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Futility UI :: The Simple Web Framework</title>
+
+    <link rel="stylesheet" href="/css/reset.css" />
+
+    <link rel="stylesheet" href="/css/base.css" />
+
+    <link rel="stylesheet" href="/css/util.css" />
+
+    <link rel="stylesheet" href="/css/devices.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  </head>
+  <body class="page-slug p-2">
+    <main class="container">
+      <section>
+        <h1>Styled Elements</h1>
+        <h3>Tags</h3>
+        <ul>
+          <li>
+            <code class="tag text-xs">code .tag</code>
+            <a class="tag code text-xs" href="#">a .tag</a>
+          </li>
+          <li>
+            <code class="tag text-xs success">code .tag .success</code>
+            <a href="#" class="tag code text-xs success">a .tag .success</a>
+          </li>
+          <li>
+            <code class="tag text-xs danger">code .tag .danger</code>
+            <a href="#" class="tag code text-xs danger">a .tag .danger</a>
+          </li>
+          <li>
+            <code class="tag text-xs warning">code .tag .warning</code>
+            <a href="#" class="tag code text-xs warning">a .tag .warning</a>
+          </li>
+          <li>
+            <code class="tag text-xs info">code .tag .info</code>
+            <a href="#" class="tag code text-xs info">a .tag .info</a>
+          </li>
+          <li>
+            <code class="tag text-xs success-alt">code .tag .success-alt</code>
+            <a href="#" class="tag code text-xs success-alt"
+              >a .tag .success-alt</a
+            >
+          </li>
+          <li>
+            <code class="tag text-xs danger-alt">code .tag .danger-alt</code>
+            <a href="#" class="tag code text-xs danger-alt"
+              >a .tag .danger-alt</a
+            >
+          </li>
+          <li>
+            <code class="tag text-xs warning-alt">code .tag .warning-alt</code>
+            <a href="#" class="tag code text-xs warning-alt"
+              >a .tag .warning-alt</a
+            >
+          </li>
+          <li>
+            <code class="tag text-xs info-alt">code .tag .info-alt</code>
+            <a href="#" class="tag code text-xs info-alt">a .tag .info-alt</a>
+          </li>
+          <li>
+            <code class="tag text-xs contrast">code .tag .contrast</code>
+            <a href="#" class="tag code text-xs contrast">a .tag .contrast</a>
+          </li>
+          <li>
+            <code class="tag text-xs grayscale">code .tag .grayscale</code>
+            <a href="#" class="tag code text-xs grayscale">a .tag .grayscale</a>
+          </li>
+          <li>
+            <code class="tag text-xs midnite">code .tag .midnite</code>
+            <a href="#" class="tag code text-xs midnite">a .tag .midnite</a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3>Blockquotes</h3>
+        <blockquote>
+          <p class="mb-2">A normal blockquote</p>
+        </blockquote>
+        <blockquote class="border-success">
+          <p class="mb-2">
+            A blockquote with .border-success, with <a href="#">a hyperlink</a>
+          </p>
+        </blockquote>
+        <blockquote class="border-danger">
+          <p class="mb-2">
+            A blockquote with .border-danger, with <a href="#">a hyperlink</a>
+          </p>
+        </blockquote>
+        <blockquote class="border-warning">
+          <p class="mb-2">
+            A blockquote with .border-warning, with <a href="#">a hyperlink</a>
+          </p>
+        </blockquote>
+        <blockquote class="border-info">
+          <p class="mb-2">
+            A blockquote with .border-info, with <a href="#">a hyperlink</a>
+          </p>
+        </blockquote>
+      </section>
+      <section>
+        <h3>Buttons</h3>
+        <table class="table-sm">
+          <thead>
+            <th>Input</th>
+            <th>Button</th>
+            <th>Link</th>
+            <th>Input Disabled</th>
+            <th>Button Disabled</th>
+          </thead>
+          <tbody>
+            <td>
+              <input
+                class="btn-sm btn-success d-block w-100 text-centers"
+                type="submit"
+                name="submit"
+                value=".btn-success"
+              />
+            </td>
+            <td>
+              <button class="btn-sm btn-success d-block w-100 text-center">
+                .btn-success
+              </button>
+            </td>
+            <td>
+              <a
+                href="#"
+                class="btn-sm btn btn-success d-block w-100 text-center"
+                >.btn-success</a
+              >
+            </td>
+            <td>
+              <input
+                class="btn-sm btn-success d-block w-100 text-center"
+                disabled="true"
+                type="submit"
+                name="submit"
+                value=".btn-success"
+              />
+            </td>
+            <td>
+              <button
+                class="btn-sm btn-success d-block w-100 text-center"
+                disabled="true"
+              >
+                .btn-success
+              </button>
+            </td>
+          </tbody>
+          <tbody>
+            <td>
+              <input
+                class="btn-sm btn-danger d-block w-100 text-centers"
+                type="submit"
+                name="submit"
+                value=".btn-danger"
+              />
+            </td>
+            <td>
+              <button class="btn-sm btn-danger d-block w-100 text-center">
+                .btn-danger
+              </button>
+            </td>
+            <td>
+              <a
+                href="#"
+                class="btn-sm btn btn-danger d-block w-100 text-center"
+                >.btn-danger</a
+              >
+            </td>
+            <td>
+              <input
+                class="btn-sm btn-danger d-block w-100 text-center"
+                disabled="true"
+                type="submit"
+                name="submit"
+                value=".btn-danger"
+              />
+            </td>
+            <td>
+              <button
+                class="btn-sm btn-danger d-block w-100 text-center"
+                disabled="true"
+              >
+                .btn-danger
+              </button>
+            </td>
+          </tbody>
+          <tbody>
+            <td>
+              <input
+                class="btn-sm btn-warning d-block w-100 text-centers"
+                type="submit"
+                name="submit"
+                value=".btn-warning"
+              />
+            </td>
+            <td>
+              <button class="btn-sm btn-warning d-block w-100 text-center">
+                .btn-warning
+              </button>
+            </td>
+            <td>
+              <a
+                href="#"
+                class="btn-sm btn btn-warning d-block w-100 text-center"
+                >.btn-warning</a
+              >
+            </td>
+            <td>
+              <input
+                class="btn-sm btn-warning d-block w-100 text-center"
+                disabled="true"
+                type="submit"
+                name="submit"
+                value=".btn-warning"
+              />
+            </td>
+            <td>
+              <button
+                class="btn-sm btn-warning d-block w-100 text-center"
+                disabled="true"
+              >
+                .btn-warning
+              </button>
+            </td>
+          </tbody>
+          <tbody>
+            <td>
+              <input
+                class="btn-sm btn-info d-block w-100 text-centers"
+                type="submit"
+                name="submit"
+                value=".btn-info"
+              />
+            </td>
+            <td>
+              <button class="btn-sm btn-info d-block w-100 text-center">
+                .btn-info
+              </button>
+            </td>
+            <td>
+              <a href="#" class="btn-sm btn btn-info d-block w-100 text-center"
+                >.btn-info</a
+              >
+            </td>
+            <td>
+              <input
+                class="btn-sm btn-info d-block w-100 text-center"
+                disabled="true"
+                type="submit"
+                name="submit"
+                value=".btn-info"
+              />
+            </td>
+            <td>
+              <button
+                class="btn-sm btn-info d-block w-100 text-center"
+                disabled="true"
+              >
+                .btn-info
+              </button>
+            </td>
+          </tbody>
+          <tbody>
+            <td>
+              <input
+                class="btn-sm btn-outline btn-success d-block w-100 text-centers"
+                type="submit"
+                name="submit"
+                value=".btn-success"
+              />
+            </td>
+            <td>
+              <button
+                class="btn-sm btn-outline btn-success d-block w-100 text-center"
+              >
+                .btn-success
+              </button>
+            </td>
+            <td>
+              <a
+                href="#"
+                class="btn-sm btn-outline btn btn-success d-block w-100 text-center"
+                >.btn-success</a
+              >
+            </td>
+            <td>
+              <input
+                class="btn-sm btn-outline btn-success d-block w-100 text-center"
+                disabled="true"
+                type="submit"
+                name="submit"
+                value=".btn-success"
+              />
+            </td>
+            <td>
+              <button
+                class="btn-sm btn-outline btn-success d-block w-100 text-center"
+                disabled="true"
+              >
+                .btn-success
+              </button>
+            </td>
+          </tbody>
+          <tbody>
+            <td>
+              <input
+                class="btn-sm btn-outline btn-danger d-block w-100 text-centers"
+                type="submit"
+                name="submit"
+                value=".btn-danger"
+              />
+            </td>
+            <td>
+              <button
+                class="btn-sm btn-outline btn-danger d-block w-100 text-center"
+              >
+                .btn-danger
+              </button>
+            </td>
+            <td>
+              <a
+                href="#"
+                class="btn-sm btn-outline btn btn-danger d-block w-100 text-center"
+                >.btn-danger</a
+              >
+            </td>
+            <td>
+              <input
+                class="btn-sm btn-outline btn-danger d-block w-100 text-center"
+                disabled="true"
+                type="submit"
+                name="submit"
+                value=".btn-danger"
+              />
+            </td>
+            <td>
+              <button
+                class="btn-sm btn-outline btn-danger d-block w-100 text-center"
+                disabled="true"
+              >
+                .btn-danger
+              </button>
+            </td>
+          </tbody>
+          <tbody>
+            <td>
+              <input
+                class="btn-sm btn-outline btn-warning d-block w-100 text-centers"
+                type="submit"
+                name="submit"
+                value=".btn-warning"
+              />
+            </td>
+            <td>
+              <button
+                class="btn-sm btn-outline btn-warning d-block w-100 text-center"
+              >
+                .btn-warning
+              </button>
+            </td>
+            <td>
+              <a
+                href="#"
+                class="btn-sm btn-outline btn btn-warning d-block w-100 text-center"
+                >.btn-warning</a
+              >
+            </td>
+            <td>
+              <input
+                class="btn-sm btn-outline btn-warning d-block w-100 text-center"
+                disabled="true"
+                type="submit"
+                name="submit"
+                value=".btn-warning"
+              />
+            </td>
+            <td>
+              <button
+                class="btn-sm btn-outline btn-warning d-block w-100 text-center"
+                disabled="true"
+              >
+                .btn-warning
+              </button>
+            </td>
+          </tbody>
+          <tbody>
+            <td>
+              <input
+                class="btn-sm btn-outline btn-info d-block w-100 text-centers"
+                type="submit"
+                name="submit"
+                value=".btn-info"
+              />
+            </td>
+            <td>
+              <button
+                class="btn-sm btn-outline btn-info d-block w-100 text-center"
+              >
+                .btn-info
+              </button>
+            </td>
+            <td>
+              <a
+                href="#"
+                class="btn-sm btn-outline btn btn-info d-block w-100 text-center"
+                >.btn-info</a
+              >
+            </td>
+            <td>
+              <input
+                class="btn-sm btn-outline btn-info d-block w-100 text-center"
+                disabled="true"
+                type="submit"
+                name="submit"
+                value=".btn-info"
+              />
+            </td>
+            <td>
+              <button
+                class="btn-sm btn-outline btn-info d-block w-100 text-center"
+                disabled="true"
+              >
+                .btn-info
+              </button>
+            </td>
+          </tbody>
+          <tbody>
+            <td>
+              <input
+                class="btn-sm btn-clear btn-success d-block w-100 text-centers"
+                type="submit"
+                name="submit"
+                value=".btn-success"
+              />
+            </td>
+            <td>
+              <button
+                class="btn-sm btn-clear btn-success d-block w-100 text-center"
+              >
+                .btn-success
+              </button>
+            </td>
+            <td>
+              <a
+                href="#"
+                class="btn-sm btn-clear btn btn-success d-block w-100 text-center"
+                >.btn-success</a
+              >
+            </td>
+            <td>
+              <input
+                class="btn-sm btn-clear btn-success d-block w-100 text-center"
+                disabled="true"
+                type="submit"
+                name="submit"
+                value=".btn-success"
+              />
+            </td>
+            <td>
+              <button
+                class="btn-sm btn-clear btn-success d-block w-100 text-center"
+                disabled="true"
+              >
+                .btn-success
+              </button>
+            </td>
+          </tbody>
+          <tbody>
+            <td>
+              <input
+                class="btn-sm btn-clear btn-danger d-block w-100 text-centers"
+                type="submit"
+                name="submit"
+                value=".btn-danger"
+              />
+            </td>
+            <td>
+              <button
+                class="btn-sm btn-clear btn-danger d-block w-100 text-center"
+              >
+                .btn-danger
+              </button>
+            </td>
+            <td>
+              <a
+                href="#"
+                class="btn-sm btn-clear btn btn-danger d-block w-100 text-center"
+                >.btn-danger</a
+              >
+            </td>
+            <td>
+              <input
+                class="btn-sm btn-clear btn-danger d-block w-100 text-center"
+                disabled="true"
+                type="submit"
+                name="submit"
+                value=".btn-danger"
+              />
+            </td>
+            <td>
+              <button
+                class="btn-sm btn-clear btn-danger d-block w-100 text-center"
+                disabled="true"
+              >
+                .btn-danger
+              </button>
+            </td>
+          </tbody>
+          <tbody>
+            <td>
+              <input
+                class="btn-sm btn-clear btn-warning d-block w-100 text-centers"
+                type="submit"
+                name="submit"
+                value=".btn-warning"
+              />
+            </td>
+            <td>
+              <button
+                class="btn-sm btn-clear btn-warning d-block w-100 text-center"
+              >
+                .btn-warning
+              </button>
+            </td>
+            <td>
+              <a
+                href="#"
+                class="btn-sm btn-clear btn btn-warning d-block w-100 text-center"
+                >.btn-warning</a
+              >
+            </td>
+            <td>
+              <input
+                class="btn-sm btn-clear btn-warning d-block w-100 text-center"
+                disabled="true"
+                type="submit"
+                name="submit"
+                value=".btn-warning"
+              />
+            </td>
+            <td>
+              <button
+                class="btn-sm btn-clear btn-warning d-block w-100 text-center"
+                disabled="true"
+              >
+                .btn-warning
+              </button>
+            </td>
+          </tbody>
+          <tbody>
+            <td>
+              <input
+                class="btn-sm btn-clear btn-info d-block w-100 text-centers"
+                type="submit"
+                name="submit"
+                value=".btn-info"
+              />
+            </td>
+            <td>
+              <button
+                class="btn-sm btn-clear btn-info d-block w-100 text-center"
+              >
+                .btn-info
+              </button>
+            </td>
+            <td>
+              <a
+                href="#"
+                class="btn-sm btn-clear btn btn-info d-block w-100 text-center"
+                >.btn-info</a
+              >
+            </td>
+            <td>
+              <input
+                class="btn-sm btn-clear btn-info d-block w-100 text-center"
+                disabled="true"
+                type="submit"
+                name="submit"
+                value=".btn-info"
+              />
+            </td>
+            <td>
+              <button
+                class="btn-sm btn-clear btn-info d-block w-100 text-center"
+                disabled="true"
+              >
+                .btn-info
+              </button>
+            </td>
+          </tbody>
+        </table>
+      </section>
+      <p class="mt-4">
+        <a title="Futility UI Contents" href="/contents"
+          >&larr; Back to Contents</a
+        >
+      </p>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+
+    <script src="/js/app.js"></script>
+  </body>
+</html>

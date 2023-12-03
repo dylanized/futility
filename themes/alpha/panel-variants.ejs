@@ -1,0 +1,25 @@
+<%- include('inc/head') %>
+<main class="container">
+  <section>
+    <h1>Styled Panels</h1>
+    <% for (const variant_slug in variants) { -%>
+      <div class="panel <%= variant_slug %>">
+        <p class="mb-2">A .panel with .<%= variant_slug %>, including <a href="#">a hyperlink</a>.</p>
+      </div>
+    <% } %>
+    <div class="panel success bg-white">
+      <p class="mb-2">A .panel with variant and .bg-white, including <a href="#">a hyperlink</a>.</p>
+    </div>
+    <div class="panel danger bg-white">
+      <p class="mb-2">A .panel with variant and .bg-white, including <a href="#">a hyperlink</a>.</p>
+    </div>
+    <div class="panel warning bg-white">
+      <p class="mb-2">A .panel with variant and .bg-white, including <a href="#">a hyperlink</a>.</p>
+    </div>
+    <div class="panel info bg-white">
+      <p class="mb-2">A .panel with variant and .bg-white, including <a href="#">a hyperlink</a>.</p>
+    </div>
+  </section>
+  <p class="mt-4"><a title="Futility UI Contents" href="/contents">&larr; Back to Contents</a></p>
+</main>
+<%- include('inc/foot') %>
