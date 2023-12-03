@@ -48,6 +48,10 @@
   :not([disabled]).btn-<%= variant_slug %> {
     background-color: var(--color-<%= variants[variant_slug].highlight %>);
   }
+  :not([disabled]).btn-<%= variant_slug %>:hover,
+  :not([disabled]).btn-<%= variant_slug %>:active {
+    background-color: var(--color-<%= variants[variant_slug].matte %>);
+  }
   :not([disabled]).btn-outline.btn-<%= variant_slug %> {
     background-color: white;
     border-color: var(--color-<%= variants[variant_slug].highlight %>);

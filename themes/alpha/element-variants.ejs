@@ -2,11 +2,10 @@
 <main class="container">
   <section>
     <h1>Styled Elements</h1>
-    <h3>Tags</h3>
-    <ul>
-      <li><code class="tag text-xs">code .tag</code> <a class="tag code text-xs" href="#">a .tag</a></li>
+    <h3>Badges</h3>
+    <ul>      
       <% for (const variant_slug in variants) { -%>
-        <li><code class="tag text-xs <%= variant_slug %>">code .tag .<%= variant_slug %></code> <a href="#" class="tag code text-xs <%= variant_slug %>">a .tag .<%= variant_slug %></a></li>
+        <li><code class="badge text-xs <%= variant_slug %>">code .badge .<%= variant_slug %></code> <a href="#" class="badge code text-xs <%= variant_slug %>">a .badge .<%= variant_slug %></a></li>
       <% } %>
     </ul>
   </section>

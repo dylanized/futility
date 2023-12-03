@@ -54,7 +54,7 @@ code,
   font-size: .8em;
 }
 
-.tag {
+.badge {
   color: var(--color-charcoal);
   display: inline-block;
   background-color: #fff;
@@ -62,9 +62,13 @@ code,
   border-radius: .25rem;
   padding: 3px 5px;
 }
-a.tag {
+a.badge {
   text-decoration: none;
   color: var(--color-charcoal);
+}
+.badge-pill {
+  padding: 3px 10px;
+  border-radius: 50%;
 }
 
 .mark {
@@ -164,6 +168,10 @@ ul {
   padding: 0 0 0 var(--sp-2);
 }
 
+ul ul {
+  list-style-type: circle;
+}
+
 ul.list-inline {
   list-style-type: none;
   margin: 0;
@@ -171,8 +179,9 @@ ul.list-inline {
 }
 
 ol {
-  margin: 0 0 var(--sp-3) var(--sp-3);
-  padding: 0 0 0 0;
+  list-style-type: number;
+  margin: 0 0 var(--sp-3) var(--sp-2);
+  padding: 0 0 0 var(--sp-2);
 }
 
 li {
@@ -361,6 +370,8 @@ a.btn {
 
 .btn:hover,
 .btn:active {
+  background-color: var(--color-slate);
+  transition: background-color .05s;
   text-decoration: underline;
   color: #fff;
 }
@@ -420,7 +431,7 @@ blockquote {
   border-left: 5px solid var(--color-<%= theme.borderColor %>);
   color: var(--color-slate);
   margin: 0 0 var(--sp-3) 0;
-  padding: var(--sp-2) var(--sp-2) 1px var(--sp-3);
+  padding: var(--sp-2) var(--sp-2) var(--sp-2) var(--sp-3);
 }
 
 /* panels and cards */
