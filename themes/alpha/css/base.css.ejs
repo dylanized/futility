@@ -208,7 +208,7 @@ img.border {
   padding: .75rem;
 }
 
-a:hover,
+a:hover img,
 a:active img {
   opacity: 0.85;
   transition: opacity .1s;
@@ -341,9 +341,8 @@ input[type="file"] {
 
 /* buttons */
 
-a.btn,
-button,
-input[type=submit] {
+.btn,
+a.btn {
   background-color: var(--color-charcoal);
   border: none;
   border-radius: 7px;
@@ -357,71 +356,61 @@ input[type=submit] {
   line-height: 1.45;
   display: inline-block;
   text-align: center;
-  vertical-align: text;
+  vertical-align: text-top;
 }
 
-button:hover,
-input[type=submit]:not([disabled]):hover {
+.btn:hover,
+.btn:active {
   text-decoration: underline;
+  color: #fff;
 }
 
-a.btn:hover {
-  text-decoration: underline;
-  color: #fff !important;
+.btn.btn-outline {
+  background-color: white;
+  border: 2px solid #000;
+  color: var(--color-charcoal);
 }
 
-.btn-secondary {
-  backgrond-color: var(--color-cloud);
+.btn.btn-sm {
+  border-radius: 5px;
+  border-width: 1px;
+  padding: .35rem;
+  font-size: var(--text-xs);
 }
 
-.btn-outline {
-  background-color: white !important;
-  border: 2px solid #000 !important;
-  color: var(--color-charcoal) !important;
+.btn.btn-lg {
+  border-radius: 10px;
+  border-width: 3px;
+  padding: 1.1rem;
+  font-size: var(--text-lg);
 }
 
-.btn-sm {
-  border-radius: 5px !important;
-  border-width: 1px !important;
-  padding: .35rem !important;
-  font-size: var(--text-xs) !important;
-}
-
-.btn-lg {
-  border-radius: 10px !important;
-  border-width: 3px !important;
-  padding: 1.1rem !important;
-  font-size: var(--text-lg) !important;
-}
-
-.btn-clear {
-  background-color: transparent !important;
-  border: none !important;
-  color: var(--color-charcoal) !important;
+.btn.btn-clear {
+  background-color: transparent;
+  border: none;
+  color: var(--color-charcoal);
 }
 
 a.btn-outline:hover,
 a.btn-outline:active {
-  color: var(--color-charcoal) !important;
+  color: var(--color-charcoal);
 }
 
-input[type=submit][disabled],
-button[disabled] {
-  background-color: var(--color-cloud) !important;
-  color: var(--color-aluminum) !important;
+[disabled].btn {
+  background-color: var(--color-cloud);
+  color: var(--color-aluminum);
   cursor: default;
 }
 
-input[type=submit][disabled].btn-outline,
-button[disabled].btn-outline,
-input[type=submit][disabled].btn-clear,
-button[disabled].btn-clear {
-  color: var(--color-aluminum) !important;
-  border-color: var(--color-aluminum) !important;
-  background-color: transparent !important;
+[disabled].btn-outline,
+[disabled].btn-clear {
+  color: var(--color-aluminum);
+  border-color: var(--color-aluminum);
+  background-color: transparent;
 }
 
-button[disabled]:hover {
+[disabled]:hover,
+[disabled]:active {
   text-decoration: none;
 }
 
