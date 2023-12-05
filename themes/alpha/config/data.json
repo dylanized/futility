@@ -21,7 +21,7 @@
       "path": "/typography"
     },
     {
-      "desc": "Image alignment & styles",
+      "desc": "Image alignment",
       "name": "Images",
       "path": "/images"
     },
@@ -56,6 +56,11 @@
       "path": "/utilities"
     },
     {
+      "desc": "Images with borders",
+      "name": "Image Borders",
+      "path": "/image-borders"
+    },
+    {
       "desc": "Button sizes and styles",
       "name": "Buttons",
       "path": "/buttons"
@@ -65,6 +70,7 @@
       "name": "Badges",
       "path": "/badges"
     },
+
     {
       "desc": "Panel component",
       "name": "Panels",
