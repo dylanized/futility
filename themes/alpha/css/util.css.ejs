@@ -358,7 +358,7 @@
 .text-underline {
   text-decoration: underline !important;
 }
-.text-default {
+.text-underline-none {
   text-decoration: none !important;
 }
 
@@ -388,6 +388,11 @@
 }
 
 /* text weight */
+<% for (const weight_num in styles.textWeights) { -%>
+  .text-<%= weight_num %> {
+    font-weight: <%= styles.textWeights[weight_num] %> !important;
+  }
+<% } %>
 .text-bold {
   font-weight: bold !important;
 }

@@ -213,7 +213,8 @@ hr {
 
 /* inline elements and helpers */
 
-abbr {
+abbr,
+.abbr {
   text-decoration-line: underline;
   text-decoration-style: dotted;
   font-style: italic;
@@ -228,14 +229,15 @@ cite,
 code,
 kbd
 samp,
+time,
 .code {
   font-family: var(--font-monospace);
-  font-size: .8em;
+  font-size: .9em;
 }
 
 del,
 s {
-  text-transform: strike;
+  text-decoration: line-through;
 }
 
 .lead {
@@ -257,8 +259,13 @@ small,
 
 em,
 i,
-ins {
+var {
   font-style: italic;
+}
+
+ins {
+  text-decoration-line: underline;
+  text-decoration-style: double;
 }
 
 .muted {

@@ -1112,7 +1112,7 @@
 .text-underline {
   text-decoration: underline !important;
 }
-.text-default {
+.text-underline-none {
   text-decoration: none !important;
 }
 
@@ -1162,6 +1162,34 @@
 }
 
 /* text weight */
+.text-100 {
+  font-weight: 100 !important;
+}
+.text-200 {
+  font-weight: 200 !important;
+}
+.text-300 {
+  font-weight: 300 !important;
+}
+.text-400 {
+  font-weight: 400 !important;
+}
+.text-500 {
+  font-weight: 500 !important;
+}
+.text-600 {
+  font-weight: 600 !important;
+}
+.text-700 {
+  font-weight: 700 !important;
+}
+.text-800 {
+  font-weight: 800 !important;
+}
+.text-900 {
+  font-weight: 900 !important;
+}
+
 .text-bold {
   font-weight: bold !important;
 }
