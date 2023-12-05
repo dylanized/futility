@@ -214,6 +214,8 @@ hr {
 /* inline elements and helpers */
 
 abbr {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
   font-style: italic;
 }
 
@@ -229,6 +231,11 @@ samp,
 .code {
   font-family: var(--font-monospace);
   font-size: .8em;
+}
+
+del,
+s {
+  text-transform: strike;
 }
 
 .lead {
@@ -249,21 +256,22 @@ small,
 }
 
 em,
-i {
+i,
+ins {
   font-style: italic;
+}
+
+.muted {
+  color: var(--color-slate);
 }
 
 q {
   font-style: italic;
 }
 
-strong,
-b {
+b,
+strong {
   font-weight: bold;
-}
-
-s {
-  text-transform: strike;
 }
 
 sub {

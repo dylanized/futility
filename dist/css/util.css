@@ -1095,6 +1095,14 @@
 }
 
 /* text decoration */
+.text-dotted {
+  text-decoration-line: underline !important;
+  text-decoration-style: dotted !important;
+}
+.text-double {
+  text-decoration-line: underline !important;
+  text-decoration-style: double !important;
+}
 .text-italic {
   font-style: italic !important;
 }
