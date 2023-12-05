@@ -38,16 +38,17 @@ body {
   padding: 0;
 }
 
-a:link,
-a:visited { color: var(--color-cobalt); font-weight: normal; text-decoration: underline; }
+a  { color: var(--color-cobalt); text-decoration: underline; }
 a:hover,
-a:active { color: var(--color-royal); font-weight: normal; text-decoration: underline; }
+a:active { color: var(--color-royal); text-decoration: underline; }
 
 a.link-alt:link,
 a.link-alt:visited { color: var(--color-whale); font-weight: normal; text-decoration: none; }
 a.link-alt:hover,
 a.link-alt:active { color: var(--color-slate); font-weight: normal; text-decoration: underline; }
 
+abbr,
+address,
 code,
 .code {
   font-family: var(--font-monospace);
@@ -71,6 +72,25 @@ a.badge {
   border-radius: 50%;
 }
 
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+sup {
+  font-size: 0.55em;
+  vertical-align: top;
+}
+
+sub {
+  font-size: 0.55em;
+  vertical-align: bottom;
+}
+
+mark,
 .mark {
   display: inline-block;
   padding: 1px 3px;
@@ -122,29 +142,97 @@ h6 {
   margin: 0 0 var(--sp-4) 0;
 }
 
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  transition: color .07s, background-color .08s;
+  font-weight: bold;
+}
+
 h1 {
   color: var(--color-<%= theme.primaryColor %>);
   font-size: var(--text-xl);
+}
+
+h1 a {
+  color: var(--color-<%= theme.primaryColor %>);
+}
+
+h1 a:hover,
+h1 a:active {
+  color: var(--color-<%= theme.primaryColor %>);
+  background-color: var(--color-cloud);
 }
 
 h2 {
   font-size: var(--text-lg);
 }
 
+h2 a {
+  color: var(--color-<%= theme.bodyTextColor %>);
+}
+
+h2 a:hover,
+h2 a:active {
+  color: var(--color-<%= theme.bodyTextColor %>);
+  background-color: var(--color-cloud);
+}
+
 h3 {
   font-size: var(--text-md);
 }
 
+h3 a {
+  color: var(--color-<%= theme.bodyTextColor %>);
+}
+
+h3 a:hover,
+h3 a:active {
+  color: var(--color-<%= theme.bodyTextColor %>);
+  background-color: var(--color-cloud);
+}
+
 h4 {
-  
+
+}
+
+h4 a {
+  color: var(--color-<%= theme.bodyTextColor %>);
+}
+
+h4 a:hover,
+h4 a:active {
+  color: var(--color-<%= theme.bodyTextColor %>);
+  background-color: var(--color-cloud);
 }
 
 h5 {
   font-size: var(--text-sm);
 }
 
+h5 a {
+  color: var(--color-<%= theme.bodyTextColor %>);
+}
+
+h5 a:hover,
+h5 a:active {
+  color: var(--color-aluminum);
+}
+
 h6 {
   font-size: var(--text-xs);
+}
+
+h6 a {
+  color: var(--color-<%= theme.bodyTextColor %>);
+}
+
+h6 a:hover,
+h6 a:active {
+  color: var(--color-aluminum);
 }
 
 /* basic typography */
@@ -225,11 +313,6 @@ a:hover img,
 a:active img {
   opacity: 0.85;
   transition: opacity .1s;
-}
-
-caption {
-  display: block;
-  font-size: var(--text-sm);
 }
 
 /* navigation */

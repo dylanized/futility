@@ -31,6 +31,11 @@
       "path": "/form"
     },
     {
+      "desc": "Headings",
+      "name": "Headings",
+      "path": "/headings"
+    },
+    {
       "desc": "Lists",
       "name": "Lists",
       "path": "/lists"
