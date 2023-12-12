@@ -1,14 +1,14 @@
-# Minimos
+# Futility UI
 
-## lightweight ui framework
+## The Simple Web Framework
 
 # Getting Started
 
-Minimos is a very simple frontend web framework, based on utility css principles and a simple Bash build script.
+Futility UI is a very simple frontend web framework, based on utility css principles and a simple Bash build script.
 
 This repo contains the source files for generating static web template files.
 
-To preview your templates, launch the development server with `yarn dev` and visit http://localhost:3000. You will see the Minimos default index page, and can click through your other templates.
+To preview your templates, launch the development server with `yarn dev` and visit http://localhost:3000. You will see the Futility default index page, and can click through your other templates.
 
 To build the static version of your templates, run `yarn build` and explore the generated files in `/dist`. To view these static files, run `yarn start` and visit http://localhost:3000.
 
