@@ -557,21 +557,44 @@ a.btn-outline:active {
 
 /* badges and tags */
 
-.badge {
-  color: var(--color-charcoal);
+.tag {
   display: inline-block;
-  background-color: #fff;
+  font-family: var(--font-monospace);
   border: 1px solid var(--color-cloud);
   border-radius: .25rem;
   padding: 3px 5px;
+  font-size: .9em;
+}
+a.tag {
+  color: inherit;
+}
+a.tag:hover,
+a.tag:active {
+  color: var(--color-aluminum);
+}
+.badge {
+  display: inline-block;
+  font-family: var(--font-monospace);
+  border: 1px solid var(--color-cloud);
+  border-radius: .25rem;
+  padding: 3px 5px;
+  background-color: var(--color-charcoal);
+  color: #fff;
+  font-size: .8em;
+  font-weight: bold;
 }
 a.badge {
-  text-decoration: none;
-  color: var(--color-charcoal);
+  text-decoration: underline;
+  color: var(--color-white);
+}
+a.badge:hover,
+a.badge:active {
+  text-decoration: underline;
+  color: var(--color-aluminum);
 }
 .badge-pill {
   padding: 3px 10px;
-  border-radius: 50%;
+  border-radius: 1rem;
 }
 
 /* panels and cards */

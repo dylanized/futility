@@ -61,16 +61,10 @@
       "path": "/image-borders"
     },
     {
-      "desc": "Button sizes and styles",
+      "desc": "Buttons and badge styles",
       "name": "Buttons",
       "path": "/buttons"
     },
-    {
-      "desc": "Badges",
-      "name": "Badges",
-      "path": "/badges"
-    },
-
     {
       "desc": "Panel component",
       "name": "Panels",
