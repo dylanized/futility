@@ -15,7 +15,7 @@
         <% contents.forEach(function (template, i) { %>
           <tr>
             <td><%= i+1 %></td>
-            <td><a href="<%= template.path %>"><%= template.name %></a></td>
+            <td><a href="<%= template.path %><%= ext %>"><%= template.name %></a></td>
             <td><code><%= template.path %></code></td>
             <td class="text-slate"><%= template.desc %></td>
           </tr>

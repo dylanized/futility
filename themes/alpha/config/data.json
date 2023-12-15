@@ -41,12 +41,12 @@
       "path": "/lists"
     },
     {
-      "desc": "Blockquote variations",
+      "desc": "Blockquote examples",
       "name": "Quotes",
       "path": "/quotes"
     },
     {
-      "desc": "Table variations",
+      "desc": "Table examples",
       "name": "Tables",
       "path": "/tables"
     },
@@ -61,9 +61,14 @@
       "path": "/image-borders"
     },
     {
-      "desc": "Buttons and badge styles",
+      "desc": "Button styles",
       "name": "Buttons",
       "path": "/buttons"
+    },
+    {
+      "desc": "Badge & tag styles",
+      "name": "Badges",
+      "path": "/badges"
     },
     {
       "desc": "Panel component",

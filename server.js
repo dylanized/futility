@@ -120,10 +120,11 @@ else {
         themeConfig,
         flavorConfig,
         themeData,
+        { ext: "" },
       );
       return locals;
     }
-    return Object.assign({}, { req }, themeConfig, themeData);
+    return Object.assign({}, { req }, themeConfig, themeData, { ext: "" });
   };
 
   const renderTemplate = (req, res, template_slug) => {

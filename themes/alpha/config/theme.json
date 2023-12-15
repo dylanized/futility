@@ -1,4 +1,5 @@
 {
+  "ext": ".html",
   "scripts": ["https://code.jquery.com/jquery-3.7.1.slim.min.js", "/js/app.js"],
   "stylesheets": [
     "/css/reset.css",

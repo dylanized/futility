@@ -38,13 +38,25 @@ body {
   padding: 0;
 }
 
-a  { color: var(--color-cobalt); text-decoration: underline; }
+a  {
+  color: var(--color-cobalt);
+  text-decoration: underline;
+}
 a:hover,
-a:active { color: var(--color-royal); text-decoration: underline; }
+a:active {
+  color: var(--color-royal);
+  text-decoration: underline;
+}
 
-a.link-alt { color: var(--color-whale); font-weight: normal; text-decoration: none; }
+a.link-alt {
+  color: var(--color-whale);
+  font-weight: normal;
+  text-decoration: none;
+}
 a.link-alt:hover,
-a.link-alt:active { color: var(--color-slate); font-weight: normal; text-decoration: underline; }
+a.link-alt:active {
+  color: var(--color-slate); font-weight: normal; text-decoration: underline;
+}
 
 /* structure */
 
@@ -88,7 +100,7 @@ h6 {
   font-weight: bold;
   line-height: 1.15;
   font-size: var(--text-base);
-  margin: 0 0 var(--sp-4) 0;
+  margin: 0 0 var(--sp-3) 0;
 }
 
 h1 a,
@@ -187,7 +199,7 @@ h6 a:active {
 /* basic typography */
 
 p {
-  margin: 0 0 var(--sp-3) 0;
+  margin: 0 0 var(--sp-4) 0;
 }
 
 address,
@@ -299,7 +311,7 @@ u {
 
 ul {
   list-style-type: <%= theme.bodyListType %>;
-  margin: 0 0 var(--sp-3) var(--sp-2);
+  margin: 0 0 var(--sp-4) var(--sp-2);
   padding: 0 0 0 var(--sp-2);
 }
 
@@ -315,7 +327,7 @@ ul.list-inline {
 
 ol {
   list-style-type: number;
-  margin: 0 0 var(--sp-3) var(--sp-2);
+  margin: 0 0 var(--sp-4) var(--sp-2);
   padding: 0 0 0 var(--sp-2);
 }
 
@@ -330,11 +342,13 @@ img {
 }
 
 img.float-left {
+  margin-top: .45rem;
   margin-right: var(--sp-3);
   margin-bottom: var(--sp-2);
 }
 
 img.float-right {
+  margin-top: .45rem;
   margin-left: var(--sp-2);
   margin-bottom: var(--sp-2);
 }
@@ -583,12 +597,12 @@ a.tag:active {
   font-size: .8em;
   font-weight: bold;
 }
-a.badge {
+.badge a {
   text-decoration: underline;
   color: var(--color-white);
 }
-a.badge:hover,
-a.badge:active {
+.badge a:hover,
+.badge a:active {
   text-decoration: underline;
   color: var(--color-aluminum);
 }
