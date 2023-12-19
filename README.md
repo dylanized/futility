@@ -2,77 +2,38 @@
 
 ## The Simple Web Framework
 
-# Getting Started
+# Preparation
 
-Futility UI is a very simple frontend web framework, based on utility css principles and a simple Bash build script.
+Download the repo to your local machine. You'll need NodeJS 16+ installed.
 
-This repo contains the source files for generating static web template files.
+Run `yarn install` to install packages.
 
-To preview your templates, launch the development server with `yarn dev` and visit http://localhost:3000. You will see the Futility default index page, and can click through your other templates.
+# Step 1 - Explore the Static Files
 
-To build the static version of your templates, run `yarn build` and explore the generated files in `/dist`. To view these static files, run `yarn start` and visit http://localhost:3000.
+Look in `/dist` to see the static rendered files.
 
-# Source Files
+Notice the HTML templates, along with CSS files in the CSS folder.
 
-HTML Templates:
+Run `yarn start` to serve the static files on http://localhost:2000
 
-- 404.ejs (404 Error Page)
-- index.ejs (Table of Contents)
-- typography.ejs (Typography Examples)
+# Step 2 - Build a Custom Site
 
-CSS Templates:
+Look in `/themes/alpha` to see the default Futility theme, called Alpha.
 
-- base.css.ejs (CSS Variables & Base Elements)
-- util.css.ejs (Utility Classes)
+Notice the EJS templates, along with dynamic CSS templates in the CSS folder.
 
-Configuration & Tooling:
+Run `yarn dev` to launch the dev server on http://localhost:3000
 
-- app.json (App Config)
-- bin/build (Build Script)
+It will restart when you edit files.
 
-# Compiled Files
+Run `yarn build` to generate new static files in the `/dist` folder.
 
-The compiled version consists of these parts:
+# Step 3 - Extra Features
 
-- app.json (application config)
-- src/base.css
-- src/util.css
-- js/app.js (custom JS)
+Run `yarn minify` to generate minified CSS files in the dist folder.
 
-# Tooling
+Change the theme folder like `THEME=foobar yarn dev`.
 
-To format & lint the source code, run `yarn validate`.
+Explore and customize the static site generation process in `bin/build`.
 
-# Todo
-
-- yarn start index.js
-
-- good table of contents
-
-- font awesome (or other icon library)
-
-- for each page in this folder, render it
-
-- styleguide page
-
-- table data styles
-
-- form.html
-
-- yarn start-dist express-static
-- 2col, 3col
-
-- add favicon
-- eslint
-- watch for changes
-- lint more file types
-- lib folder
-- img folder
-- reset?
-- validate 404
-- landing page template
-- resume template
-- article template
-- contact form template
-- build-minify
-- start-minify
+Format the code with `yarn format`, then validate it with `yarn validate`.
