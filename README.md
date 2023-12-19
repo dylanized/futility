@@ -1,14 +1,14 @@
 # Futility UI
 
-## The Simple Web Framework
+### The Simple Web Framework
 
-# Preparation
+## Preparation
 
 Download the repo to your local machine. You'll need NodeJS 16+ and Yarn installed.
 
 Run `yarn install` to install packages.
 
-# Step 1 - Explore the Static Files
+## Part 1 - Explore the Static Files
 
 Look in `/dist` to see the static rendered files.
 
@@ -16,7 +16,7 @@ Notice the HTML templates, along with CSS files in the CSS folder.
 
 Run `yarn start` to serve the static files on http://localhost:2000
 
-# Step 2 - Build a Custom Site
+## Part 2 - Build a Custom Site
 
 Look in `/themes/alpha` to see the default Futility theme, called Alpha.
 
@@ -28,7 +28,7 @@ It will restart when you edit files.
 
 Run `yarn build` to generate new static files in the `/dist` folder.
 
-# Step 3 - Extra Features
+## Part 3 - Extra Features
 
 Run `yarn minify` to generate minified CSS files in the dist folder.
 
