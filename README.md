@@ -4,7 +4,7 @@
 
 # Preparation
 
-Download the repo to your local machine. You'll need NodeJS 16+ installed.
+Download the repo to your local machine. You'll need NodeJS 16+ and Yarn installed.
 
 Run `yarn install` to install packages.
 
