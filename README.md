@@ -2,7 +2,9 @@
 
 ### The Simple Web Framework
 
-## Preparation
+For introduction, visit https://futilityui.com
+
+## Setup
 
 Download the repo to your local machine. You'll need NodeJS 16+ and Yarn installed.
 
@@ -22,9 +24,11 @@ Look in `/themes/alpha` to see the default Futility theme, called Alpha.
 
 Notice the EJS templates, along with dynamic CSS templates in the CSS folder.
 
-Run `yarn dev` to launch the dev server on http://localhost:3000
+Edit the Alpha theme config file at `/themes/alpha/config/theme.json`, or supply custom data via `/themes/alpha/config/data.json`.
 
-It will restart when you edit files.
+Run `yarn dev` to launch the development server on http://localhost:3000
+
+The server will restart when you edit files.
 
 Run `yarn build` to generate new static files in the `/dist` folder.
 
