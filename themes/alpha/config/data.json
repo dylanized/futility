@@ -3,7 +3,7 @@
     {
       "desc": "Basic typography elements",
       "name": "Homepage",
-      "path": "/"
+      "path": "/index"
     },
     {
       "desc": "Error message",
@@ -39,11 +39,6 @@
       "desc": "Lists",
       "name": "Lists",
       "path": "/lists"
-    },
-    {
-      "desc": "Blockquote examples",
-      "name": "Quotes",
-      "path": "/quotes"
     },
     {
       "desc": "Table examples",

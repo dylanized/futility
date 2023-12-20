@@ -1,7 +1,7 @@
 <%- include('inc/head') %>
 <main class="container">
   <section>
-    <h1>Styled Panels</h1>
+    <h1>Panel Variants</h1>
     <% for (const variant_slug in variants) { -%>
       <div class="panel <%= variant_slug %>">
         <p class="mb-2">A .panel with .<%= variant_slug %>, including <a href="#">a hyperlink</a>.</p>
@@ -20,6 +20,6 @@
       <p class="mb-2">A .panel with variant and .bg-white, including <a href="#">a hyperlink</a>.</p>
     </div>
   </section>
-  <h6><a class="link-alt" title="Futility UI Contents" href="/contents">&larr; Back to Contents</a></h6>
+  <h6><a class="link-alt" title="Futility UI Contents" href="/contents<%= ext %>">&larr; Back to Contents</a></h6>
 </main>
 <%- include('inc/foot') %>

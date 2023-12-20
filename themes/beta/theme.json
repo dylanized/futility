@@ -14,7 +14,7 @@
       {
         "desc": "(This page) Simple table",
         "name": "Table of Contents",
-        "path": "/contents"
+        "path": "/contents<%= ext %>"
       },
       {
         "desc": "Basic type elements",

@@ -1,9 +1,9 @@
 <%- include('inc/head') %>
 <main class="container">
   <section>
-    <h1>Styled Elements</h1>
+    <h1>Element Variants</h1>
     <h3>Badges</h3>
-    <ul>      
+    <ul>
       <% for (const variant_slug in variants) { -%>
         <li><code class="badge text-xs <%= variant_slug %>">code .badge .<%= variant_slug %></code> <a href="#" class="badge code text-xs <%= variant_slug %>">a .badge .<%= variant_slug %></a></li>
       <% } %>
@@ -123,6 +123,6 @@
       </tbody>
     </table>
   </section>
-  <h6><a class="link-alt" title="Futility UI Contents" href="/contents">&larr; Back to Contents</a></h6>
+  <h6><a class="link-alt" title="Futility UI Contents" href="/contents<%= ext %>">&larr; Back to Contents</a></h6>
 </main>
 <%- include('inc/foot') %>
