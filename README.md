@@ -24,7 +24,9 @@ Look in `/themes/alpha` to see the default Futility theme, called Alpha.
 
 Notice the EJS templates, along with dynamic CSS templates in the CSS folder.
 
-Edit the Alpha theme config file at `/themes/alpha/config/theme.json`, or supply custom data via `/themes/alpha/config/data.json`.
+Edit the Alpha theme config file at `/themes/alpha/config/theme.json`.
+
+Supply custom data via `/themes/alpha/config/data.json`.
 
 Run `yarn dev` to launch the development server on http://localhost:3000
 
