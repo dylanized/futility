@@ -422,6 +422,36 @@ nav {
   padding: 0;
 }
 
+ul.list-inline {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: start;
+}
+
+nav li {
+  padding: 0;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+nav li a {
+  margin: 0;
+  padding: 0.5rem 0.75rem;
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:visited {
+  text-decoration: none;
+}
+
 /* table */
 
 table {
@@ -545,7 +575,7 @@ a.btn {
   font-size: var(--text-sm);
   font-family: var(--font-verdana);
   font-weight: normal;
-  padding: 0.95rem 1.3rem;
+  padding: 0.725rem 1.3rem;
   text-decoration: none;
   line-height: 1.45;
   display: inline-block;

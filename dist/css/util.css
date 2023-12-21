@@ -103,6 +103,10 @@
 .border-cloud {
   border-color: var(--color-cloud) !important;
 }
+a.hover-cloud:hover,
+a.hover-cloud:active {
+  color: var(--color-cloud) !important;
+}
 .text-chalk {
   color: var(--color-chalk) !important;
 }
@@ -111,6 +115,10 @@
 }
 .border-chalk {
   border-color: var(--color-chalk) !important;
+}
+a.hover-chalk:hover,
+a.hover-chalk:active {
+  color: var(--color-chalk) !important;
 }
 .text-aluminum {
   color: var(--color-aluminum) !important;
@@ -121,6 +129,10 @@
 .border-aluminum {
   border-color: var(--color-aluminum) !important;
 }
+a.hover-aluminum:hover,
+a.hover-aluminum:active {
+  color: var(--color-aluminum) !important;
+}
 .text-whale {
   color: var(--color-whale) !important;
 }
@@ -129,6 +141,10 @@
 }
 .border-whale {
   border-color: var(--color-whale) !important;
+}
+a.hover-whale:hover,
+a.hover-whale:active {
+  color: var(--color-whale) !important;
 }
 .text-slate {
   color: var(--color-slate) !important;
@@ -139,6 +155,10 @@
 .border-slate {
   border-color: var(--color-slate) !important;
 }
+a.hover-slate:hover,
+a.hover-slate:active {
+  color: var(--color-slate) !important;
+}
 .text-charcoal {
   color: var(--color-charcoal) !important;
 }
@@ -147,6 +167,10 @@
 }
 .border-charcoal {
   border-color: var(--color-charcoal) !important;
+}
+a.hover-charcoal:hover,
+a.hover-charcoal:active {
+  color: var(--color-charcoal) !important;
 }
 .text-black {
   color: var(--color-black) !important;
@@ -157,6 +181,10 @@
 .border-black {
   border-color: var(--color-black) !important;
 }
+a.hover-black:hover,
+a.hover-black:active {
+  color: var(--color-black) !important;
+}
 .text-cardinal {
   color: var(--color-cardinal) !important;
 }
@@ -165,6 +193,10 @@
 }
 .border-cardinal {
   border-color: var(--color-cardinal) !important;
+}
+a.hover-cardinal:hover,
+a.hover-cardinal:active {
+  color: var(--color-cardinal) !important;
 }
 .text-rosey {
   color: var(--color-rosey) !important;
@@ -175,6 +207,10 @@
 .border-rosey {
   border-color: var(--color-rosey) !important;
 }
+a.hover-rosey:hover,
+a.hover-rosey:active {
+  color: var(--color-rosey) !important;
+}
 .text-grapefruit {
   color: var(--color-grapefruit) !important;
 }
@@ -183,6 +219,10 @@
 }
 .border-grapefruit {
   border-color: var(--color-grapefruit) !important;
+}
+a.hover-grapefruit:hover,
+a.hover-grapefruit:active {
+  color: var(--color-grapefruit) !important;
 }
 .text-tangerine {
   color: var(--color-tangerine) !important;
@@ -193,6 +233,10 @@
 .border-tangerine {
   border-color: var(--color-tangerine) !important;
 }
+a.hover-tangerine:hover,
+a.hover-tangerine:active {
+  color: var(--color-tangerine) !important;
+}
 .text-sunshine {
   color: var(--color-sunshine) !important;
 }
@@ -201,6 +245,10 @@
 }
 .border-sunshine {
   border-color: var(--color-sunshine) !important;
+}
+a.hover-sunshine:hover,
+a.hover-sunshine:active {
+  color: var(--color-sunshine) !important;
 }
 .text-canary {
   color: var(--color-canary) !important;
@@ -211,6 +259,10 @@
 .border-canary {
   border-color: var(--color-canary) !important;
 }
+a.hover-canary:hover,
+a.hover-canary:active {
+  color: var(--color-canary) !important;
+}
 .text-manilla {
   color: var(--color-manilla) !important;
 }
@@ -219,6 +271,10 @@
 }
 .border-manilla {
   border-color: var(--color-manilla) !important;
+}
+a.hover-manilla:hover,
+a.hover-manilla:active {
+  color: var(--color-manilla) !important;
 }
 .text-peach {
   color: var(--color-peach) !important;
@@ -229,6 +285,10 @@
 .border-peach {
   border-color: var(--color-peach) !important;
 }
+a.hover-peach:hover,
+a.hover-peach:active {
+  color: var(--color-peach) !important;
+}
 .text-mustard {
   color: var(--color-mustard) !important;
 }
@@ -237,6 +297,10 @@
 }
 .border-mustard {
   border-color: var(--color-mustard) !important;
+}
+a.hover-mustard:hover,
+a.hover-mustard:active {
+  color: var(--color-mustard) !important;
 }
 .text-lima {
   color: var(--color-lima) !important;
@@ -247,6 +311,10 @@
 .border-lima {
   border-color: var(--color-lima) !important;
 }
+a.hover-lima:hover,
+a.hover-lima:active {
+  color: var(--color-lima) !important;
+}
 .text-canvas {
   color: var(--color-canvas) !important;
 }
@@ -255,6 +323,10 @@
 }
 .border-canvas {
   border-color: var(--color-canvas) !important;
+}
+a.hover-canvas:hover,
+a.hover-canvas:active {
+  color: var(--color-canvas) !important;
 }
 .text-slime {
   color: var(--color-slime) !important;
@@ -265,6 +337,10 @@
 .border-slime {
   border-color: var(--color-slime) !important;
 }
+a.hover-slime:hover,
+a.hover-slime:active {
+  color: var(--color-slime) !important;
+}
 .text-pine {
   color: var(--color-pine) !important;
 }
@@ -273,6 +349,10 @@
 }
 .border-pine {
   border-color: var(--color-pine) !important;
+}
+a.hover-pine:hover,
+a.hover-pine:active {
+  color: var(--color-pine) !important;
 }
 .text-tropical {
   color: var(--color-tropical) !important;
@@ -283,6 +363,10 @@
 .border-tropical {
   border-color: var(--color-tropical) !important;
 }
+a.hover-tropical:hover,
+a.hover-tropical:active {
+  color: var(--color-tropical) !important;
+}
 .text-skyline {
   color: var(--color-skyline) !important;
 }
@@ -291,6 +375,10 @@
 }
 .border-skyline {
   border-color: var(--color-skyline) !important;
+}
+a.hover-skyline:hover,
+a.hover-skyline:active {
+  color: var(--color-skyline) !important;
 }
 .text-aquarium {
   color: var(--color-aquarium) !important;
@@ -301,6 +389,10 @@
 .border-aquarium {
   border-color: var(--color-aquarium) !important;
 }
+a.hover-aquarium:hover,
+a.hover-aquarium:active {
+  color: var(--color-aquarium) !important;
+}
 .text-slushy {
   color: var(--color-slushy) !important;
 }
@@ -309,6 +401,10 @@
 }
 .border-slushy {
   border-color: var(--color-slushy) !important;
+}
+a.hover-slushy:hover,
+a.hover-slushy:active {
+  color: var(--color-slushy) !important;
 }
 .text-seastone {
   color: var(--color-seastone) !important;
@@ -319,6 +415,10 @@
 .border-seastone {
   border-color: var(--color-seastone) !important;
 }
+a.hover-seastone:hover,
+a.hover-seastone:active {
+  color: var(--color-seastone) !important;
+}
 .text-cobalt {
   color: var(--color-cobalt) !important;
 }
@@ -327,6 +427,10 @@
 }
 .border-cobalt {
   border-color: var(--color-cobalt) !important;
+}
+a.hover-cobalt:hover,
+a.hover-cobalt:active {
+  color: var(--color-cobalt) !important;
 }
 .text-ocean {
   color: var(--color-ocean) !important;
@@ -337,6 +441,10 @@
 .border-ocean {
   border-color: var(--color-ocean) !important;
 }
+a.hover-ocean:hover,
+a.hover-ocean:active {
+  color: var(--color-ocean) !important;
+}
 .text-royal {
   color: var(--color-royal) !important;
 }
@@ -345,6 +453,10 @@
 }
 .border-royal {
   border-color: var(--color-royal) !important;
+}
+a.hover-royal:hover,
+a.hover-royal:active {
+  color: var(--color-royal) !important;
 }
 .text-lavish {
   color: var(--color-lavish) !important;
@@ -355,6 +467,10 @@
 .border-lavish {
   border-color: var(--color-lavish) !important;
 }
+a.hover-lavish:hover,
+a.hover-lavish:active {
+  color: var(--color-lavish) !important;
+}
 .text-maple {
   color: var(--color-maple) !important;
 }
@@ -363,6 +479,10 @@
 }
 .border-maple {
   border-color: var(--color-maple) !important;
+}
+a.hover-maple:hover,
+a.hover-maple:active {
+  color: var(--color-maple) !important;
 }
 .text-fuschia {
   color: var(--color-fuschia) !important;
@@ -373,6 +493,10 @@
 .border-fuschia {
   border-color: var(--color-fuschia) !important;
 }
+a.hover-fuschia:hover,
+a.hover-fuschia:active {
+  color: var(--color-fuschia) !important;
+}
 .text-white {
   color: var(--color-white) !important;
 }
@@ -381,6 +505,10 @@
 }
 .border-white {
   border-color: var(--color-white) !important;
+}
+a.hover-white:hover,
+a.hover-white:active {
+  color: var(--color-white) !important;
 }
 
 /* column gap */
@@ -487,10 +615,10 @@
 
 /* flex justify-content */
 .justify-center {
-  justify-content: space-between !important;
+  justify-content: center !important;
 }
 .justify-start {
-  justify-content: space-between !important;
+  justify-content: start !important;
 }
 .justify-space-around {
   justify-content: space-around !important;
