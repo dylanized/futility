@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= siteName %> :: <%= siteTagline %></title>
+    <% stylesheets.forEach((stylesheet) => { %>
+      <link rel="stylesheet" href="<%= stylesheet %><% if (typeof req !== 'undefined' && req.query.flavor) { %>?flavor=<%= req.query.flavor %><% } %>">
+    <% }); %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="page-social bg-skyline">
+  <nav class="midnite w-100 p-1 text-verdana d-flex">
+    <ul class="list-inline">
+      <li class="mr-1"><a href="#" class="hover-sunshine"><i class="fa-solid fa-house d-inline-block mr-05"></i> Home</a></li>
+      <li class="mr-1"><a href="#" class="hover-sunshine"><i class="fa-solid fa-hashtag d-inline-block mr-05"></i> Trends</a></li>
+      <li class="mr-1"><a href="#" class="hover-sunshine"><i class="fa-solid fa-comment d-inline-block mr-05"></i> Mentions <span class="badge text-tangerine border-tangerine" style="margin-left:3px; padding:3px 6px;position:relative;top:-1px;">99</span></a></li>
+      <li class="mr-1"><a href="#" class="hover-sunshine"><i class="fa-solid fa-bookmark d-inline-block mr-05"></i> Saved</a></li>
+    </ul>
+    <ul class="list-inline">
+      <li><a class="hover-tangerine" href="#"><i class="fa-solid fa-user d-inline-block mr-05"></i> Account</a></li>
+    </ul>
+  </nav>
+  <main class="d-flex w-100 col-gap-2">
+    <div class="col-1 w-25">
+      <div class="panel bg-white info border-0 shadow">
+        <p class="mb-2">
+          <img src="https://placehold.it/500x500" alt="">
+        </p>
+        <h4>@username</h4>
+        <ul class="list-inline d-flex justify-space-between">
+          <li class="lh-12"><h4 class="mb-05">5</h4><div class="text-xs">posts</div></li>
+          <li class="lh-12"><h4 class="mb-05">127</h4><div class="text-xs">following</div></li>
+          <li class="lh-12"><h4 class="mb-05">5500</h4><div class="text-xs">followers</div></li>
+        </ul>
+      </div>
+      <div class="panel bg-white info border-0 shadow">
+        <h5 class="text-xs text-slate text-normal mb-2">Trending Topics</h5>
+        <ul class="list-style-none ml-0 pl-0 mb-3">
+          <li class="mb-1"><a class="tag" href="#">#HereIsAHashtag</a> <span class="text-whale text-xs">100 posts</span></li>
+          <li class="mb-1"><a class="tag" href="#">#Something</a> <span class="text-whale text-xs">99 posts</span></li>
+          <li class="mb-1"><a class="tag" href="#">#Foobar</a> <span class="text-whale text-xs">105 posts</span></li>
+          <li class="mb-1"><a class="tag" href="#">#somthingelse</a> <span class="text-whale text-xs">105 posts</span></li>
+          <li class="mb-1"><a class="tag" href="#">#ATopic</a> <span class="text-whale text-xs">110 posts</span></li>
+          <li class="mb-1"><a class="tag" href="#">#anothertopic</a> <span class="text-whale text-xs">10 posts</span></li>
+          <li class="mb-1"><a class="tag" href="#">#foobar</a> <span class="text-whale text-xs">5000 posts</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-2 w-50">
+      <div class="panel info bg-white p-2">
+        <div class="d-flex justify-space-between">
+          <h5 class="mb-1">What do you want to share?</h5>
+          <span>
+            <a href="#" class="d-inline-block ml-05 text-whale"><i class="fa-solid fa-note-sticky"></i></a>
+            <a href="#" class="d-inline-block ml-05 text-whale"><i class="fa-solid fa-image"></i></a>
+            <a href="#" class="d-inline-block ml-05 text-whale"><i class="fa-solid fa-video"></i></a>
+            <a href="#" class="d-inline-block ml-05 text-whale"><i class="fa-solid fa-book"></i></a>
+          </span>
+        </div>
+        <fieldset class="mb-05">
+          <textarea class="w-100 mb-1"></textarea>
+          <div class="d-flex justify-space-between">
+            <button class="btn w-150px">Post</button>
+            <small class="text-whale text-xs text-verdana">140 chars</small>
+          </div>
+        </fieldset>
+      </div>
+      <div class="panel info bg-white mb-2">
+        <ol class="list-style-none ml-0 pl-0">
+          <li class="ml-0 pl-0">
+            <blockquote>
+              The quick brown fox jumps over the lazy dog
+            </blockquote>
+          </li>
+          <li class="ml-0 pl-0">
+            <blockquote>
+              The quick brown fox jumps over the lazy dog
+            </blockquote>
+          </li>
+          <li class="ml-0 pl-0">
+            <blockquote>
+              Here is a link: https://google.com
+            </blockquote>
+          </li>
+          <li class="ml-0 pl-0">
+            <blockquote>
+              Just testing out my nug
+            </blockquote>
+          </li>
+          <li class="ml-0 pl-0">
+            <blockquote>
+              The quick brown fox jumps over the lazy dog
+            </blockquote>
+          </li>
+          <li class="ml-0 pl-0">
+            <blockquote>
+              The quick brown fox jumps over the lazy dog
+            </blockquote>
+          </li>
+          <li class="ml-0 pl-0">
+            <blockquote>
+              Here is a link: https://google.com
+            </blockquote>
+          </li>
+          <li class="ml-0 pl-0">
+            <blockquote>
+              Just testing out my nug
+            </blockquote>
+          </li>
+          <li class="ml-0 pl-0">
+            <blockquote>
+              The quick brown fox jumps over the lazy dog
+            </blockquote>
+          </li>
+          <li class="ml-0 pl-0">
+            <blockquote>
+              The quick brown fox jumps over the lazy dog
+            </blockquote>
+          </li>
+          <li class="ml-0 pl-0">
+            <blockquote>
+              Here is a link: https://google.com
+            </blockquote>
+          </li>
+          <li class="ml-0 pl-0">
+            <blockquote>
+              Just testing out my nug
+            </blockquote>
+          </li>
+        </ol>
+      </div>
+      <h6 class="text-center"><a href="#" class="text-normal text-underline-none">View more posts</a></h6>
+    </div>
+    <div class="col-3 w-25">
+      <div class="panel bg-white info border-0 shadow">
+        <h5 class="text-xs text-slate text-normal mb-2">People to Follow</h5>
+        <ul class="list-style-none ml-0 pl-0 mb-1">
+          <li class="mb-05">
+            <a href="#" class="d-block">
+              <img src="http://placehold.it/30x30" alt="" /><h5 class="d-inline-block ml-05">@username</h5>
+            </a>
+          </li>
+          <li class="mb-05">
+            <a href="#" class="d-block">
+              <img src="http://placehold.it/30x30" alt="" /><h5 class="d-inline-block ml-05">@username</h5>
+            </a>
+          </li>
+          <li class="mb-05">
+            <a href="#" class="d-block">
+              <img src="http://placehold.it/30x30" alt="" /><h5 class="d-inline-block ml-05">@username</h5>
+            </a>
+          </li>
+          <li class="mb-05">
+            <a href="#" class="d-block">
+              <img src="http://placehold.it/30x30" alt="" /><h5 class="d-inline-block ml-05">@username</h5>
+            </a>
+          </li>
+          <li class="mb-05">
+            <a href="#" class="d-block">
+              <img src="http://placehold.it/30x30" alt="" /><h5 class="d-inline-block ml-05">@username</h5>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="panel bg-white info border-0 shadow pb-2">
+        <h5 class="text-xs text-slate text-normal mb-2">Media Gallery</h5>
+        <div>
+          <a href="#" class="d-inline-block mr-05 mb-1">
+            <img src="https://placehold.it/75x75" alt="">
+          </a>
+          <a href="#" class="d-inline-block mr-05 mb-1">
+            <img src="https://placehold.it/75x75" alt="">
+          </a>
+          <a href="#" class="d-inline-block mr-05 mb-1">
+            <img src="https://placehold.it/75x75" alt="">
+          </a>
+          <a href="#" class="d-inline-block mr-05 mb-1">
+            <img src="https://placehold.it/75x75" alt="">
+          </a>
+          <a href="#" class="d-inline-block mr-05 mb-1">
+            <img src="https://placehold.it/75x75" alt="">
+          </a>
+          <a href="#" class="d-inline-block mr-05 mb-1">
+            <img src="https://placehold.it/75x75" alt="">
+          </a>
+          <a href="#" class="d-inline-block mr-05 mb-1">
+            <img src="https://placehold.it/75x75" alt="">
+          </a>
+          <a href="#" class="d-inline-block mr-05 mb-1">
+            <img src="https://placehold.it/75x75" alt="">
+          </a>
+          <a href="#" class="d-inline-block mr-05 mb-1">
+            <img src="https://placehold.it/75x75" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <% scripts.forEach((script) => { %>
+    <script src="<%= script %>"></script>
+  <% }); %>
+</body>
+</html>

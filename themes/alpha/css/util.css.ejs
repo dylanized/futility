@@ -61,6 +61,10 @@
   .border-<%= color_slug %> {
     border-color: var(--color-<%= color_slug %>) !important;
   }
+  a.hover-<%= color_slug %>:hover,
+  a.hover-<%= color_slug %>:active {
+    color: var(--color-<%= color_slug %>) !important;
+  }
 <% } %>
 
 /* column gap */
@@ -151,10 +155,10 @@
 
 /* flex justify-content */
 .justify-center {
-  justify-content: space-between !important;
+  justify-content: center !important;
 }
 .justify-start {
-  justify-content: space-between !important;
+  justify-content: start !important;
 }
 .justify-space-around {
   justify-content: space-around !important;
