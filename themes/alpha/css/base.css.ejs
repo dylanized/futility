@@ -58,6 +58,10 @@ a.link-alt:active {
   color: var(--color-slate); font-weight: normal; text-decoration: underline;
 }
 
+a.hover-underline-none {
+  text-decoration: none !important;
+}
+
 /* structure */
 
 .row {
@@ -319,12 +323,6 @@ ul ul {
   list-style-type: circle;
 }
 
-ul.list-inline {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
 ol {
   list-style-type: number;
   margin: 0 0 var(--sp-4) var(--sp-2);
@@ -333,6 +331,16 @@ ol {
 
 li {
   margin: 0 0 var(--sp-2) 0;
+}
+
+.list-inline {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list-inline li {
+  display: inline;
 }
 
 /* images */
