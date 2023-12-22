@@ -595,7 +595,6 @@ a.btn {
 .btn:active {
   background-color: var(--color-slate);
   transition: background-color 0.05s;
-  text-decoration: underline;
   color: #fff;
 }
 

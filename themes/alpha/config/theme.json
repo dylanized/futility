@@ -6,7 +6,8 @@
     "/css/base.css",
     "/css/variants.css",
     "/css/util.css",
-    "/css/devices.css"
+    "/css/media-md.css",
+    "/css/media-lg.css"
   ],
   "theme": {
     "blockquoteBorderColor": "5px",
@@ -16,8 +17,8 @@
     "bodyTextColor": "charcoal",
     "bodyFont": "serif",
     "borderColor": "cloud",
-    "breakpointTablet": "600px",
-    "breakpointDesktop": "975px",
+    "breakpointTablet": "768px",
+    "breakpointDesktop": "1100px",
     "containerWidth": "900px",
     "primaryColor": "grapefruit",
     "secondaryColor": "charcoal",

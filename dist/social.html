@@ -14,7 +14,9 @@
 
     <link rel="stylesheet" href="/css/util.css" />
 
-    <link rel="stylesheet" href="/css/devices.css" />
+    <link rel="stylesheet" href="/css/media-md.css" />
+
+    <link rel="stylesheet" href="/css/media-lg.css" />
 
     <link
       rel="stylesheet"
@@ -25,120 +27,168 @@
     />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   </head>
-  <body class="page-social bg-skyline">
+  <body class="page-social bg-slate">
     <nav class="midnite w-100 p-1 text-verdana d-flex">
       <ul class="list-inline">
         <li class="mr-1">
-          <a href="#" class="hover-sunshine"
-            ><i class="fa-solid fa-house d-inline-block mr-05"></i> Home</a
+          <a href="/" class="hover-pine"
+            ><i class="fa-solid fa-house d-inline-block mr-05"></i
+            ><span class="d-none lg-d-inline"> Home</span></a
           >
         </li>
         <li class="mr-1">
-          <a href="#" class="hover-sunshine"
-            ><i class="fa-solid fa-hashtag d-inline-block mr-05"></i> Trends</a
+          <a href="/explore" class="hover-sunshine"
+            ><i class="fa-solid fa-hashtag d-inline-block mr-05"></i
+            ><span class="d-none lg-d-inline"> Explore</span></a
           >
         </li>
         <li class="mr-1">
-          <a href="#" class="hover-sunshine"
-            ><i class="fa-solid fa-comment d-inline-block mr-05"></i> Mentions
+          <a href="/mentions" class="hover-tangerine"
+            ><i class="fa-solid fa-comment d-inline-block mr-05"></i
+            ><span class="d-none lg-d-inline"> Mentions</span>
             <span
-              class="badge text-tangerine border-tangerine"
+              class="d-none md-d-inline badge text-tangerine border-tangerine"
               style="
                 margin-left: 3px;
                 padding: 3px 6px;
                 position: relative;
                 top: -1px;
               "
-              >99</span
+              >15</span
             ></a
           >
         </li>
         <li class="mr-1">
-          <a href="#" class="hover-sunshine"
-            ><i class="fa-solid fa-bookmark d-inline-block mr-05"></i> Saved</a
+          <a href="/user/foobar" class="hover-cobalt"
+            ><i class="fa-solid fa-user d-inline-block mr-05"></i
+            ><span class="d-none lg-d-inline"> Profile</span></a
           >
         </li>
       </ul>
       <ul class="list-inline">
+        <li class="mr-1">
+          <a href="/saved" class="hover-pine"
+            ><i class="fa-solid fa-bookmark d-inline-block mr-05"></i
+            ><span class="d-none lg-d-inline"> Saved</span></a
+          >
+        </li>
         <li>
-          <a class="hover-tangerine" href="#"
-            ><i class="fa-solid fa-user d-inline-block mr-05"></i> Account</a
+          <a class="hover-grapefruit" href="/account"
+            ><i class="fa-solid fa-gear d-inline-block mr-05"></i
+            ><span class="d-none lg-d-inline"> Account</span></a
           >
         </li>
       </ul>
     </nav>
-    <main class="d-flex w-100 col-gap-2">
-      <div class="col-1 w-25">
+    <main class="md-d-flex w-100 col-gap-2 p-1 md-p-2">
+      <!-- Column 1 -->
+      <div class="col-1 w-100 md-w-33">
         <div class="panel bg-white info border-0 shadow">
           <p class="mb-2">
-            <img src="https://placehold.it/500x500" alt="" />
+            <img src="https://picsum.photos/800/800" alt="" />
           </p>
-          <h4>@username</h4>
+          <h4 class="mb-05">@foobar</h4>
+          <h5 class="text-normal mb-1">Foobar McGee</h5>
+          <p class="text-normal text-slate text-sm mb-05">
+            Just a dude trying not to screw up
+          </p>
+          <p class="text-normal text-verdana text-xs text-whale mb-2">
+            <a
+              class="text-normal text-whale hover-cobalt text-underline-none"
+              href="https://google.com"
+              title="View User's Link"
+              >https://google.com</a
+            >
+          </p>
           <ul class="list-inline d-flex justify-space-between">
             <li class="lh-12">
-              <h4 class="mb-05">5</h4>
+              <h4 class="mb-05">99</h4>
               <div class="text-xs">posts</div>
             </li>
             <li class="lh-12">
-              <h4 class="mb-05">127</h4>
+              <h4 class="mb-05">5</h4>
               <div class="text-xs">following</div>
             </li>
             <li class="lh-12">
-              <h4 class="mb-05">5500</h4>
+              <h4 class="mb-05">1200</h4>
               <div class="text-xs">followers</div>
             </li>
           </ul>
         </div>
-        <div class="panel bg-white info border-0 shadow">
+        <div class="panel bg-white info border-0 shadow d-none md-d-block">
           <h5 class="text-xs text-slate text-normal mb-2">Trending Topics</h5>
           <ul class="list-style-none ml-0 pl-0 mb-3">
             <li class="mb-1">
-              <a class="tag" href="#">#HereIsAHashtag</a>
-              <span class="text-whale text-xs">100 posts</span>
-            </li>
-            <li class="mb-1">
-              <a class="tag" href="#">#Something</a>
+              <a class="tag" href="/topic/something">#Something</a>
               <span class="text-whale text-xs">99 posts</span>
             </li>
+
             <li class="mb-1">
-              <a class="tag" href="#">#Foobar</a>
-              <span class="text-whale text-xs">105 posts</span>
+              <a class="tag" href="/topic/foobar">#Foobar</a>
+              <span class="text-whale text-xs">15 posts</span>
             </li>
+
             <li class="mb-1">
-              <a class="tag" href="#">#somthingelse</a>
-              <span class="text-whale text-xs">105 posts</span>
+              <a class="tag" href="/topic/something-else">#somethingElse</a>
+              <span class="text-whale text-xs">12 posts</span>
             </li>
+
             <li class="mb-1">
-              <a class="tag" href="#">#ATopic</a>
-              <span class="text-whale text-xs">110 posts</span>
+              <a class="tag" href="/topic/a-topic">#aTopic</a>
+              <span class="text-whale text-xs">300 posts</span>
             </li>
+
             <li class="mb-1">
-              <a class="tag" href="#">#anothertopic</a>
-              <span class="text-whale text-xs">10 posts</span>
+              <a class="tag" href="/topic/another-topic">#anotherTopic</a>
+              <span class="text-whale text-xs">5005 posts</span>
             </li>
+
             <li class="mb-1">
-              <a class="tag" href="#">#foobar</a>
-              <span class="text-whale text-xs">5000 posts</span>
+              <a class="tag" href="/topic/foobar">#foobar</a>
+              <span class="text-whale text-xs">100 posts</span>
+            </li>
+
+            <li class="mb-1">
+              <a class="tag" href="/topic/biden-2024">#Biden2024</a>
+              <span class="text-whale text-xs">12 posts</span>
+            </li>
+
+            <li class="mb-1">
+              <a class="tag" href="/topic/usa">#USA</a>
+              <span class="text-whale text-xs">99 posts</span>
             </li>
           </ul>
         </div>
       </div>
-      <div class="col-2 w-50">
-        <div class="panel info bg-white p-2">
+      <!-- Column 2 -->
+      <div class="col-2 w-100 md-w-66">
+        <div class="panel info border-0 bg-white p-2">
           <div class="d-flex justify-space-between">
             <h5 class="mb-1">What do you want to share?</h5>
-            <span>
-              <a href="#" class="d-inline-block ml-05 text-whale"
+            <span class="text-sm">
+              <a
+                title="Post note"
+                href="#"
+                class="align-top d-inline-block ml-05 text-charcoal hover-sunshine"
                 ><i class="fa-solid fa-note-sticky"></i
               ></a>
-              <a href="#" class="d-inline-block ml-05 text-whale"
+              <a
+                title="Coming soon"
+                href="#"
+                class="align-top cursor-not-allowed d-inline-block ml-05 text-whale hover-whale"
                 ><i class="fa-solid fa-image"></i
               ></a>
-              <a href="#" class="d-inline-block ml-05 text-whale"
-                ><i class="fa-solid fa-video"></i
+              <a
+                title="Coming soon"
+                href="#"
+                class="align-top cursor-not-allowed d-inline-block ml-05 text-whale hover-whale"
+                ><i class="fa-solid fa-link"></i
               ></a>
-              <a href="#" class="d-inline-block ml-05 text-whale"
-                ><i class="fa-solid fa-book"></i
+              <a
+                title="Coming soon"
+                href="#"
+                class="align-top cursor-not-allowed d-inline-block ml-05 text-whale hover-whale"
+                ><i class="fa-solid fa-palette"></i
               ></a>
             </span>
           </div>
@@ -150,129 +200,686 @@
             </div>
           </fieldset>
         </div>
-        <div class="panel info bg-white mb-2">
-          <ol class="list-style-none ml-0 pl-0">
-            <li class="ml-0 pl-0">
-              <blockquote>
-                The quick brown fox jumps over the lazy dog
+        <div class="panel border-0 p-0 info bg-white mb-2">
+          <div
+            class="p-2 d-flex justify-space-between border-1 border-whale border-bottom-dashed"
+          >
+            <h5 class="mb-0">
+              Timeline
+              <span class="text-cloud">
+                |
+                <a
+                  title="Coming soon"
+                  href="#"
+                  class="cursor-not-allowed text-whale text-normal text-underline-none hover-whale"
+                  >Popular</a
+                ></span
+              >
+            </h5>
+            <div class="text-sm">
+              <a
+                title="View list"
+                href="#"
+                class="d-inline-block ml-05 text-charcoal hover-sunshine"
+                ><i class="fa-solid fa-list"></i
+              ></a>
+              <a
+                title="Coming soon"
+                href="#"
+                class="cursor-not-allowed d-inline-block ml-05 text-whale hover-whale"
+                ><i class="fa-solid fa-image"></i
+              ></a>
+              <a
+                title="Coming soon"
+                href="#"
+                class="cursor-not-allowed d-inline-block ml-05 text-whale hover-whale"
+                ><i class="fa-solid fa-map"></i
+              ></a>
+            </div>
+          </div>
+          <ol class="list-style-none ml-0 pl-0 mb-0">
+            <li class="ml-0 pl-0 mb-1">
+              <blockquote class="border-bottom-dashed border-1 pl-2 pb-2 mb-0">
+                <div class="note-footer d-flex justify-space-between">
+                  <h6 class="mb-1">
+                    <a
+                      href="/user/foobar"
+                      class="text-underline-none text-whale hover-cobalt"
+                      >@foobar</a
+                    >
+                    <span class="text-cloud">&bull;</span>
+                    <span class="text-normal text-whale">Foobar McGee</span>
+                  </h6>
+                  <div class="text-xs text-whale text-verdana">
+                    <a
+                      href="/posts/0"
+                      title="View Post"
+                      class="text-whale hover-cobalt text-normal text-underline-none"
+                    >
+                      1min
+                    </a>
+                  </div>
+                </div>
+                <p class="mb-05 text-charcoal">
+                  The quick brown fox jumps over the lazy dog
+                </p>
+                <div
+                  class="note-footer d-flex justify-space-between text-sm text-cloud pt-05"
+                >
+                  <div>
+                    <i
+                      title="Reply to post"
+                      class="hover-sunshine cursor-pointer d-inline-block mr-05 fa-solid fa-comment"
+                    ></i>
+                    <i
+                      title="Republic post"
+                      class="hover-sunshine cursor-pointer d-inline-block mr-05 fa-solid fa-retweet"
+                    ></i>
+                    <i
+                      title="Star post"
+                      class="hover-sunshine cursor-pointer d-inline-block mr-05 fa-solid fa-star"
+                    ></i>
+                  </div>
+                  <div>
+                    <i
+                      title="Share post"
+                      class="hover-sunshine cursor-pointer d-inline-block ml-1 fa-solid fa-share"
+                    ></i>
+                    <i
+                      title="Save post"
+                      class="hover-sunshine cursor-pointer d-inline-block ml-1 fa-solid fa-bookmark"
+                    ></i>
+                  </div>
+                </div>
               </blockquote>
             </li>
-            <li class="ml-0 pl-0">
-              <blockquote>
-                The quick brown fox jumps over the lazy dog
+
+            <li class="ml-0 pl-0 mb-1">
+              <blockquote class="border-bottom-dashed border-1 pl-2 pb-2 mb-0">
+                <div class="note-footer d-flex justify-space-between">
+                  <h6 class="mb-1">
+                    <a
+                      href="/user/jerrbear"
+                      class="text-underline-none text-whale hover-cobalt"
+                      >@jerrbear</a
+                    >
+                    <span class="text-cloud">&bull;</span>
+                    <span class="text-normal text-whale">Jerry Garcia</span>
+                  </h6>
+                  <div class="text-xs text-whale text-verdana">
+                    <a
+                      href="/posts/1"
+                      title="View Post"
+                      class="text-whale hover-cobalt text-normal text-underline-none"
+                    >
+                      1hr
+                    </a>
+                  </div>
+                </div>
+                <p class="mb-05 text-charcoal">Just testing out my nug</p>
+                <div
+                  class="note-footer d-flex justify-space-between text-sm text-cloud pt-05"
+                >
+                  <div>
+                    <i
+                      title="Reply to post"
+                      class="hover-sunshine cursor-pointer d-inline-block mr-05 fa-solid fa-comment"
+                    ></i>
+                    <i
+                      title="Republic post"
+                      class="hover-sunshine cursor-pointer d-inline-block mr-05 fa-solid fa-retweet"
+                    ></i>
+                    <i
+                      title="Star post"
+                      class="hover-sunshine cursor-pointer d-inline-block mr-05 fa-solid fa-star"
+                    ></i>
+                  </div>
+                  <div>
+                    <i
+                      title="Share post"
+                      class="hover-sunshine cursor-pointer d-inline-block ml-1 fa-solid fa-share"
+                    ></i>
+                    <i
+                      title="Save post"
+                      class="hover-sunshine cursor-pointer d-inline-block ml-1 fa-solid fa-bookmark"
+                    ></i>
+                  </div>
+                </div>
               </blockquote>
             </li>
-            <li class="ml-0 pl-0">
-              <blockquote>Here is a link: https://google.com</blockquote>
-            </li>
-            <li class="ml-0 pl-0">
-              <blockquote>Just testing out my nug</blockquote>
-            </li>
-            <li class="ml-0 pl-0">
-              <blockquote>
-                The quick brown fox jumps over the lazy dog
+
+            <li class="ml-0 pl-0 mb-1">
+              <blockquote class="border-bottom-dashed border-1 pl-2 pb-2 mb-0">
+                <div class="note-footer d-flex justify-space-between">
+                  <h6 class="mb-1">
+                    <a
+                      href="/user/foobar"
+                      class="text-underline-none text-whale hover-cobalt"
+                      >@foobar</a
+                    >
+                    <span class="text-cloud">&bull;</span>
+                    <span class="text-normal text-whale">Foobar McGee</span>
+                  </h6>
+                  <div class="text-xs text-whale text-verdana">
+                    <a
+                      href="/posts/2"
+                      title="View Post"
+                      class="text-whale hover-cobalt text-normal text-underline-none"
+                    >
+                      11s
+                    </a>
+                  </div>
+                </div>
+                <p class="mb-05 text-charcoal">
+                  Here is a link: https://google.com
+                </p>
+                <div
+                  class="note-footer d-flex justify-space-between text-sm text-cloud pt-05"
+                >
+                  <div>
+                    <i
+                      title="Reply to post"
+                      class="hover-sunshine cursor-pointer d-inline-block mr-05 fa-solid fa-comment"
+                    ></i>
+                    <i
+                      title="Republic post"
+                      class="hover-sunshine cursor-pointer d-inline-block mr-05 fa-solid fa-retweet"
+                    ></i>
+                    <i
+                      title="Star post"
+                      class="hover-sunshine cursor-pointer d-inline-block mr-05 fa-solid fa-star"
+                    ></i>
+                  </div>
+                  <div>
+                    <i
+                      title="Share post"
+                      class="hover-sunshine cursor-pointer d-inline-block ml-1 fa-solid fa-share"
+                    ></i>
+                    <i
+                      title="Save post"
+                      class="hover-sunshine cursor-pointer d-inline-block ml-1 fa-solid fa-bookmark"
+                    ></i>
+                  </div>
+                </div>
               </blockquote>
             </li>
-            <li class="ml-0 pl-0">
-              <blockquote>
-                The quick brown fox jumps over the lazy dog
+
+            <li class="ml-0 pl-0 mb-1">
+              <blockquote class="border-bottom-dashed border-1 pl-2 pb-2 mb-0">
+                <div class="note-footer d-flex justify-space-between">
+                  <h6 class="mb-1">
+                    <a
+                      href="/user/lincoln"
+                      class="text-underline-none text-whale hover-cobalt"
+                      >@lincoln</a
+                    >
+                    <span class="text-cloud">&bull;</span>
+                    <span class="text-normal text-whale">Honest Abe</span>
+                  </h6>
+                  <div class="text-xs text-whale text-verdana">
+                    <a
+                      href="/posts/3"
+                      title="View Post"
+                      class="text-whale hover-cobalt text-normal text-underline-none"
+                    >
+                      Springfield, Mass &bull; 1min
+                    </a>
+                  </div>
+                </div>
+                <p class="mb-05 text-charcoal">
+                  Four score and seven years ago our fathers brought forth, upon
+                  this continent, a new nation, conceived in liberty, and
+                  dedicated to the proposition that all men are created equal.
+                </p>
+                <div
+                  class="note-footer d-flex justify-space-between text-sm text-cloud pt-05"
+                >
+                  <div>
+                    <i
+                      title="Reply to post"
+                      class="hover-sunshine cursor-pointer d-inline-block mr-05 fa-solid fa-comment"
+                    ></i>
+                    <i
+                      title="Republic post"
+                      class="hover-sunshine cursor-pointer d-inline-block mr-05 fa-solid fa-retweet"
+                    ></i>
+                    <i
+                      title="Star post"
+                      class="hover-sunshine cursor-pointer d-inline-block mr-05 fa-solid fa-star"
+                    ></i>
+                  </div>
+                  <div>
+                    <i
+                      title="Share post"
+                      class="hover-sunshine cursor-pointer d-inline-block ml-1 fa-solid fa-share"
+                    ></i>
+                    <i
+                      title="Save post"
+                      class="hover-sunshine cursor-pointer d-inline-block ml-1 fa-solid fa-bookmark"
+                    ></i>
+                  </div>
+                </div>
               </blockquote>
             </li>
-            <li class="ml-0 pl-0">
-              <blockquote>Here is a link: https://google.com</blockquote>
-            </li>
-            <li class="ml-0 pl-0">
-              <blockquote>Just testing out my nug</blockquote>
-            </li>
-            <li class="ml-0 pl-0">
-              <blockquote>
-                The quick brown fox jumps over the lazy dog
+
+            <li class="ml-0 pl-0 mb-1">
+              <blockquote class="border-bottom-dashed border-1 pl-2 pb-2 mb-0">
+                <div class="note-footer d-flex justify-space-between">
+                  <h6 class="mb-1">
+                    <a
+                      href="/user/jerrbear"
+                      class="text-underline-none text-whale hover-cobalt"
+                      >@jerrbear</a
+                    >
+                    <span class="text-cloud">&bull;</span>
+                    <span class="text-normal text-whale">Jerry Garcia</span>
+                  </h6>
+                  <div class="text-xs text-whale text-verdana">
+                    <a
+                      href="/posts/4"
+                      title="View Post"
+                      class="text-whale hover-cobalt text-normal text-underline-none"
+                    >
+                      1hr
+                    </a>
+                  </div>
+                </div>
+                <p class="mb-05 text-charcoal">Just testing out my nug</p>
+                <div
+                  class="note-footer d-flex justify-space-between text-sm text-cloud pt-05"
+                >
+                  <div>
+                    <i
+                      title="Reply to post"
+                      class="hover-sunshine cursor-pointer d-inline-block mr-05 fa-solid fa-comment"
+                    ></i>
+                    <i
+                      title="Republic post"
+                      class="hover-sunshine cursor-pointer d-inline-block mr-05 fa-solid fa-retweet"
+                    ></i>
+                    <i
+                      title="Star post"
+                      class="hover-sunshine cursor-pointer d-inline-block mr-05 fa-solid fa-star"
+                    ></i>
+                  </div>
+                  <div>
+                    <i
+                      title="Share post"
+                      class="hover-sunshine cursor-pointer d-inline-block ml-1 fa-solid fa-share"
+                    ></i>
+                    <i
+                      title="Save post"
+                      class="hover-sunshine cursor-pointer d-inline-block ml-1 fa-solid fa-bookmark"
+                    ></i>
+                  </div>
+                </div>
               </blockquote>
             </li>
-            <li class="ml-0 pl-0">
-              <blockquote>
-                The quick brown fox jumps over the lazy dog
+
+            <li class="ml-0 pl-0 mb-1">
+              <blockquote class="border-bottom-dashed border-1 pl-2 pb-2 mb-0">
+                <div class="note-footer d-flex justify-space-between">
+                  <h6 class="mb-1">
+                    <a
+                      href="/user/foobar"
+                      class="text-underline-none text-whale hover-cobalt"
+                      >@foobar</a
+                    >
+                    <span class="text-cloud">&bull;</span>
+                    <span class="text-normal text-whale">Foobar McGee</span>
+                  </h6>
+                  <div class="text-xs text-whale text-verdana">
+                    <a
+                      href="/posts/5"
+                      title="View Post"
+                      class="text-whale hover-cobalt text-normal text-underline-none"
+                    >
+                      11s
+                    </a>
+                  </div>
+                </div>
+                <p class="mb-05 text-charcoal">
+                  Here is a link: https://google.com
+                </p>
+                <div
+                  class="note-footer d-flex justify-space-between text-sm text-cloud pt-05"
+                >
+                  <div>
+                    <i
+                      title="Reply to post"
+                      class="hover-sunshine cursor-pointer d-inline-block mr-05 fa-solid fa-comment"
+                    ></i>
+                    <i
+                      title="Republic post"
+                      class="hover-sunshine cursor-pointer d-inline-block mr-05 fa-solid fa-retweet"
+                    ></i>
+                    <i
+                      title="Star post"
+                      class="hover-sunshine cursor-pointer d-inline-block mr-05 fa-solid fa-star"
+                    ></i>
+                  </div>
+                  <div>
+                    <i
+                      title="Share post"
+                      class="hover-sunshine cursor-pointer d-inline-block ml-1 fa-solid fa-share"
+                    ></i>
+                    <i
+                      title="Save post"
+                      class="hover-sunshine cursor-pointer d-inline-block ml-1 fa-solid fa-bookmark"
+                    ></i>
+                  </div>
+                </div>
               </blockquote>
             </li>
-            <li class="ml-0 pl-0">
-              <blockquote>Here is a link: https://google.com</blockquote>
+
+            <li class="ml-0 pl-0 mb-1">
+              <blockquote class="border-bottom-dashed border-1 pl-2 pb-2 mb-0">
+                <div class="note-footer d-flex justify-space-between">
+                  <h6 class="mb-1">
+                    <a
+                      href="/user/foobar"
+                      class="text-underline-none text-whale hover-cobalt"
+                      >@foobar</a
+                    >
+                    <span class="text-cloud">&bull;</span>
+                    <span class="text-normal text-whale">Foobar McGee</span>
+                  </h6>
+                  <div class="text-xs text-whale text-verdana">
+                    <a
+                      href="/posts/6"
+                      title="View Post"
+                      class="text-whale hover-cobalt text-normal text-underline-none"
+                    >
+                      1min
+                    </a>
+                  </div>
+                </div>
+                <p class="mb-05 text-charcoal">
+                  The quick brown fox jumps over the lazy dog
+                </p>
+                <div
+                  class="note-footer d-flex justify-space-between text-sm text-cloud pt-05"
+                >
+                  <div>
+                    <i
+                      title="Reply to post"
+                      class="hover-sunshine cursor-pointer d-inline-block mr-05 fa-solid fa-comment"
+                    ></i>
+                    <i
+                      title="Republic post"
+                      class="hover-sunshine cursor-pointer d-inline-block mr-05 fa-solid fa-retweet"
+                    ></i>
+                    <i
+                      title="Star post"
+                      class="hover-sunshine cursor-pointer d-inline-block mr-05 fa-solid fa-star"
+                    ></i>
+                  </div>
+                  <div>
+                    <i
+                      title="Share post"
+                      class="hover-sunshine cursor-pointer d-inline-block ml-1 fa-solid fa-share"
+                    ></i>
+                    <i
+                      title="Save post"
+                      class="hover-sunshine cursor-pointer d-inline-block ml-1 fa-solid fa-bookmark"
+                    ></i>
+                  </div>
+                </div>
+              </blockquote>
             </li>
-            <li class="ml-0 pl-0">
-              <blockquote>Just testing out my nug</blockquote>
+
+            <li class="ml-0 pl-0 mb-1">
+              <blockquote class="border-bottom-dashed border-1 pl-2 pb-2 mb-0">
+                <div class="note-footer d-flex justify-space-between">
+                  <h6 class="mb-1">
+                    <a
+                      href="/user/bobbyweir"
+                      class="text-underline-none text-whale hover-cobalt"
+                      >@bobbyweir</a
+                    >
+                    <span class="text-cloud">&bull;</span>
+                    <span class="text-normal text-whale">Bob Weir</span>
+                  </h6>
+                  <div class="text-xs text-whale text-verdana">
+                    <a
+                      href="/posts/7"
+                      title="View Post"
+                      class="text-whale hover-cobalt text-normal text-underline-none"
+                    >
+                      Marin County &bull; 1hr
+                    </a>
+                  </div>
+                </div>
+                <p class="mb-05 text-charcoal">Come see Wolf Bros</p>
+                <div
+                  class="note-footer d-flex justify-space-between text-sm text-cloud pt-05"
+                >
+                  <div>
+                    <i
+                      title="Reply to post"
+                      class="hover-sunshine cursor-pointer d-inline-block mr-05 fa-solid fa-comment"
+                    ></i>
+                    <i
+                      title="Republic post"
+                      class="hover-sunshine cursor-pointer d-inline-block mr-05 fa-solid fa-retweet"
+                    ></i>
+                    <i
+                      title="Star post"
+                      class="hover-sunshine cursor-pointer d-inline-block mr-05 fa-solid fa-star"
+                    ></i>
+                  </div>
+                  <div>
+                    <i
+                      title="Share post"
+                      class="hover-sunshine cursor-pointer d-inline-block ml-1 fa-solid fa-share"
+                    ></i>
+                    <i
+                      title="Save post"
+                      class="hover-sunshine cursor-pointer d-inline-block ml-1 fa-solid fa-bookmark"
+                    ></i>
+                  </div>
+                </div>
+              </blockquote>
+            </li>
+
+            <li class="ml-0 pl-0 mb-1">
+              <blockquote class="border-bottom-dashed border-1 pl-2 pb-2 mb-0">
+                <div class="note-footer d-flex justify-space-between">
+                  <h6 class="mb-1">
+                    <a
+                      href="/user/foobar"
+                      class="text-underline-none text-whale hover-cobalt"
+                      >@foobar</a
+                    >
+                    <span class="text-cloud">&bull;</span>
+                    <span class="text-normal text-whale">Foobar McGee</span>
+                  </h6>
+                  <div class="text-xs text-whale text-verdana">
+                    <a
+                      href="/posts/8"
+                      title="View Post"
+                      class="text-whale hover-cobalt text-normal text-underline-none"
+                    >
+                      11s
+                    </a>
+                  </div>
+                </div>
+                <p class="mb-05 text-charcoal">
+                  Here is a link: https://google.com
+                </p>
+                <div
+                  class="note-footer d-flex justify-space-between text-sm text-cloud pt-05"
+                >
+                  <div>
+                    <i
+                      title="Reply to post"
+                      class="hover-sunshine cursor-pointer d-inline-block mr-05 fa-solid fa-comment"
+                    ></i>
+                    <i
+                      title="Republic post"
+                      class="hover-sunshine cursor-pointer d-inline-block mr-05 fa-solid fa-retweet"
+                    ></i>
+                    <i
+                      title="Star post"
+                      class="hover-sunshine cursor-pointer d-inline-block mr-05 fa-solid fa-star"
+                    ></i>
+                  </div>
+                  <div>
+                    <i
+                      title="Share post"
+                      class="hover-sunshine cursor-pointer d-inline-block ml-1 fa-solid fa-share"
+                    ></i>
+                    <i
+                      title="Save post"
+                      class="hover-sunshine cursor-pointer d-inline-block ml-1 fa-solid fa-bookmark"
+                    ></i>
+                  </div>
+                </div>
+              </blockquote>
             </li>
           </ol>
         </div>
         <h6 class="text-center">
-          <a href="#" class="text-normal text-underline-none"
+          <a
+            href="#"
+            class="text-normal text-cloud hover-sunshine text-underline-none"
             >View more posts</a
           >
         </h6>
       </div>
-      <div class="col-3 w-25">
-        <div class="panel bg-white info border-0 shadow">
+      <!-- Column 3 -->
+      <div class="col-3 d-none lg-d-block w-25">
+        <div class="panel bg-white info border-0 shadow d-none lg-d-block">
           <h5 class="text-xs text-slate text-normal mb-2">People to Follow</h5>
           <ul class="list-style-none ml-0 pl-0 mb-1">
             <li class="mb-05">
-              <a href="#" class="d-block text-underline-none">
-                <img src="http://placehold.it/30x30" alt="" />
-                <h5 class="d-inline-block ml-05">@username</h5>
+              <a
+                href="/user/foobar"
+                class="d-block text-whale hover-cobalt text-underline-none"
+              >
+                <img src="https://picsum.photos/45/45?0" alt="" />
+                <h5 class="text-normal d-inline-block ml-05">@foobar</h5>
               </a>
             </li>
+
             <li class="mb-05">
-              <a href="#" class="d-block text-underline-none">
-                <img src="http://placehold.it/30x30" alt="" />
-                <h5 class="d-inline-block ml-05">@username</h5>
+              <a
+                href="/user/jerrbear"
+                class="d-block text-whale hover-cobalt text-underline-none"
+              >
+                <img src="https://picsum.photos/45/45?1" alt="" />
+                <h5 class="text-normal d-inline-block ml-05">@jerrbear</h5>
               </a>
             </li>
+
             <li class="mb-05">
-              <a href="#" class="d-block text-underline-none">
-                <img src="http://placehold.it/30x30" alt="" />
-                <h5 class="d-inline-block ml-05">@username</h5>
+              <a
+                href="/user/foobar"
+                class="d-block text-whale hover-cobalt text-underline-none"
+              >
+                <img src="https://picsum.photos/45/45?2" alt="" />
+                <h5 class="text-normal d-inline-block ml-05">@foobar</h5>
               </a>
             </li>
+
             <li class="mb-05">
-              <a href="#" class="d-block text-underline-none">
-                <img src="http://placehold.it/30x30" alt="" />
-                <h5 class="d-inline-block ml-05">@username</h5>
+              <a
+                href="/user/lincoln"
+                class="d-block text-whale hover-cobalt text-underline-none"
+              >
+                <img src="https://picsum.photos/45/45?3" alt="" />
+                <h5 class="text-normal d-inline-block ml-05">@lincoln</h5>
               </a>
             </li>
+
             <li class="mb-05">
-              <a href="#" class="d-block text-underline-none">
-                <img src="http://placehold.it/30x30" alt="" />
-                <h5 class="d-inline-block ml-05">@username</h5>
+              <a
+                href="/user/jerrbear"
+                class="d-block text-whale hover-cobalt text-underline-none"
+              >
+                <img src="https://picsum.photos/45/45?4" alt="" />
+                <h5 class="text-normal d-inline-block ml-05">@jerrbear</h5>
+              </a>
+            </li>
+
+            <li class="mb-05">
+              <a
+                href="/user/foobar"
+                class="d-block text-whale hover-cobalt text-underline-none"
+              >
+                <img src="https://picsum.photos/45/45?5" alt="" />
+                <h5 class="text-normal d-inline-block ml-05">@foobar</h5>
+              </a>
+            </li>
+
+            <li class="mb-05">
+              <a
+                href="/user/foobar"
+                class="d-block text-whale hover-cobalt text-underline-none"
+              >
+                <img src="https://picsum.photos/45/45?6" alt="" />
+                <h5 class="text-normal d-inline-block ml-05">@foobar</h5>
+              </a>
+            </li>
+
+            <li class="mb-05">
+              <a
+                href="/user/bobbyweir"
+                class="d-block text-whale hover-cobalt text-underline-none"
+              >
+                <img src="https://picsum.photos/45/45?7" alt="" />
+                <h5 class="text-normal d-inline-block ml-05">@bobbyweir</h5>
+              </a>
+            </li>
+
+            <li class="mb-05">
+              <a
+                href="/user/foobar"
+                class="d-block text-whale hover-cobalt text-underline-none"
+              >
+                <img src="https://picsum.photos/45/45?8" alt="" />
+                <h5 class="text-normal d-inline-block ml-05">@foobar</h5>
               </a>
             </li>
           </ul>
         </div>
-        <div class="panel bg-white info border-0 shadow pb-2">
+        <div class="panel bg-white info border-0 shadow pb-2 d-none lg-d-block">
           <h5 class="text-xs text-slate text-normal mb-2">Media Gallery</h5>
           <div>
-            <a href="#" class="d-inline-block mr-05 mb-1">
-              <img src="https://placehold.it/75x75" alt="" />
+            <a href="/posts/0" class="d-inline-block mr-05 mb-1">
+              <img src="https://picsum.photos/75/75?0" alt="" />
             </a>
-            <a href="#" class="d-inline-block mr-05 mb-1">
-              <img src="https://placehold.it/75x75" alt="" />
+
+            <a href="/posts/1" class="d-inline-block mr-05 mb-1">
+              <img src="https://picsum.photos/75/75?1" alt="" />
             </a>
-            <a href="#" class="d-inline-block mr-05 mb-1">
-              <img src="https://placehold.it/75x75" alt="" />
+
+            <a href="/posts/2" class="d-inline-block mr-05 mb-1">
+              <img src="https://picsum.photos/75/75?2" alt="" />
             </a>
-            <a href="#" class="d-inline-block mr-05 mb-1">
-              <img src="https://placehold.it/75x75" alt="" />
+
+            <a href="/posts/3" class="d-inline-block mr-05 mb-1">
+              <img src="https://picsum.photos/75/75?3" alt="" />
             </a>
-            <a href="#" class="d-inline-block mr-05 mb-1">
-              <img src="https://placehold.it/75x75" alt="" />
+
+            <a href="/posts/4" class="d-inline-block mr-05 mb-1">
+              <img src="https://picsum.photos/75/75?4" alt="" />
             </a>
-            <a href="#" class="d-inline-block mr-05 mb-1">
-              <img src="https://placehold.it/75x75" alt="" />
+
+            <a href="/posts/5" class="d-inline-block mr-05 mb-1">
+              <img src="https://picsum.photos/75/75?5" alt="" />
             </a>
-            <a href="#" class="d-inline-block mr-05 mb-1">
-              <img src="https://placehold.it/75x75" alt="" />
+
+            <a href="/posts/6" class="d-inline-block mr-05 mb-1">
+              <img src="https://picsum.photos/75/75?6" alt="" />
             </a>
-            <a href="#" class="d-inline-block mr-05 mb-1">
-              <img src="https://placehold.it/75x75" alt="" />
+
+            <a href="/posts/7" class="d-inline-block mr-05 mb-1">
+              <img src="https://picsum.photos/75/75?7" alt="" />
             </a>
-            <a href="#" class="d-inline-block mr-05 mb-1">
-              <img src="https://placehold.it/75x75" alt="" />
+
+            <a href="/posts/8" class="d-inline-block mr-05 mb-1">
+              <img src="https://picsum.photos/75/75?8" alt="" />
             </a>
           </div>
         </div>

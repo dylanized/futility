@@ -17,18 +17,6 @@
   .border-<%= width_suffix %> {
     border-width: <%= styles.borderWidths[width_suffix] %> !important;
   }
-  .border-top-<%= width_suffix %> {
-    border-width: <%= styles.borderWidths[width_suffix] %> !important;
-  }
-  .border-right-<%= width_suffix %> {
-    border-width: <%= styles.borderWidths[width_suffix] %> !important;
-  }
-  .border-bottom-<%= width_suffix %> {
-    border-width: <%= styles.borderWidths[width_suffix] %> !important;
-  }
-  .border-left-<%= width_suffix %> {
-    border-width: <%= styles.borderWidths[width_suffix] %> !important;
-  }
 <% } %>
 
 /* border radius */
@@ -49,6 +37,54 @@
 .border-none {
   border-style: none !important;
 }
+.border-top-dashed {
+  border-top-style: dashed !important;
+}
+.border-top-dotted {
+  border-top-style: dotted !important;
+}
+.border-top-solid {
+  border-top-style: solid !important;
+}
+.border-top-none {
+  border-top-style: none !important;
+}
+.border-right-dashed {
+  border-right-style: dashed !important;
+}
+.border-right-dotted {
+  border-right-style: dotted !important;
+}
+.border-right-solid {
+  border-right-style: solid !important;
+}
+.border-right-none {
+  border-right-style: none !important;
+}
+.border-bottom-dashed {
+  border-bottom-style: dashed !important;
+}
+.border-bottom-dotted {
+  border-bottom-style: dotted !important;
+}
+.border-bottom-solid {
+  border-bottom-style: solid !important;
+}
+.border-bottom-none {
+  border-bottom-style: none !important;
+}
+.border-left-dashed {
+  border-left-style: dashed !important;
+}
+.border-left-dotted {
+  border-left-style: dotted !important;
+}
+.border-left-solid {
+  border-left-style: solid !important;
+}
+.border-left-none {
+  border-left-style: none !important;
+}
 
 /* colors */
 <% for (const color_slug in styles.colors) { -%>
@@ -61,6 +97,8 @@
   .border-<%= color_slug %> {
     border-color: var(--color-<%= color_slug %>) !important;
   }
+  a.text-<%= color_slug %>:link,
+  a.text-<%= color_slug %>:visited,
   a.hover-<%= color_slug %>:hover,
   a.hover-<%= color_slug %>:active {
     color: var(--color-<%= color_slug %>) !important;
@@ -92,8 +130,29 @@
 }
 
 /* cursor */
+.cursor-auto {
+  cursor: auto !important;
+}
+.cursor-crosshair {
+  cursor: crosshair !important;
+}
+.cursor-grab {
+  cursor: grab !important;
+}
+.cursor-help {
+  cursor: help !important;
+}
+.cursor-not-allowed {
+  cursor: not-allowed !important;
+}
 .cursor-pointer {
   cursor: pointer !important;
+}
+.cursor-wait {
+  cursor: wait !important;
+}
+.cursor-zoom-in {
+  cursor: zoom-in !important;
 }
 
 /* display */
@@ -405,22 +464,22 @@
 }
 
 /* vertical alignment */
-.va-baseline {
+.align-baseline {
   vertical-align: baseline !important;
 }
-.va-bottom {
+.align-bottom {
   vertical-align: bottom !important;
 }
-.va-middle {
+.align-middle {
   vertical-align: middle !important;
 }
-.va-top {
+.align-top {
   vertical-align: top !important;
 }
-.va-text-top {
+.align-text-top {
   vertical-align: text-top !important;
 }
-.va-sub {
+.align-sub {
   vertical-align: sub !important;
 }
 
