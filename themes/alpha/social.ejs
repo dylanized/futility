@@ -16,8 +16,8 @@
     <ul class="list-inline">
       <li class="mr-1"><a href="/" class="hover-pine"><i class="fa-solid fa-house d-inline-block mr-05"></i><span class="d-none lg-d-inline"> Home</span></a></li>
       <li class="mr-1"><a href="/explore" class="hover-sunshine"><i class="fa-solid fa-hashtag d-inline-block mr-05"></i><span class="d-none lg-d-inline"> Explore</span></a></li>
-      <li class="mr-1"><a href="/mentions" class="hover-tangerine"><i class="fa-solid fa-comment d-inline-block mr-05"></i><span class="d-none lg-d-inline"> Mentions</span> <span class="d-none md-d-inline badge text-tangerine border-tangerine" style="margin-left:3px; padding:3px 6px;position:relative;top:-1px;"><%= user.mentions %></span></a></li>
-      <li class="mr-1"><a href="/user/<%= user.handle %>" class="hover-cobalt"><i class="fa-solid fa-user d-inline-block mr-05"></i><span class="d-none lg-d-inline"> Profile</span></a></li>
+      <li class="mr-1"><a href="/activity" class="hover-tangerine"><i class="fa-solid fa-at d-inline-block mr-05"></i><span class="d-none lg-d-inline"> Mentions</span> <span class="d-none md-d-inline badge text-tangerine border-tangerine" style="margin-left:3px; padding:3px 6px;position:relative;top:-1px;"><%= user.mentions %></span></a></li>
+      <li class="mr-1"><a href="/<%= user.handle %>" class="hover-cobalt"><i class="fa-solid fa-user d-inline-block mr-05"></i><span class="d-none lg-d-inline"> Profile</span></a></li>
     </ul>
     <ul class="list-inline">
       <li class="mr-1"><a href="/saved" class="hover-pine"><i class="fa-solid fa-bookmark d-inline-block mr-05"></i><span class="d-none lg-d-inline"> Saved</span></a></li>
@@ -85,7 +85,7 @@
               <blockquote class="border-bottom-dashed border-1 pl-2 pb-2 mb-0">
                 <div class="note-footer d-flex justify-space-between">
                   <h6 class="mb-1">
-                    <a href="/user/<%= post.authorHandle %>" class="text-underline-none text-whale hover-cobalt">@<%= post.authorHandle %></a> <span class="text-cloud">&bull;</span> <span class="text-normal text-whale"><%= post.authorName %></span>
+                    <a href="/<%= post.authorHandle %>" class="text-underline-none text-whale hover-cobalt">@<%= post.authorHandle %></a> <span class="text-cloud">&bull;</span> <span class="text-normal text-whale"><%= post.authorName %></span>
                   </h6>
                   <div class="text-xs text-whale text-verdana">
                     <a href="/posts/<%= i %>" title="View Post" class="text-whale hover-cobalt text-normal text-underline-none">
@@ -122,7 +122,7 @@
         <ul class="list-style-none ml-0 pl-0 mb-1">
           <% posts.forEach(function (post, i) { %>
             <li class="mb-05">
-              <a href="/user/<%= post.authorHandle %>" class="d-block text-whale hover-cobalt text-underline-none">
+              <a href="/<%= post.authorHandle %>" class="d-block text-whale hover-cobalt text-underline-none">
                 <img src="https://picsum.photos/45/45?<%= i %>" alt="" /><h5 class="text-normal d-inline-block ml-05">@<%= post.authorHandle %></h5>
               </a>
             </li>
