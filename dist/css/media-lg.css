@@ -467,20 +467,68 @@
   }
 
   /* width percent */
+  .lg-w-5 {
+    width: 5% !important;
+  }
+  .lg-w-10 {
+    width: 10% !important;
+  }
+  .lg-w-15 {
+    width: 15% !important;
+  }
+  .lg-w-20 {
+    width: 20% !important;
+  }
   .lg-w-25 {
     width: 25% !important;
+  }
+  .lg-w-30 {
+    width: 30% !important;
   }
   .lg-w-33 {
     width: 33% !important;
   }
+  .lg-w-35 {
+    width: 35% !important;
+  }
+  .lg-w-40 {
+    width: 40% !important;
+  }
+  .lg-w-45 {
+    width: 45% !important;
+  }
   .lg-w-50 {
     width: 50% !important;
+  }
+  .lg-w-55 {
+    width: 55% !important;
+  }
+  .lg-w-60 {
+    width: 60% !important;
+  }
+  .lg-w-65 {
+    width: 65% !important;
   }
   .lg-w-66 {
     width: 66% !important;
   }
+  .lg-w-70 {
+    width: 70% !important;
+  }
   .lg-w-75 {
     width: 75% !important;
+  }
+  .lg-w-80 {
+    width: 80% !important;
+  }
+  .lg-w-85 {
+    width: 85% !important;
+  }
+  .lg-w-90 {
+    width: 90% !important;
+  }
+  .lg-w-95 {
+    width: 95% !important;
   }
   .lg-w-100 {
     width: 100% !important;
